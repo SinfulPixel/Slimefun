@@ -269,7 +269,7 @@ durability:
   infinite-quantumarmor-durability: true
   infinite-uberarmor-durability: true
 armor:
-update-second-delay: 2
+  update-second-delay: 2
   nano:
     can-fly: false
     fly-speed: 1
