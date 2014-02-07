@@ -6,7 +6,10 @@ import org.bukkit.ChatColor;
 import org.bukkit.Effect;
 import org.bukkit.GameMode;
 import org.bukkit.Location;
+import org.bukkit.Material;
 import org.bukkit.Sound;
+import org.bukkit.block.Block;
+import org.bukkit.block.BlockFace;
 import org.bukkit.entity.Arrow;
 import org.bukkit.entity.Player;
 import org.bukkit.entity.Projectile;
@@ -17,6 +20,7 @@ import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.entity.EntityDamageEvent.DamageCause;
 import org.bukkit.event.entity.ProjectileHitEvent;
 import org.bukkit.event.entity.ProjectileLaunchEvent;
+import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.event.player.PlayerToggleFlightEvent;
 import org.bukkit.util.Vector;
 
@@ -29,6 +33,32 @@ public class UberArmorListener implements Listener{
 	  {
 	    this.plugin = instance;
 	    this.plugin.getServer().getPluginManager().registerEvents(this, this.plugin);
+	  }
+	  
+	  @SuppressWarnings("deprecation")
+	@EventHandler
+	  public void onClimb(PlayerMoveEvent e) {
+		  Player p = e.getPlayer();
+		  if (p.getInventory().getChestplate() != null) {
+				if (p.getInventory().getChestplate().hasItemMeta()) {
+					if (p.getInventory().getChestplate().getItemMeta().hasDisplayName()) {
+						if (p.getInventory().getChestplate().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.BLUE + "" + ChatColor.BOLD + "Uber" + ChatColor.GOLD + "" + ChatColor.BOLD + "Chestplate")) {
+							 if (p.getInventory().getChestplate().getItemMeta().getLore().contains(ChatColor.GRAY + "Spider Climb")) {
+							        Block b = p.getLocation().getBlock();
+							        if (b.getType() == Material.AIR && (!(b.getRelative(BlockFace.NORTH).getType() == Material.AIR) || !(b.getRelative(BlockFace.EAST).getType() == Material.AIR) || !(b.getRelative(BlockFace.SOUTH).getType() == Material.AIR) || !(b.getRelative(BlockFace.WEST).getType() == Material.AIR))) {
+							            p.sendBlockChange(b.getLocation(), Material.VINE, (byte) 0);
+							            Block b2 = b.getRelative(BlockFace.UP);
+							            if (b2.getType() == Material.AIR && (!(b2.getRelative(BlockFace.NORTH).getType() == Material.AIR) || !(b2.getRelative(BlockFace.EAST).getType() == Material.AIR) || !(b2.getRelative(BlockFace.SOUTH).getType() == Material.AIR) || !(b2.getRelative(BlockFace.WEST).getType() == Material.AIR))) {
+							                if (p.getEyeLocation().getBlock().getRelative(BlockFace.UP).getType() == Material.AIR) {
+							                	p.sendBlockChange(b2.getLocation(), Material.VINE, (byte) 0);
+							                }
+							            }
+							        }
+								}
+						}
+					}
+				}
+		  }
 	  }
 	  
 	
