@@ -29,8 +29,6 @@ import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 import org.bukkit.util.Vector;
 
-import com.RingOfStorms.commands.ecp.chest;
-
 public class MultiToolListener implements Listener {
 	
 	private startup plugin;
@@ -171,23 +169,10 @@ public class MultiToolListener implements Listener {
 							    	   p.playSound(p.getLocation(), Sound.ZOMBIE_METAL, 1, 1);
 							       }
 							  
-							  if (this.plugin.getServer().getPluginManager().isPluginEnabled("EnderChestPlus")) {
-					    		  if (this.plugin.ECPcfg.getBoolean("use") == true) {
-					    			  chest.openAC(p, p.getName());
-						    		  p.playEffect(p.getLocation(), Effect.ENDER_SIGNAL, 0);
-							    	  p.playSound(p.getLocation(), Sound.ENDERMAN_TELEPORT, 1, 1);
-					    		  }
-					    		  else {
-					    			  p.openInventory(p.getEnderChest());
-							    	  p.playEffect(p.getLocation(), Effect.ENDER_SIGNAL, 0);
-							    	  p.playSound(p.getLocation(), Sound.ENDERMAN_TELEPORT, 1, 1);
-					    		  }
-					    	  }
-					    	  else {
+							  
 					    		  p.openInventory(p.getEnderChest());
 						    	  p.playEffect(p.getLocation(), Effect.ENDER_SIGNAL, 0);
 						    	  p.playSound(p.getLocation(), Sound.ENDERMAN_TELEPORT, 1, 1);
-					    	  }
 						  }
 						  else if (p.getItemInHand().getItemMeta().getLore().toString().equalsIgnoreCase(SlimefunItem.MULTI_TOOL_MODE_WRENCH.getItemMeta().getLore().toString())) {
 							  

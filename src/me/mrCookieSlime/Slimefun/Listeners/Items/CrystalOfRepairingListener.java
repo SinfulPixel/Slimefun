@@ -6,18 +6,14 @@ import java.util.Random;
 
 import me.mrCookieSlime.Slimefun.startup;
 import me.mrCookieSlime.Slimefun.Items.SlimefunItem;
-import me.mrCookieSlime.Slimefun.Setup.EnderChestPlusSupporter;
 
-import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerMoveEvent;
-import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
-import com.RingOfStorms.util.ecp.chestUtil;
 
 public class CrystalOfRepairingListener implements Listener {
 	
@@ -213,188 +209,6 @@ public class CrystalOfRepairingListener implements Listener {
 		materials.add(Material.FISHING_ROD);
 		materials.add(Material.CARROT_STICK);
 		
-		if (Bukkit.getPluginManager().isPluginEnabled("EnderChestPlus")) {
-			if (this.plugin.ECPcfg.getBoolean("use") == true) {
-				if (chestUtil.playerHasFileConfig(p.getName())) {
-					chestUtil.loadToMemory(p.getName());
-					Inventory ECP = EnderChestPlusSupporter.getInventoryObject(p.getName());
-
-						if (p.getInventory().contains(SlimefunItem.ENDER_CRYSTAL_OF_REPAIRING) || p.getEnderChest().contains(SlimefunItem.ENDER_CRYSTAL_OF_REPAIRING) || ECP.contains(SlimefunItem.ENDER_CRYSTAL_OF_REPAIRING)) {
-							
-							for(int i = 0; i < 46; i++) {
-								try {
-									if (p.getItemInHand().getType() == materials.get(i)) {
-										if (new Random().nextInt(1000) < delayENDER) {
-											short j = p.getItemInHand().getDurability();
-											if (j != 0) {
-												j--;
-												p.getItemInHand().setDurability(j);
-											}
-										}
-									}
-									if (p.getInventory().getHelmet().getType() == materials.get(i)) {
-										if (new Random().nextInt(1000) < delayENDER) {
-											short j = p.getInventory().getHelmet().getDurability();
-											if ( j != 0) {
-												j--;
-												p.getInventory().getHelmet().setDurability(j);
-											}
-										}
-									}
-									if (p.getInventory().getChestplate().getType() == materials.get(i)) {
-										if (new Random().nextInt(1000) < delayENDER) {
-											short j = p.getInventory().getChestplate().getDurability();
-											if (j != 0) {
-												j--;
-												p.getInventory().getChestplate().setDurability(j);
-											}
-										}
-									}
-									if (p.getInventory().getLeggings().getType() == materials.get(i)) {
-										if (new Random().nextInt(1000) < delayENDER) {
-											short j = p.getInventory().getLeggings().getDurability();
-											if (j != 0) {
-												j--;
-												p.getInventory().getLeggings().setDurability(j);
-											}
-										}
-									}
-									if (p.getInventory().getBoots().getType() == materials.get(i)) {
-										if (new Random().nextInt(1000) < delayENDER) {
-											short j = p.getInventory().getBoots().getDurability();
-											if (j != 0) {
-												j--;
-												p.getInventory().getBoots().setDurability(j);
-											}
-										}
-									}
-								}
-								catch(Exception x) {
-									
-								}
-							}
-					}
-					
-				}
-				else {
-					if (p.getInventory().contains(SlimefunItem.ENDER_CRYSTAL_OF_REPAIRING) || p.getEnderChest().contains(SlimefunItem.ENDER_CRYSTAL_OF_REPAIRING)) {
-						
-						
-						for(int i = 0; i < 46; i++) {
-							try {
-								if (p.getItemInHand().getType() == materials.get(i)) {
-									if (new Random().nextInt(1000) < delayENDER) {
-										short j = p.getItemInHand().getDurability();
-										if (j != 0) {
-											j--;
-											p.getItemInHand().setDurability(j);
-										}
-									}
-								}
-								if (p.getInventory().getHelmet().getType() == materials.get(i)) {
-									if (new Random().nextInt(1000) < delayENDER) {
-										short j = p.getInventory().getHelmet().getDurability();
-										if ( j != 0) {
-											j--;
-											p.getInventory().getHelmet().setDurability(j);
-										}
-									}
-								}
-								if (p.getInventory().getChestplate().getType() == materials.get(i)) {
-									if (new Random().nextInt(1000) < delayENDER) {
-										short j = p.getInventory().getChestplate().getDurability();
-										if (j != 0) {
-											j--;
-											p.getInventory().getChestplate().setDurability(j);
-										}
-									}
-								}
-								if (p.getInventory().getLeggings().getType() == materials.get(i)) {
-									if (new Random().nextInt(1000) < delayENDER) {
-										short j = p.getInventory().getLeggings().getDurability();
-										if (j != 0) {
-											j--;
-											p.getInventory().getLeggings().setDurability(j);
-										}
-									}
-								}
-								if (p.getInventory().getBoots().getType() == materials.get(i)) {
-									if (new Random().nextInt(1000) < delayENDER) {
-										short j = p.getInventory().getBoots().getDurability();
-										if (j != 0) {
-											j--;
-											p.getInventory().getBoots().setDurability(j);
-										}
-									}
-								}
-							}
-							catch(Exception x) {
-								
-							}
-						}
-				}
-				}
-			}
-			else {
-				if (p.getInventory().contains(SlimefunItem.ENDER_CRYSTAL_OF_REPAIRING) || p.getEnderChest().contains(SlimefunItem.ENDER_CRYSTAL_OF_REPAIRING)) {
-					
-					
-					for(int i = 0; i < 46; i++) {
-						try {
-							if (p.getItemInHand().getType() == materials.get(i)) {
-								if (new Random().nextInt(1000) < delayENDER) {
-									short j = p.getItemInHand().getDurability();
-									if (j != 0) {
-										j--;
-										p.getItemInHand().setDurability(j);
-									}
-								}
-							}
-							if (p.getInventory().getHelmet().getType() == materials.get(i)) {
-								if (new Random().nextInt(1000) < delayENDER) {
-									short j = p.getInventory().getHelmet().getDurability();
-									if ( j != 0) {
-										j--;
-										p.getInventory().getHelmet().setDurability(j);
-									}
-								}
-							}
-							if (p.getInventory().getChestplate().getType() == materials.get(i)) {
-								if (new Random().nextInt(1000) < delayENDER) {
-									short j = p.getInventory().getChestplate().getDurability();
-									if (j != 0) {
-										j--;
-										p.getInventory().getChestplate().setDurability(j);
-									}
-								}
-							}
-							if (p.getInventory().getLeggings().getType() == materials.get(i)) {
-								if (new Random().nextInt(1000) < delayENDER) {
-									short j = p.getInventory().getLeggings().getDurability();
-									if (j != 0) {
-										j--;
-										p.getInventory().getLeggings().setDurability(j);
-									}
-								}
-							}
-							if (p.getInventory().getBoots().getType() == materials.get(i)) {
-								if (new Random().nextInt(1000) < delayENDER) {
-									short j = p.getInventory().getBoots().getDurability();
-									if (j != 0) {
-										j--;
-										p.getInventory().getBoots().setDurability(j);
-									}
-								}
-							}
-						}
-						catch(Exception x) {
-							
-						}
-					}
-			}
-			}
-		}
-		else {
 			if (p.getInventory().contains(SlimefunItem.ENDER_CRYSTAL_OF_REPAIRING) || p.getEnderChest().contains(SlimefunItem.ENDER_CRYSTAL_OF_REPAIRING)) {
 				
 				
@@ -450,7 +264,6 @@ public class CrystalOfRepairingListener implements Listener {
 						
 					}
 				}
-		}
 		}
 	}
 	
