@@ -89,7 +89,6 @@ items:
   OreWasher: true
   IronChunk: true
   GoldChunk: true
-  MysteriousEnchanter: true
 researches:
   Walking sticks: true
   Portable Crafter: true
