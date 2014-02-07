@@ -5,12 +5,10 @@ import java.util.Random;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Color;
-import org.bukkit.Effect;
 import org.bukkit.GameMode;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.Sound;
-import org.bukkit.block.BlockFace;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.meta.ItemMeta;
@@ -245,19 +243,6 @@ public class RunningTimer {
 							if (p.getInventory().getChestplate().getItemMeta().hasDisplayName()) {
 								if (p.getInventory().getChestplate().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.BLUE + "" + ChatColor.BOLD + "Uber" + ChatColor.GOLD + "" + ChatColor.BOLD + "Chestplate")) {
 									
-									if (p.getInventory().getChestplate().getItemMeta().getLore().contains(ChatColor.GRAY + "Glider")) {
-											if(p.getLocation().getBlock().getRelative(BlockFace.DOWN).getType().equals(Material.AIR) && p.getLocation().getBlock().getRelative(0, -2, 0).getType().equals(Material.AIR)){
-												if(p.getLocation().getPitch() > -5){
-													if(p.getLocation().getPitch() < 5){
-														p.setVelocity(p.getLocation().getDirection().multiply(0.2));
-													}else{
-														p.setVelocity(p.getLocation().getDirection().multiply(0.2));
-													}
-													p.setFallDistance(0F);
-												}
-										}
-									}
-									
 									if (p.getInventory().getChestplate().getItemMeta().getLore().contains(ChatColor.GRAY + "Resistance")) {
 										p.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 1200, 5));
 									}
@@ -266,19 +251,6 @@ public class RunningTimer {
 									}
 									if (p.getInventory().getChestplate().getItemMeta().getLore().contains(ChatColor.GRAY + "Fast Digging")) {
 										p.addPotionEffect(new PotionEffect(PotionEffectType.FAST_DIGGING, 1200, 3));
-									}
-									if (p.getInventory().getChestplate().getItemMeta().getLore().contains(ChatColor.GRAY + "Jetpack")) {
-										if (p.isSneaking()) {
-											p.getWorld().playSound(p.getLocation(), Sound.EXPLODE, (float) 0.25, 1);
-											p.getWorld().playEffect(p.getLocation(), Effect.SMOKE, 1, 1);
-											Location l = p.getLocation();
-											l.setPitch(1000);
-										       Vector d = l.getDirection();
-										       d.multiply(0.55);
-										       p.setVelocity(d);
-										       
-										       p.setFallDistance(0F);
-										}
 									}
 								}
 							}

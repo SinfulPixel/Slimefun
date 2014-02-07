@@ -55,6 +55,31 @@ public class UberArmorListener implements Listener{
 							            }
 							        }
 								}
+							 if (p.getInventory().getChestplate().getItemMeta().getLore().contains(ChatColor.GRAY + "Glider")) {
+									if(p.getLocation().getBlock().getRelative(BlockFace.DOWN).getType().equals(Material.AIR) && p.getLocation().getBlock().getRelative(0, -2, 0).getType().equals(Material.AIR)){
+										if(p.getLocation().getPitch() > -5){
+											if(p.getLocation().getPitch() < 5){
+												p.setVelocity(p.getLocation().getDirection().multiply(0.2));
+											}else{
+												p.setVelocity(p.getLocation().getDirection().multiply(0.2));
+											}
+											p.setFallDistance(0F);
+										}
+								}
+							}
+							 if (p.getInventory().getChestplate().getItemMeta().getLore().contains(ChatColor.GRAY + "Jetpack")) {
+									if (p.isSneaking()) {
+										p.getWorld().playSound(p.getLocation(), Sound.EXPLODE, (float) 0.25, 1);
+										p.getWorld().playEffect(p.getLocation(), Effect.SMOKE, 1, 1);
+										Location l = p.getLocation();
+										l.setPitch(1000);
+									       Vector d = l.getDirection();
+									       d.multiply(0.55);
+									       p.setVelocity(d);
+									       
+									       p.setFallDistance(0F);
+									}
+								}
 						}
 					}
 				}
