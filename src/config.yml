@@ -1,0 +1,330 @@
+
+##########################################################################
+##                                                                      ##
+##                             Slimefun                                 ##
+##                              Config                                  ##
+##                                                                      ##
+##########################################################################
+options:
+  enable-researching: false
+  auto-update: true
+items:
+  NanoPickaxe: true
+  iTome: false
+  BookoTeleporting: false
+  Dustbin: true
+  Enderbackpack: true
+  Grandpaswalkingstick: true
+  Grandmaswalkingstick: true
+  pEnchanter: true
+  pCrafter: true
+  SuperMeat: true
+  QuantumHelmet: true
+  QuantumChestplate: true
+  QuantumLeggings: true
+  QuantumBoots: true
+  NanoHelmet: true
+  NanoChestplate: true
+  NanoLeggings: true
+  NanoBoots: true
+  NanoHoe: true
+  Nanosaber: true
+  ToolBench: true
+  SlimeHelmet: true
+  SlimeChestplate: true
+  SlimeLeggings: true
+  SlimeBoots: true
+  glowstonehelmet: true
+  glowstonechestplate: true
+  glowstoneleggings: true
+  glowstoneboots: true
+  simplecircuitboard: true
+  pToolbench: true
+  pBookBinder: true
+  tomeofhomeland: true
+  steelingot: true
+  advancedcircuitboard: true
+  steelthruster: true
+  jetpack: true
+  pJukebox: true
+  guide: true
+  guide2: true
+  nanoaxel: true
+  magic-eye-of-ender: true
+  EnderHelmet: true
+  EnderChestplate: true
+  EnderLeggings: true
+  EnderBoots: true
+  parachute: true
+  MagicSugar: true
+  PartiallyGoldenApple: true
+  ubermeat: true
+  magicallump1: true
+  magicallump2: true
+  magicallump3: true
+  CrystalOfRepairing: true
+  enderlump1: true
+  enderlump2: true
+  enderlump3: true
+  EnderCrystalOfRepairing: true
+  Sword-of-Beheading: true
+  Emerald-of-Repairing: true
+  MultiTool: true
+  UberHelmet: true
+  UberChestplate: true
+  UberLeggings: true
+  UberBoots: true
+  Smeltery: true
+  SteelPlate: true
+  chain: true
+  fortune-cookie: true
+  hook: true
+  grappling-hook: true
+  Diamond-of-Duplicating: false
+  BookBinder: true
+  SlimeGem: true
+  InkOfKnowledge: true
+  MinersCompass: true
+  NanoFocus: true
+  OreWasher: true
+  IronChunk: true
+  GoldChunk: true
+  MysteriousEnchanter: true
+researches:
+  Walking sticks: true
+  Portable Crafter: true
+  Super Meat: true
+  Fortune Cookie: true
+  Portable Enchanter: true
+  Portable Dustbin: true
+  Armor Crafting: true
+  Glowstone armor: true
+  Lumps and Magic: true
+  Ender Backpack: true
+  Magic Eye of Ender: true
+  Ender armor: true
+  Partially Golden Apple: true
+  Magic Sugar: true
+  Uber Meat: true
+  Slime armor: true
+  Sword of Beheading: true
+  Portable Book Binder: true
+  Portable Tool Bench: true
+  Portable Jukebox: true
+  Tome of Homeland: true
+  Invisible Tome: false
+  Book o Teleporting: false
+  Electric Work: true
+  Advanced Circuit Board: true
+  Ore Washing: true
+  Hot Melting: true
+  Steel Ingot: true
+  Miners Compass: true
+  Steel Thruster: true
+  Steel Plate: true
+  Parachute: true
+  Chain: true
+  Hook: true
+  Grappling Hook: true
+  Jetpack: true
+  Multi Tool: true
+  Emerald of Repairing: true
+  Crystal of Repairing: true
+  Ender Crystal of Repairing: true
+  Mysterious Enchanting: true
+  Diamond of Duplicating: false
+  Nano Tools: true
+  Nano Pickaxe: true
+  Nano Axel: true
+  Nano Saber: true
+  Nano armor: true
+  Quantum armor: true
+  Uber armor: true
+  Uber Upgrade Cores: true
+structures:
+  huts: true
+generation-chance:
+  huts:
+    in: 1
+    of: 1200
+loot-in-chest:
+  hut:
+    - 264
+    - 265
+    - 266
+    - magicallump1
+    - magicallump2
+    - magicallump3
+    - SlimeGem
+    - SlimeGem
+    - SlimeGem
+    - grappling-hook
+    - Emerald-of-Repairing
+    - enderlump1
+    - enderlump2
+    - enderlump3
+    - magic-eye-of-ender
+    - pJukebox
+    - SlimeBoots
+    - glowstoneleggings
+mobs:
+  villagers:
+    merchant: true
+    quest: true
+    blacksmith: true
+quests:
+  message:
+  - Hey my house is a bit too small, can you bring me 20 logs, so I can expand it?
+  - Oouuh, I'm so hungry, 8 breads would saturate me
+  - Oh nooo, somebody has stolen my gold treasure, can I have a golden sword from you, to kill these robbers?
+  - I'm a little dizzy, do you have a Water Bottle for me?
+  - Huh, recently I saw a witch, can you give me 10 fences to build a barricade?
+  - Hey, I'm cold, can I have a leather chestplate please?
+  - Hi, I'm about to craft myself a NanoSuit, do you have a Nether star?
+  - Oooh, I'm hungry, can you give me 10 Steaks?
+  - My room looks dark, do you have 5 Glowstones for me?
+  - It's so dark here, I need 20 Glass to bring light into this room!
+  - I'm bored, can you write me a book please?
+  - I wanna dig a hole, can I have 1 Iron shovel from you?
+  needed-item:
+  - 17
+  - 297
+  - 283
+  - 373
+  - 85
+  - 299
+  - 399
+  - 364
+  - 89
+  - 20
+  - 387
+  - 256
+  needed-amount:
+  - 20
+  - 8
+  - 1
+  - 1
+  - 10
+  - 1
+  - 1
+  - 10
+  - 5
+  - 25
+  - 1
+  - 1
+  amount-of-slime-gems-rewarded:
+  - 1
+  - 2
+  - 1
+  - 1
+  - 1
+  - 1
+  - 20
+  - 2
+  - 2
+  - 1
+  - 1
+  - 1
+merchant:
+  offers:
+    - grappling-hook
+    - MultiTool
+    - ubermeat
+    - jetpack
+    - steelingot
+    - magic-eye-of-ender
+    - emerald-of-repairing
+    - pJukebox
+    - MinersCompass
+    - InkOfKnowledge
+  prices:
+    grappling-hook: 15
+    MultiTool: 25
+    ubermeat: 1
+    jetpack: 20
+    steelingot: 6
+    magic-eye-of-ender: 12
+    emerald-of-repairing: 35
+    pJukebox: 7
+    MinersCompass: 16
+    InkOfKnowledge: 1
+recipes:
+  3paper=>1book: true
+  1quartzblock=>4quartz: true
+  1wool=>4string: true
+  4stonebricks=>4chiseledstonebricks: true
+  2blazepowder=>1blazerod: true
+  enable-crafting-iron-horse-armor: true
+  enable-crafting-gold-horse-armor: true
+  enable-crafting-diamond-horse-armor: true
+  enable-crafting-saddle: true
+  allow-crafting-chainmail-armor-with-chains: true
+  allow-smelting-Rotten-flesh-to-leather-in-smeltery: true
+  allow-washing-diamond-ores: true
+durability:
+  infinite-nanoaxel-durability: false
+  infinite-nanosaber-durability: false
+  infinite-nanohoe-durability: false
+  infinite-nanopickaxe-durability: false
+  infinite-nanosuit-durability: false
+  infinite-quantumarmor-durability: true
+  infinite-uberarmor-durability: true
+armor:
+update-second-delay: 2
+  nano:
+    can-fly: false
+    fly-speed: 1
+    speed: 4
+    jump: 3
+    regeneration: 1
+  quantum:
+    can-fly: false
+    fly-speed: 1
+    speed: 8
+    jump: 6
+    regeneration: 2
+    strength: 1
+  uber:
+    upgrades:
+      glider: true
+      jetpack: true
+      KineticLegs: true
+      jumpassist: true
+      scuba: true
+      nightvision: true
+      longfall: true
+      enderfake: true
+      climb: true
+      repair: true
+      disco: true
+      ArrowReflector: true
+      fire-resistance: true
+      regeneration: true
+      resistance: true
+      absorption: true
+      milk-module: true
+      strength: true
+      double-jump: true
+      fast-digging: true
+      feeder: true
+craftable-items:
+  nanosuit-is-craftable: true
+  quantumarmor-is-craftable: true
+  uberarmor-is-craftable: true
+  nanosaber-is-craftable: true
+  nanopickaxe-is-craftable: true
+  nanohoe-is-craftable: true
+  nanoaxel-is-craftable: true
+drop-chance:
+  beheading-chance:
+    wither-skeleton: 40
+    skeleton: 70
+    zombie: 70
+    creeper: 70
+    player: 100
+world-blacklist:
+  enabled: false
+  list:
+  - PvPworld
+  - FarmingWorld
+  - Heaven
