@@ -243,7 +243,8 @@ public class MultiToolListener implements Listener {
 		  }
 	  }
 	  
-	  @EventHandler
+	  @SuppressWarnings("deprecation")
+	@EventHandler
 		public void onLand(ProjectileHitEvent e) {
 			if (e.getEntity() instanceof Arrow) {
 				if (e.getEntity().getShooter() instanceof Player) {
@@ -291,7 +292,8 @@ public class MultiToolListener implements Listener {
 			}
 		}
 	  
-	  @EventHandler
+	  @SuppressWarnings("deprecation")
+	@EventHandler
 		public void onDamage(EntityDamageByEntityEvent e) {
 			if (e.getDamager() instanceof Arrow) {
 				Arrow a = (Arrow) e.getDamager();
