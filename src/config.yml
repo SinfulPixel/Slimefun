@@ -6,7 +6,8 @@
 ##                                                                      ##
 ##########################################################################
 options:
-  enable-researching: false
+  enable-researching: true
+  research-cost: 1
   auto-update: true
 items:
   NanoPickaxe: true
@@ -89,57 +90,57 @@ items:
   OreWasher: true
   IronChunk: true
   GoldChunk: true
-researches:
-  Walking sticks: true
-  Portable Crafter: true
-  Super Meat: true
-  Fortune Cookie: true
-  Portable Enchanter: true
-  Portable Dustbin: true
-  Armor Crafting: true
-  Glowstone armor: true
-  Lumps and Magic: true
-  Ender Backpack: true
-  Magic Eye of Ender: true
-  Ender armor: true
-  Partially Golden Apple: true
-  Magic Sugar: true
-  Uber Meat: true
-  Slime armor: true
-  Sword of Beheading: true
-  Portable Book Binder: true
-  Portable Tool Bench: true
-  Portable Jukebox: true
-  Tome of Homeland: true
-  Invisible Tome: false
-  Book o Teleporting: false
-  Electric Work: true
-  Advanced Circuit Board: true
-  Ore Washing: true
-  Hot Melting: true
-  Steel Ingot: true
-  Miners Compass: true
-  Steel Thruster: true
-  Steel Plate: true
-  Parachute: true
-  Chain: true
-  Hook: true
-  Grappling Hook: true
-  Jetpack: true
-  Multi Tool: true
-  Emerald of Repairing: true
-  Crystal of Repairing: true
-  Ender Crystal of Repairing: true
-  Mysterious Enchanting: true
-  Diamond of Duplicating: false
-  Nano Tools: true
-  Nano Pickaxe: true
-  Nano Axel: true
-  Nano Saber: true
-  Nano armor: true
-  Quantum armor: true
-  Uber armor: true
-  Uber Upgrade Cores: true
+enabled-researches:
+- Walking sticks
+- Portable Crafter
+- Super Meat
+- Fortune Cookie
+- Portable Enchanter
+- Portable Dustbin
+- Armor Crafting
+- Glowstone armor
+- Lumps and Magic
+- Ender Backpack
+- Magic Eye of Ender
+- Ender armor
+- Partially Golden Apple
+- Magic Sugar
+- Uber Meat
+- Slime armor
+- Sword of Beheading
+- Portable Book Binder
+- Portable Tool Bench
+- Portable Jukebox
+- Tome of Homeland
+- Invisible Tome
+- Book o Teleporting
+- Electric Work
+- Advanced Circuit Board
+- Ore Washing
+- Hot Melting
+- Steel Ingot
+- Miners Compass
+- Steel Thruster
+- Steel Plate
+- Parachute
+- Chain
+- Hook
+- Grappling Hook
+- Jetpack
+- Multi Tool
+- Emerald of Repairing
+- Crystal of Repairing
+- Ender Crystal of Repairing
+- Mysterious Enchanting
+- Diamond of Duplicating
+- Nano Tools
+- Nano Pickaxe
+- Nano Axel
+- Nano Saber
+- Nano armor
+- Quantum armor
+- Uber armor
+- Uber Upgrade Cores
 structures:
   huts: true
 generation-chance:

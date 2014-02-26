@@ -91,12 +91,10 @@ public class BookBinderListener implements Listener {
 			  ItemStack book = new ItemStack(Material.BOOK_AND_QUILL);
 			  ItemMeta bim = book.getItemMeta();
 			  List<String> bll = new ArrayList<String>();
-			  bll.add(ChatColor.BLUE + "Click " + ChatColor.GREEN + "to unlock items");
+			  bll.add(ChatColor.BLUE + "Click " + ChatColor.GREEN + "to unlock new Secrets");
 			  bll.add("");
-			  bll.add(ChatColor.BLUE + "Materials needed:");
-			  bll.add(ChatColor.BLUE + "1 Paper");
-			  bll.add(ChatColor.BLUE + "1 Feather");
-			  bll.add(ChatColor.BLUE + "1 Ink of Knowledge");
+			  bll.add(ChatColor.BLUE + "Research Requirement:");
+			  bll.add(ChatColor.BLUE + "" + plugin.getConfig().getInt("options.research-cost") + " Levels of XP");
 			  bim.setLore(bll);
 			  book.setItemMeta(bim);
 			  book = Setname(book, ChatColor.GOLD + "Research Notes", "");
@@ -280,7 +278,8 @@ public class BookBinderListener implements Listener {
 	 					  e.setCancelled(true);
 	 					  
 	 					  if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GOLD + "Research Notes")) {
-	 						  if (p.getInventory().contains(Material.FEATHER, 1) && p.getInventory().contains(Material.PAPER, 1) && p.getInventory().containsAtLeast(SlimefunItem.INK_OF_KNOWLEDGE, 1)) {
+	 						  int level = plugin.getConfig().getInt("research-cost");
+	 						  if (p.getLevel() >= level) {
 	 							  
 	 							  List<String> Researches = PlayerResearch.getResearchNames();
 	 							  for (int i = 0; i < Researches.size() + 1; i++) {
@@ -291,9 +290,7 @@ public class BookBinderListener implements Listener {
 	 								 else {
 	 									if (!PlayerResearch.hasResearched(p, Researches.get(i))) {
 		 									  
-		 									  PlayerInventory.removeItemIgnoringMeta(p, Material.FEATHER, 1);
-		 									  PlayerInventory.removeItemIgnoringMeta(p, Material.PAPER, 1);
-		 									  PlayerInventory.removeItem(p, SlimefunItem.INK_OF_KNOWLEDGE, 1);
+	 										  p.setLevel(p.getLevel() - level);
 		 									  
 		 									  PlayerResearch.research(p, Researches.get(i));
 		 									  messages.Researched(p, Researches.get(i));

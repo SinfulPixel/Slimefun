@@ -31,17 +31,12 @@ public class PlayerResearch {
 		File Researches = new File("data-storage/Slimefun/Researches", p.getName() + ".yml");
 		FileConfiguration rcfg = YamlConfiguration.loadConfiguration(Researches);
 		
-		if (plugin.getConfig().contains("researches." + research)) {
-			if (plugin.getConfig().getBoolean("researches." + research)) {
+		if (plugin.getConfig().getStringList("enabled-researches").contains(research)) {
 				if (rcfg.contains(p.getName() + "." + research)) {
 					if (rcfg.getBoolean(p.getName() + "." + research)) {
 						b = true;
 					}
 				}
-			}
-			else {
-				b = true;
-			}
 		}
 		else {
 			if (rcfg.contains(p.getName() + "." + research)) {
