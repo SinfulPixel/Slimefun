@@ -311,5 +311,8 @@ public class Guide {
 		if (plugin.getConfig().getBoolean("items.MysteriousEnchanter")) {
 			Slimefun.registerItem(SlimefunItem.MYSTERIOUS_ENCHANTER, Category.MagicUtils(), GuideItems.MysteriousEnchanter(), RecipeType.MULTIBLOCK, SlimefunItem.MYSTERIOUS_ENCHANTER);
 		}
+		if (plugin.getConfig().getBoolean("items.GoldenFeather")) {
+			Slimefun.registerItem(SlimefunItem.GOLDEN_FEATHER, Category.MagicUtils(), GuideItems.GFRecipe(), RecipeType.SHAPED_RECIPE, SlimefunItem.GOLDEN_FEATHER);
+		}
 	}
 }

@@ -1,9 +1,7 @@
 package me.mrCookieSlime.Slimefun.Setup;
 
 import me.mrCookieSlime.Slimefun.startup;
-import me.mrCookieSlime.Slimefun.AddonHandler.Slimefun;
 import me.mrCookieSlime.Slimefun.Commands.CommandAliases;
-import me.mrCookieSlime.Slimefun.Inventories.SlimefunInventory;
 import me.mrCookieSlime.Slimefun.Items.SlimefunGuide;
 import me.mrCookieSlime.Slimefun.Listeners.VillagerListener;
 import me.mrCookieSlime.Slimefun.Listeners.Armor.EnderArmorListener;
@@ -70,8 +68,6 @@ import me.mrCookieSlime.Slimefun.Listeners.UberUpgrades.ResistanceUpgrade;
 import me.mrCookieSlime.Slimefun.Listeners.UberUpgrades.ScubaUpgrade;
 import me.mrCookieSlime.Slimefun.Listeners.UberUpgrades.StrengthUpgrade;
 import me.mrCookieSlime.Slimefun.WorldGenerators.HutGenerator;
-import me.mrCookieSlime.Slimefun.research.CraftingBlocker;
-import me.mrCookieSlime.Slimefun.research.PlayerResearch;
 
 public class Classes {
 	
@@ -80,12 +76,6 @@ public class Classes {
 	public static void setup(startup instance) {
 		
 		plugin = instance;
-		
-		new PlayerResearch(plugin);
-		new CraftingBlocker(plugin);
-		
-		new Slimefun(plugin);
-		new SlimefunInventory(plugin);
 		
 		new WelcomeListener(plugin);
 		new NanoSuitListener(plugin);

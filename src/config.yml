@@ -49,7 +49,6 @@ items:
   jetpack: true
   pJukebox: true
   guide: true
-  guide2: true
   nanoaxel: true
   magic-eye-of-ender: true
   EnderHelmet: true
@@ -90,6 +89,7 @@ items:
   OreWasher: true
   IronChunk: true
   GoldChunk: true
+  GoldenFeather: true
 researches:
   Walking sticks: true
   Portable Crafter: true
@@ -132,6 +132,7 @@ researches:
   Crystal of Repairing: true
   Ender Crystal of Repairing: true
   Mysterious Enchanting: true
+  Golden Feather: true
   Diamond of Duplicating: false
   Nano Tools: true
   Nano Pickaxe: true

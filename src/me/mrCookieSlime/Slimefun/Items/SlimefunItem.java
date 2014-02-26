@@ -115,4 +115,5 @@ public class SlimefunItem {
 		public static ItemStack IRON_CHUNK = ItemDictionary.getItem("IronChunk");
 		public static ItemStack GOLD_CHUNK = ItemDictionary.getItem("GoldChunk");
 		public static ItemStack MYSTERIOUS_ENCHANTER = ItemDictionary.getItem("MysteriousEnchanter");
+		public static ItemStack GOLDEN_FEATHER = ItemDictionary.getItem("GoldenFeather");
 }

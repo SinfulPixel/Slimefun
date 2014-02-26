@@ -169,6 +169,9 @@ public class Recipes {
 			if (plugin.getConfig().getBoolean("items.NanoFocus")) {
 				NanoFocusRecipe();
 			}
+			if (plugin.getConfig().getBoolean("items.GoldenFeather")) {
+				GoldenFeatherRecipe();
+			}
 			
 		}
 	  
@@ -467,7 +470,7 @@ public class Recipes {
 		}
 		public static void StonebrickRecipe() {
 			ItemStack brick = new ItemStack(Material.SMOOTH_BRICK, 4);
-			brick = setDurability(brick, 3);
+			brick.setDurability((short) 3);
 			ShapelessRecipe r = new ShapelessRecipe(brick);
 			r.addIngredient(Material.SMOOTH_BRICK);
 			r.addIngredient(Material.SMOOTH_BRICK);
@@ -733,8 +736,12 @@ public class Recipes {
 			r.setIngredient('a', Material.APPLE);
 			plugin.getServer().addRecipe(r);
 		}
-		public static ItemStack setDurability(ItemStack item, int i) {
-			item.setDurability((short) i);
-			return item;
+		public static void GoldenFeatherRecipe() {
+			ShapedRecipe r = new ShapedRecipe(SlimefunItem.GOLDEN_FEATHER);
+			r.shape(new String[] { "g g", "lfl", "g g" });
+			r.setIngredient('f', Material.FEATHER);
+			r.setIngredient('l', Material.GOLD_NUGGET, 3);
+			r.setIngredient('g', Material.GOLD_BLOCK);
+			plugin.getServer().addRecipe(r);
 		}
 }

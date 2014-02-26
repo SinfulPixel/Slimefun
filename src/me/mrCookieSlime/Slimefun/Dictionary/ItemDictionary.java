@@ -686,6 +686,19 @@ public class ItemDictionary {
 			item.setType(Material.BOOKSHELF);
 			item = ItemModifier.Setname(item, ChatColor.GOLD + "Mysterious Enchanter");
 		}
+		if (ConfigName.equalsIgnoreCase("GoldenFeather")) {
+			item.setType(Material.FEATHER);
+			item = ItemModifier.Setname(item, ChatColor.GOLD + "" + ChatColor.BOLD + "Golden Feather");
+			item = ItemModifier.setDurability(item, 1);
+			List<String> ll = new ArrayList<String>();
+			ll.add("");
+			ll.add(ChatColor.GREEN + "Saves you from Fall Damage");
+			ll.add("");
+			ll.add(ChatColor.DARK_RED + "BUT: Your stomach will empty a bit");
+			ItemMeta im = item.getItemMeta();
+			im.setLore(ll);
+			item.setItemMeta(im);
+		}
 		return item;
 	}
 }

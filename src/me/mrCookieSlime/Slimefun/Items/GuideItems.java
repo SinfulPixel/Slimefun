@@ -1127,6 +1127,20 @@ public class GuideItems {
 		return items;
 	}
 	
+	public static List<ItemStack> GFRecipe(){
+		List<ItemStack> items = new ArrayList<ItemStack>();
+		items.add(new ItemStack(Material.GOLD_BLOCK));
+		items.add(null);
+		items.add(new ItemStack(Material.GOLD_BLOCK));
+		items.add(SlimefunItem.MAGICAL_LUMP_3);
+		items.add(new ItemStack(Material.LEATHER));
+		items.add(SlimefunItem.MAGICAL_LUMP_3);
+		items.add(new ItemStack(Material.GOLD_BLOCK));
+		items.add(null);
+		items.add(new ItemStack(Material.GOLD_BLOCK));
+		return items;
+	}
+	
 	public static ItemStack InkOutput() {
 		ItemStack item = SlimefunItem.INK_OF_KNOWLEDGE.clone();
 		item.setAmount(16);
