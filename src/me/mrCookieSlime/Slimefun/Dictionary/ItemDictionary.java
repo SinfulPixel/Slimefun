@@ -694,7 +694,9 @@ public class ItemDictionary {
 			ll.add("");
 			ll.add(ChatColor.GREEN + "Saves you from Fall Damage");
 			ll.add("");
-			ll.add(ChatColor.DARK_RED + "BUT: Your stomach will empty a bit");
+			ll.add(ChatColor.DARK_RED + "But it costs some Hunger");
+			ll.add(ChatColor.DARK_RED + "If you have not enough Hunger");
+			ll.add(ChatColor.DARK_RED + "this won't save you anymore");
 			ItemMeta im = item.getItemMeta();
 			im.setLore(ll);
 			item.setItemMeta(im);

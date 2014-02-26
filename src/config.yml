@@ -8,6 +8,7 @@
 options:
   enable-researching: true
   research-cost: 1
+  GoldenFeather-hunger-cost: 2
   auto-update: true
 items:
   NanoPickaxe: true
