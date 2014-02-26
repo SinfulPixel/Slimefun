@@ -30,6 +30,7 @@ import me.mrCookieSlime.Slimefun.Listeners.Items.CrystalOfRepairingListener;
 import me.mrCookieSlime.Slimefun.Listeners.Items.DiamondOfDuplicatingListener;
 import me.mrCookieSlime.Slimefun.Listeners.Items.EmeraldOfRepairingListener;
 import me.mrCookieSlime.Slimefun.Listeners.Items.EnderBackpackListener;
+import me.mrCookieSlime.Slimefun.Listeners.Items.GoldenFeatherListener;
 import me.mrCookieSlime.Slimefun.Listeners.Items.MagicEnderEyeListener;
 import me.mrCookieSlime.Slimefun.Listeners.Items.MinersCompassListener;
 import me.mrCookieSlime.Slimefun.Listeners.Items.NanoAxelListener;
@@ -258,6 +259,9 @@ public class Classes {
 		}
 		if (plugin.getConfig().getBoolean("items.OreWasher")) {
 			new OreWasherListener(plugin);
+		}
+		if (plugin.getConfig().getBoolean("items.GoldenFeather")) {
+			new GoldenFeatherListener(plugin);
 		}
 	}
 
