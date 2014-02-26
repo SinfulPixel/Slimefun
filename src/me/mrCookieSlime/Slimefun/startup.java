@@ -7,6 +7,7 @@ import me.mrCookieSlime.Slimefun.Messages.messages;
 import me.mrCookieSlime.Slimefun.Setup.Classes;
 import me.mrCookieSlime.Slimefun.Setup.Commands;
 import me.mrCookieSlime.Slimefun.Setup.Config;
+import me.mrCookieSlime.Slimefun.Setup.Folder;
 import me.mrCookieSlime.Slimefun.Setup.FortuneCookieMessages;
 import me.mrCookieSlime.Slimefun.Setup.Guide;
 import me.mrCookieSlime.Slimefun.Setup.Informations;
@@ -27,6 +28,8 @@ public class startup extends JavaPlugin {
 	@Override
 	public void onEnable() {
 		AutoUpdate();
+		
+		Folder.cleanup();
 		
 		new PlayerResearch(this);
 		new CraftingBlocker(this);
