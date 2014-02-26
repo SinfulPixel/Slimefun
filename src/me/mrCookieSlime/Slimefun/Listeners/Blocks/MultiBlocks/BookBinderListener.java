@@ -278,7 +278,7 @@ public class BookBinderListener implements Listener {
 	 					  e.setCancelled(true);
 	 					  
 	 					  if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GOLD + "Research Notes")) {
-	 						  int level = plugin.getConfig().getInt("research-cost");
+	 						  int level = plugin.getConfig().getInt("options.research-cost");
 	 						  if (p.getLevel() >= level) {
 	 							  
 	 							  List<String> Researches = PlayerResearch.getResearchNames();
