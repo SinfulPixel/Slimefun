@@ -1133,7 +1133,7 @@ public class GuideItems {
 		items.add(null);
 		items.add(new ItemStack(Material.GOLD_BLOCK));
 		items.add(SlimefunItem.MAGICAL_LUMP_3);
-		items.add(new ItemStack(Material.LEATHER));
+		items.add(new ItemStack(Material.FEATHER));
 		items.add(SlimefunItem.MAGICAL_LUMP_3);
 		items.add(new ItemStack(Material.GOLD_BLOCK));
 		items.add(null);
