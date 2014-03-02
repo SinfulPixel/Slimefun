@@ -6,9 +6,6 @@ website: http://dev.bukkit.org/profiles/mrCookieSlime/bukkit-plugins/
 main: me.mrCookieSlime.Slimefun.startup
 
 commands:
-  milk:
-       description: Removes all PotionEffects
-       usage: /milk <Player>
   slimefun:
        description: Shows the Slimefun commands
        usage: /slimefun <argument>
@@ -16,18 +13,6 @@ commands:
        description: Alias for /slimefun
        usage: /sf <argument>
 permissions:
-  slimefun.milk.*:
-       description: Let's you remove Potion Effects from all people
-       default: op
-       children:
-         slimefun.milk.self: true
-         slimefun.milk.other: true
-  slimefun.milk.self:
-       description: Let's you remove Potion Effects from you
-       default: true
-  slimefun.milk.other:
-       description: Let's you remove Potion Effects from other people
-       default: op
   slimefun.port:
        description: Can port to another Player
        default: op
