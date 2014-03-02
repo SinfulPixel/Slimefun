@@ -6,6 +6,7 @@ import java.io.IOException;
 import me.mrCookieSlime.Slimefun.startup;
 import me.mrCookieSlime.Slimefun.Items.SlimefunItem;
 import me.mrCookieSlime.Slimefun.Messages.messages;
+import me.mrCookieSlime.Slimefun.Utilities.Calculator;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Effect;
@@ -83,7 +84,7 @@ public class MinersCompassListener implements Listener{
 					l.setPitch(lcfg.getInt(p.getName() + ".PITCH"));
 					l.setWorld(Bukkit.getWorld(lcfg.getString(p.getName() + ".WORLD")));
 					
-					p.teleport(l);
+					p.teleport(Calculator.centerPosition(l));
 					p.playSound(l, Sound.ENDERDRAGON_GROWL, 1, 1);
 					p.playEffect(l, Effect.SMOKE, 1);
 				}
