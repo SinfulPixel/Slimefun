@@ -46,9 +46,9 @@ public class Researches {
 		PlayerResearch.ll.add("Emerald of Repairing");
 		PlayerResearch.ll.add("Crystal of Repairing");
 		PlayerResearch.ll.add("Ender Crystal of Repairing");
-		PlayerResearch.ll.add("Mysterious Enchanting");
 		PlayerResearch.ll.add("Golden Feather");
 		PlayerResearch.ll.add("Diamond of Duplicating");
+		PlayerResearch.ll.add("Portable Hole");
 		PlayerResearch.ll.add("Nano Tools");
 		PlayerResearch.ll.add("Nano Pickaxe");
 		PlayerResearch.ll.add("Nano Axel");
@@ -133,8 +133,8 @@ public class Researches {
 		PlayerResearch.map.put(SlimefunItem.ORE_WASHER, "Ore Washing");
 		PlayerResearch.map.put(SlimefunItem.IRON_CHUNK, "Ore Washing");
 		PlayerResearch.map.put(SlimefunItem.GOLD_CHUNK, "Ore Washing");
-		PlayerResearch.map.put(SlimefunItem.MYSTERIOUS_ENCHANTER, "Mysterious Enchanting");
 		PlayerResearch.map.put(SlimefunItem.GOLDEN_FEATHER, "Golden Feather");
+		PlayerResearch.map.put(SlimefunItem.PORTABLE_HOLE, "Portable Hole");
 	}
 
 }

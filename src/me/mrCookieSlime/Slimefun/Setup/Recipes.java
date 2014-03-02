@@ -172,7 +172,9 @@ public class Recipes {
 			if (plugin.getConfig().getBoolean("items.GoldenFeather")) {
 				GoldenFeatherRecipe();
 			}
-			
+			if (plugin.getConfig().getBoolean("items.PortableHole")) {
+				PortableHoleRecipe();
+			}
 		}
 	  
 	  public static void NanoFocusRecipe() {
@@ -742,6 +744,16 @@ public class Recipes {
 			r.setIngredient('f', Material.FEATHER);
 			r.setIngredient('l', Material.GOLD_NUGGET, 3);
 			r.setIngredient('g', Material.GOLD_BLOCK);
+			plugin.getServer().addRecipe(r);
+		}
+		public static void PortableHoleRecipe() {
+			ItemStack hole = SlimefunItem.PORTABLE_HOLE.clone();
+			hole.setAmount(4);
+			ShapedRecipe r = new ShapedRecipe(hole);
+			r.shape(new String[] { "eqe", "qpq", "eqe" });
+			r.setIngredient('p', Material.ENDER_PEARL);
+			r.setIngredient('e', Material.GOLD_NUGGET, 6);
+			r.setIngredient('q', Material.QUARTZ);
 			plugin.getServer().addRecipe(r);
 		}
 }

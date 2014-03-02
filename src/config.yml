@@ -91,6 +91,7 @@ items:
   IronChunk: true
   GoldChunk: true
   GoldenFeather: true
+  PortableHole: true
 researches:
   Walking sticks: true
   Portable Crafter: true
@@ -132,9 +133,9 @@ researches:
   Emerald of Repairing: true
   Crystal of Repairing: true
   Ender Crystal of Repairing: true
-  Mysterious Enchanting: true
   Golden Feather: true
   Diamond of Duplicating: false
+  Portable Hole: true
   Nano Tools: true
   Nano Pickaxe: true
   Nano Axel: true
@@ -330,3 +331,8 @@ world-blacklist:
   - PvPworld
   - FarmingWorld
   - Heaven
+Portable Hole:
+  block-blacklist:
+  - BEDROCK
+  seconds-until-close: 6
+  max-hole-length: 5

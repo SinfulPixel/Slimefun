@@ -9,22 +9,6 @@ import org.bukkit.inventory.ItemStack;
 
 public class GuideItems {
 	
-	public static List<ItemStack> MysteriousEnchanter() {
-		List<ItemStack> items = new ArrayList<ItemStack>();
-		
-		items.add(new ItemStack(Material.QUARTZ_STAIRS));
-		items.add(new ItemStack(Material.ENCHANTMENT_TABLE));
-		items.add(new ItemStack(Material.QUARTZ_STAIRS));
-		items.add(new ItemStack(Material.EMERALD_BLOCK));
-		items.add(new ItemStack(Material.BOOKSHELF));
-		items.add(new ItemStack(Material.EMERALD_BLOCK));
-		items.add(new ItemStack(Material.EMERALD_BLOCK));
-		items.add(new ItemStack(Material.DIAMOND_BLOCK));
-		items.add(new ItemStack(Material.EMERALD_BLOCK));
-		
-		return items;
-	}
-	
 	public static List<ItemStack> GoldChunkRecipe() {
 		List<ItemStack> items = new ArrayList<ItemStack>();
 		
@@ -1145,6 +1129,26 @@ public class GuideItems {
 		ItemStack item = SlimefunItem.INK_OF_KNOWLEDGE.clone();
 		item.setAmount(16);
 		return item;
+	}
+	
+	public static ItemStack HoleOutput() {
+		ItemStack item = SlimefunItem.PORTABLE_HOLE.clone();
+		item.setAmount(4);
+		return item;
+	}
+	
+	public static List<ItemStack> HoleRecipe(){
+		List<ItemStack> items = new ArrayList<ItemStack>();
+		items.add(SlimefunItem.ENDER_LUMP_3);
+		items.add(new ItemStack(Material.QUARTZ));
+		items.add(SlimefunItem.ENDER_LUMP_3);
+		items.add(new ItemStack(Material.QUARTZ));
+		items.add(new ItemStack(Material.ENDER_PEARL));
+		items.add(new ItemStack(Material.QUARTZ));
+		items.add(SlimefunItem.ENDER_LUMP_3);
+		items.add(new ItemStack(Material.QUARTZ));
+		items.add(SlimefunItem.ENDER_LUMP_3);
+		return items;
 	}
 
 }

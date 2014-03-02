@@ -308,11 +308,11 @@ public class Guide {
 		if (plugin.getConfig().getBoolean("items.GoldChunk")) {
 			Slimefun.registerItem(SlimefunItem.GOLD_CHUNK, Category.Smelting(), GuideItems.GoldChunkRecipe(), RecipeType.ORE_WASHER, GuideItems.GoldChunkOutput());
 		}
-		if (plugin.getConfig().getBoolean("items.MysteriousEnchanter")) {
-			Slimefun.registerItem(SlimefunItem.MYSTERIOUS_ENCHANTER, Category.MagicUtils(), GuideItems.MysteriousEnchanter(), RecipeType.MULTIBLOCK, SlimefunItem.MYSTERIOUS_ENCHANTER);
-		}
 		if (plugin.getConfig().getBoolean("items.GoldenFeather")) {
 			Slimefun.registerItem(SlimefunItem.GOLDEN_FEATHER, Category.MagicUtils(), GuideItems.GFRecipe(), RecipeType.SHAPED_RECIPE, SlimefunItem.GOLDEN_FEATHER);
+		}
+		if (plugin.getConfig().getBoolean("items.PortableHole")) {
+			Slimefun.registerItem(SlimefunItem.PORTABLE_HOLE, Category.MagicUtils(), GuideItems.HoleRecipe(), RecipeType.SHAPED_RECIPE, GuideItems.HoleOutput());
 		}
 	}
 }

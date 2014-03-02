@@ -682,10 +682,6 @@ public class ItemDictionary {
 			item = ItemModifier.Setname(item, ChatColor.GOLD + "Gold Chunk");
 			item = ItemModifier.setDurability(item, 2);
 		}
-		if (ConfigName.equalsIgnoreCase("MysteriousEnchanter")) {
-			item.setType(Material.BOOKSHELF);
-			item = ItemModifier.Setname(item, ChatColor.GOLD + "Mysterious Enchanter");
-		}
 		if (ConfigName.equalsIgnoreCase("GoldenFeather")) {
 			item.setType(Material.FEATHER);
 			item = ItemModifier.Setname(item, ChatColor.GOLD + "" + ChatColor.BOLD + "Golden Feather");
@@ -697,6 +693,22 @@ public class ItemDictionary {
 			ll.add(ChatColor.DARK_RED + "But it costs some Hunger");
 			ll.add(ChatColor.DARK_RED + "If you have not enough Hunger");
 			ll.add(ChatColor.DARK_RED + "this won't save you anymore");
+			ItemMeta im = item.getItemMeta();
+			im.setLore(ll);
+			item.setItemMeta(im);
+		}
+		if (ConfigName.equalsIgnoreCase("PortableHole")) {
+			item.setType(Material.ENDER_PEARL);
+			item = ItemModifier.Setname(item, ChatColor.BLUE + "" + ChatColor.BOLD + "Portable Hole");
+			item = ItemModifier.setDurability(item, 1);
+			List<String> ll = new ArrayList<String>();
+			ll.add("");
+			ll.add(ChatColor.DARK_PURPLE + "Creates a temporary black");
+			ll.add(ChatColor.DARK_PURPLE + "Hole at your Position");
+			ll.add(ChatColor.DARK_PURPLE + "which leads to the Place");
+			ll.add(ChatColor.DARK_PURPLE + "where you died the last time");
+			ll.add("");
+			ll.add(ChatColor.RED + "Single-Use only");
 			ItemMeta im = item.getItemMeta();
 			im.setLore(ll);
 			item.setItemMeta(im);

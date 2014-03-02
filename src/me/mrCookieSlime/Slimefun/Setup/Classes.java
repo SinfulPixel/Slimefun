@@ -39,6 +39,7 @@ import me.mrCookieSlime.Slimefun.Listeners.Items.NanoPickaxeListener;
 import me.mrCookieSlime.Slimefun.Listeners.Items.NanoSaberListener;
 import me.mrCookieSlime.Slimefun.Listeners.Items.PortableCrafterListener;
 import me.mrCookieSlime.Slimefun.Listeners.Items.PortableEnchanterListener;
+import me.mrCookieSlime.Slimefun.Listeners.Items.PortableHoleListener;
 import me.mrCookieSlime.Slimefun.Listeners.Items.PortableJukeboxListener;
 import me.mrCookieSlime.Slimefun.Listeners.Items.PortabledustbinListener;
 import me.mrCookieSlime.Slimefun.Listeners.Items.SpawnVillagers;
@@ -262,6 +263,9 @@ public class Classes {
 		}
 		if (plugin.getConfig().getBoolean("items.GoldenFeather")) {
 			new GoldenFeatherListener(plugin);
+		}
+		if (plugin.getConfig().getBoolean("items.PortableHole")) {
+			new PortableHoleListener(plugin);
 		}
 	}
 
