@@ -170,5 +170,10 @@ public class messages {
    public static void NotEnabled(Player player) {
 	   player.sendMessage(prefix + ChatColor.translateAlternateColorCodes('&', Messages.msgcfg.getString("messages.not-enabled")));
    }
-   
+   public static void NotDied(Player player) {
+	   player.sendMessage(prefix + ChatColor.translateAlternateColorCodes('&', Messages.msgcfg.getString("messages.not-died")));
+   }
+   public static void NotEnoughXP(Player player) {
+	   player.sendMessage(prefix + ChatColor.translateAlternateColorCodes('&', Messages.msgcfg.getString("messages.not-enough-xp")));
+   }
 }

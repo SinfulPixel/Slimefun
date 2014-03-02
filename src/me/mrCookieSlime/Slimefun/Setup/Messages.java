@@ -146,6 +146,12 @@ public class Messages {
 			if (!msgcfg.contains("messages.not-enabled")) {
 				msgcfg.set("messages.not-enabled", "&4Slimefun is not enabled in this World");
 			}
+			if (!msgcfg.contains("messages.not-died")) {
+				msgcfg.set("messages.not-died", "&cYou have not died yet");
+			}
+			if (!msgcfg.contains("messages.not-enough-xp")) {
+				msgcfg.set("messages.not-enough-xp", "&cYou don't have enough XP for this");
+			}
 			try {
 				msgcfg.save(messages);
 			} catch (Exception e1) {

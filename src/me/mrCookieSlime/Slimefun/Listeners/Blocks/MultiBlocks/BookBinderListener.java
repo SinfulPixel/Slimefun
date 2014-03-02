@@ -302,7 +302,7 @@ public class BookBinderListener implements Listener {
 	 							  }
 	 						  }
 	 						  else {
-	 							  messages.NotEnoughMaterials(p);
+	 							  messages.NotEnoughXP(p);
 	 							 p.playSound(p.getLocation(), Sound.WITHER_SHOOT, 1, 1);
 	 						  }
 	 					  }
