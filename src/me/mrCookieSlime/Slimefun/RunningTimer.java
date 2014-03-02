@@ -21,6 +21,7 @@ import org.bukkit.util.Vector;
 public class RunningTimer {
 	
 	public static void runRunnable(final startup plugin) {
+		
 		plugin.getServer().getScheduler().runTaskTimer(plugin, new BukkitRunnable() {
 			
 			@SuppressWarnings("deprecation")
