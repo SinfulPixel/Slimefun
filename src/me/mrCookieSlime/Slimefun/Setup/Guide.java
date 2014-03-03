@@ -320,5 +320,8 @@ public class Guide {
 		if (plugin.getConfig().getBoolean("items.UberFocus")) {
 			Slimefun.registerItem(SlimefunItem.UBER_FOCUS, Category.Materials(), GuideItems.UberFocus(), RecipeType.SHAPED_RECIPE, SlimefunItem.UBER_FOCUS);
 		}
+		if (plugin.getConfig().getBoolean("items.UberAxe")) {
+			Slimefun.registerItem(SlimefunItem.UBER_AXE, Category.Tools(), GuideItems.UberAxeRecipe(), RecipeType.SHAPED_RECIPE, SlimefunItem.UBER_AXE);
+		}
 	}
 }

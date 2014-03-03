@@ -701,6 +701,19 @@ public class ItemDictionary {
 			im.setLore(ll);
 			item.setItemMeta(im);
 		}
+		if (ConfigName.equalsIgnoreCase("UberAxe")) {
+			item.setType(Material.DIAMOND_AXE);
+			item = ItemModifier.Setname(item, ChatColor.BLUE + "" + ChatColor.BOLD + "Uber Axe");
+			List<String> ll = new ArrayList<String>();
+			ll.add("");
+			ll.add(ChatColor.GOLD + "Can chop whole Trees...");
+			ItemMeta im = item.getItemMeta();
+			im.setLore(ll);
+			item.setItemMeta(im);
+			item.addUnsafeEnchantment(Enchantment.DURABILITY, 20);
+			item.addUnsafeEnchantment(Enchantment.DIG_SPEED, 2);
+			item.addUnsafeEnchantment(Enchantment.DAMAGE_ALL, 4);
+		}
 		return item;
 	}
 }

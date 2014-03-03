@@ -777,4 +777,22 @@ public class Recipes {
 			r.setIngredient('q', Material.QUARTZ);
 			plugin.getServer().addRecipe(r);
 		}
+		public static void UberAxeRecipe() {
+			if (true) {
+				ShapedRecipe r = new ShapedRecipe(SlimefunItem.UBER_AXE);
+				r.shape(new String[] { "fd ", "db ", " b " });
+				r.setIngredient('d', Material.WATCH, 3);
+				r.setIngredient('d', Material.DIAMOND);
+				r.setIngredient('b', Material.BLAZE_ROD);
+				plugin.getServer().addRecipe(r);
+			}
+			if (true) {
+				ShapedRecipe r = new ShapedRecipe(SlimefunItem.UBER_AXE);
+				r.shape(new String[] { " df", " bd", " b " });
+				r.setIngredient('d', Material.WATCH, 3);
+				r.setIngredient('d', Material.DIAMOND);
+				r.setIngredient('b', Material.BLAZE_ROD);
+				plugin.getServer().addRecipe(r);
+			}
+		}
 }

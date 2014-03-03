@@ -1198,5 +1198,17 @@ public class GuideItems {
 		items.add(SlimefunItem.ENDER_LUMP_3);
 		return items;
 	}
-
+	public static List<ItemStack> UberAxeRecipe(){
+		List<ItemStack> items = new ArrayList<ItemStack>();
+		items.add(SlimefunItem.UBER_FOCUS);
+		items.add(new ItemStack(Material.DIAMOND));
+		items.add(null);
+		items.add(new ItemStack(Material.DIAMOND));
+		items.add(new ItemStack(Material.BLAZE_ROD));
+		items.add(null);
+		items.add(null);
+		items.add(new ItemStack(Material.BLAZE_ROD));
+		items.add(null);
+		return items;
+	}
 }

@@ -94,6 +94,7 @@ items:
   PortableHole: true
   QuantumFocus: true
   UberFocus: true
+  UberAxe: true
 researches:
   Walking sticks: true
   Portable Crafter: true
@@ -146,6 +147,7 @@ researches:
   Quantum armor: true
   Uber armor: true
   Uber Upgrade Cores: true
+  Uber Axe: true
 structures:
   huts: true
 generation-chance:

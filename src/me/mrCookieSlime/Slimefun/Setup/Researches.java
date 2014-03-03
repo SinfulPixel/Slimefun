@@ -58,6 +58,7 @@ public class Researches {
 		Slimefun.addResearch("Quantum armor");
 		Slimefun.addResearch("Uber armor");
 		Slimefun.addResearch("Uber Upgrade Cores");
+		Slimefun.addResearch("Uber Axe");
 		
 		Slimefun.registerResearch(SlimefunItem.GRANDMAS_WALKING_STICK, "Walking sticks");
 		Slimefun.registerResearch(SlimefunItem.GRANDPAS_WALKING_STICK, "Walking sticks");
@@ -138,6 +139,7 @@ public class Researches {
 		Slimefun.registerResearch(SlimefunItem.PORTABLE_HOLE, "Portable Hole");
 		Slimefun.registerResearch(SlimefunItem.QUANTUM_FOCUS, "Quantum armor");
 		Slimefun.registerResearch(SlimefunItem.UBER_FOCUS, "Uber armor");
+		Slimefun.registerResearch(SlimefunItem.UBER_AXE, "Uber Axe");
 	}
 
 }
