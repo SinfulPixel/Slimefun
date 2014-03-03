@@ -64,13 +64,15 @@ public class OreWasherListener implements Listener {
 				if (e.getClickedBlock().getType() == Material.FURNACE) {
 					if (BlockAdjacents.hasMaterialOnBothSides(e.getClickedBlock(), Material.IRON_BLOCK)) {
 						if (e.getClickedBlock().getRelative(BlockFace.DOWN).getType() == Material.STATIONARY_WATER) {
-							if (PlayerResearch.hasResearched(p, "Ore Washing")) {
-								e.setCancelled(true);
+							if (!p.isSneaking()) {
+								if (PlayerResearch.hasResearched(p, "Ore Washing")) {
+									e.setCancelled(true);
 									openInv(p, e.getClickedBlock().getLocation());
-							}
-							else {
-								messages.NotResearched(p);
-								e.setCancelled(true);
+								}
+								else {
+									messages.NotResearched(p);
+									e.setCancelled(true);
+								}
 							}
 						}
 					}

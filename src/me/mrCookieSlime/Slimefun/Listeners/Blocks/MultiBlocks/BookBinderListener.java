@@ -71,6 +71,9 @@ public class BookBinderListener implements Listener {
 				}
 				else if (e.getClickedBlock().getType() == Material.WORKBENCH) {
 					if (BlockAdjacents.hasMaterialOnBothSides(e.getClickedBlock(), Material.BOOKSHELF)) {
+						if (!p.isSneaking()) {
+							
+						}
 						e.setCancelled(true);
 						this.openInv(p);
 					}

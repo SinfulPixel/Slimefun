@@ -362,7 +362,8 @@ public class SmelteryListener implements Listener {
 					Location nether = e.getClickedBlock().getLocation();
 					nether.setY(e.getClickedBlock().getLocation().getY() - 2.0D);
 					if (fire.getBlock().getType() == Material.FIRE && nether.getBlock().getType() == Material.NETHERRACK) {
-						e.setCancelled(true);
+						if (!p.isSneaking()) {
+							e.setCancelled(true);
 							if (PlayerResearch.hasResearched(p, "Hot Melting")) {
 								openSmeltery(p, e.getClickedBlock());
 							}
@@ -370,7 +371,8 @@ public class SmelteryListener implements Listener {
 								messages.NotResearched(p);
 								e.setCancelled(true);
 							}
-						p.playSound(p.getLocation(), Sound.LAVA, (float) 0.7, 1);
+							p.playSound(p.getLocation(), Sound.LAVA, (float) 0.7, 1);	
+						}
 					}
 				}
 			}
