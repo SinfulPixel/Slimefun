@@ -135,4 +135,75 @@ public class Slimefun {
 			return "ERROR";
 		}
 	}
+	
+	public static List<String> getNames() {
+		String[] array = new String[] {
+			"nanopickaxe",
+			"dustbin",
+			"enderbackpack",
+			"grandpaswalkingstick",
+			"grandmaswalkingstick",
+			"supermeat",
+			"nanohoe",
+			"nanosaber",
+			"toolbench",
+			"simplecircuitboard",
+			"itome",
+			"bookoteleporting",
+			"penchanter",
+			"pcrafter",
+			"tomeofhomeland",
+			"ptoolbench",
+			"pbookbinder",
+			"steelingot",
+			"advancedcircuitboard",
+			"steelthruster",
+			"jetpack",
+			"pjukebox",
+			"nanoaxel",
+			"magic-eye-of-ender",
+			"parachute",
+			"ubermeat",
+			"partiallygoldenapple",
+			"magicsugar",
+			"magicallump1",
+			"magicallump2",
+			"magicallump3",
+			"enderlump1",
+			"enderlump2",
+			"enderlump3",
+			"crystalofrepairing",
+			"endercrystalofrepairing",
+			"guide",
+			"sword-of-beheading",
+			"emerald-of-repairing",
+			"multitool",
+			"steelplate",
+			"chain",
+			"fortune-cookie",
+			"grappling-hook",
+			"hook",
+			"diamond-of-duplicating",
+			"slimegem",
+			"inkofknowledge",
+			"minerscompass",
+			"nanofocus",
+			"quantumfocus",
+			"uberfocus",
+			"ironchunk",
+			"goldchunk",
+			"goldenfeather",
+			"portablehole",
+			"uberaxe"
+		};
+		
+		List<String> list = new ArrayList<String>();
+		
+		for (String s: array) {
+			list.add(s);
+		}
+		
+		return list;
+		
+	}
 }

@@ -3,6 +3,8 @@ package me.mrCookieSlime.Slimefun.Commands;
 import java.util.ArrayList;
 import java.util.List;
 
+import me.mrCookieSlime.Slimefun.AddonHandler.Slimefun;
+
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.TabCompleter;
@@ -14,7 +16,17 @@ public class SlimefunTabCompleter implements TabCompleter {
 	
 	@Override
 	public List<String> onTabComplete(CommandSender sender, Command cmd,String label, String[] args) {
-		return getArguments();
+		if (args.length == 0) {
+			return getArguments();
+		}
+		else {
+			if (args[0].equalsIgnoreCase("give")) {
+				return Slimefun.getNames();
+			}
+			else {
+				return getArguments();
+			}
+		}
 	}
 	
 	public static List<String> getArguments() {
@@ -26,6 +38,7 @@ public class SlimefunTabCompleter implements TabCompleter {
 		commands.add("villagers");
 		commands.add("killnpc");
 		commands.add("research");
+		commands.add("give");
 		return commands;
 	}
 

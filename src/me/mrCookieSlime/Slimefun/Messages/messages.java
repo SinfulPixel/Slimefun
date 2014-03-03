@@ -50,6 +50,9 @@ public class messages {
    public static void Descriptionitems(CommandSender sender) {
 	   sender.sendMessage(ChatColor.BLUE + "/sf items          " + ChatColor.translateAlternateColorCodes('&', Messages.msgcfg.getString("descriptions.items")));
    }
+   public static void Descriptiongive(CommandSender sender) {
+	   sender.sendMessage(ChatColor.BLUE + "/sf give <Player> <item>    " + ChatColor.translateAlternateColorCodes('&', Messages.msgcfg.getString("descriptions.give")));
+   }
    public static void Descriptionguide(CommandSender sender) {
 	   sender.sendMessage(ChatColor.BLUE + "/sf guide          " + ChatColor.translateAlternateColorCodes('&', Messages.msgcfg.getString("descriptions.guide")));
    }
@@ -69,22 +72,6 @@ public class messages {
    }
    public static void nocheating(Player player) {
 	   player.sendMessage(prefix + ChatColor.translateAlternateColorCodes('&', Messages.msgcfg.getString("messages.no-cheating")));
-   }
-   public static void Descriptionmilk(CommandSender sender) {
-	   sender.sendMessage(ChatColor.BLUE + "/milk [Player]       " + ChatColor.translateAlternateColorCodes('&', Messages.msgcfg.getString("descriptions.milk")));
-   }
-   public static void MilkSelf(Player player) {
-	   player.sendMessage(prefix + ChatColor.translateAlternateColorCodes('&', Messages.msgcfg.getString("messages.milkSelf")));
-   }
-   public static void MilkOtherSender(Player player, String name) {
-	   String msg = ChatColor.translateAlternateColorCodes('&', Messages.msgcfg.getString("messages.milkOther-Sender"));
-	   msg = msg.replace("%player%", name);
-	   player.sendMessage(prefix + msg);
-   }
-   public static void MilkOtherTarget(Player player, String name) {
-	   String msg = ChatColor.translateAlternateColorCodes('&', Messages.msgcfg.getString("messages.milkOther-Target"));
-	   msg = msg.replace("%player%", name);
-	   player.sendMessage(prefix + msg);
    }
    public static void Vanish(Player player) {
 	   player.sendMessage(prefix + ChatColor.translateAlternateColorCodes('&', Messages.msgcfg.getString("messages.vanish")));

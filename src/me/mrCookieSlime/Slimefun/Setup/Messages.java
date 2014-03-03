@@ -53,9 +53,6 @@ public class Messages {
 			if (!msgcfg.contains("messages.no-cheating")) {
 				msgcfg.set("messages.no-cheating", "&cDid you think you could cheat them in? ^^");
 			}
-			if (!msgcfg.contains("descriptions.milk")) {
-				msgcfg.set("descriptions.milk", "&bRemoves PotionEffects");
-			}
 			if (!msgcfg.contains("messages.milkSelf")) {
 				msgcfg.set("messages.milkSelf", "&9You are drinking a glass of milk :D");
 			}
@@ -151,6 +148,9 @@ public class Messages {
 			}
 			if (!msgcfg.contains("messages.not-enough-xp")) {
 				msgcfg.set("messages.not-enough-xp", "&cYou don't have enough XP for this");
+			}
+			if (!msgcfg.contains("descriptions.give")) {
+				msgcfg.set("descriptions.give", "&bGives Items");
 			}
 			try {
 				msgcfg.save(messages);
