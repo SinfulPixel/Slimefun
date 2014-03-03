@@ -35,26 +35,28 @@ public class PortableHoleListener implements Listener {
 	
 	@EventHandler
 	public void onUse(PlayerInteractEvent e) {
-		if (e.getItem().getType() == Material.ENDER_PEARL && e.getItem().getDurability() == 1) {
-			if (e.getAction() == Action.RIGHT_CLICK_BLOCK || e.getAction() == Action.RIGHT_CLICK_AIR) {
-				e.setCancelled(true);
-				Player p = e.getPlayer();
-				if (lcfg.contains(p.getName() + ".X")) {
-					Location death = p.getLocation();
-					death.setX(lcfg.getDouble(p.getName() + ".X"));
-					death.setY(lcfg.getDouble(p.getName() + ".Y"));
-					death.setZ(lcfg.getDouble(p.getName() + ".Z"));
-					death.setYaw(lcfg.getInt(p.getName() + ".YAW"));
-					death.setPitch(lcfg.getInt(p.getName() + ".PITCH"));
-					death.setWorld(Bukkit.getWorld(lcfg.getString(p.getName() + ".WORLD")));
-					
-					p.teleport(death);
-					death.getWorld().playSound(death, Sound.ENDERMAN_TELEPORT, 1, 1);
-					death.getWorld().playEffect(death, Effect.ENDER_SIGNAL, 1);
-					PlayerInventory.consumeItemInHand(p);
-				}
-				else {
-					messages.NotDied(p);
+		if (e.getItem() != null) {
+			if (e.getItem().getType() == Material.ENDER_PEARL && e.getItem().getDurability() == 1) {
+				if (e.getAction() == Action.RIGHT_CLICK_BLOCK || e.getAction() == Action.RIGHT_CLICK_AIR) {
+					e.setCancelled(true);
+					Player p = e.getPlayer();
+					if (lcfg.contains(p.getName() + ".X")) {
+						Location death = p.getLocation();
+						death.setX(lcfg.getDouble(p.getName() + ".X"));
+						death.setY(lcfg.getDouble(p.getName() + ".Y"));
+						death.setZ(lcfg.getDouble(p.getName() + ".Z"));
+						death.setYaw(lcfg.getInt(p.getName() + ".YAW"));
+						death.setPitch(lcfg.getInt(p.getName() + ".PITCH"));
+						death.setWorld(Bukkit.getWorld(lcfg.getString(p.getName() + ".WORLD")));
+						
+						p.teleport(death);
+						death.getWorld().playSound(death, Sound.ENDERMAN_TELEPORT, 1, 1);
+						death.getWorld().playEffect(death, Effect.ENDER_SIGNAL, 1);
+						PlayerInventory.consumeItemInHand(p);
+					}
+					else {
+						messages.NotDied(p);
+					}
 				}
 			}
 		}
