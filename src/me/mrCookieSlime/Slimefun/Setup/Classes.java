@@ -43,7 +43,6 @@ import me.mrCookieSlime.Slimefun.Listeners.Items.PortableHoleListener;
 import me.mrCookieSlime.Slimefun.Listeners.Items.PortableJukeboxListener;
 import me.mrCookieSlime.Slimefun.Listeners.Items.PortabledustbinListener;
 import me.mrCookieSlime.Slimefun.Listeners.Items.SpawnVillagers;
-import me.mrCookieSlime.Slimefun.Listeners.Items.SteelPlateListener;
 import me.mrCookieSlime.Slimefun.Listeners.Items.SwordOfBeheadingListener;
 import me.mrCookieSlime.Slimefun.Listeners.Items.TomeofHomelandListener;
 import me.mrCookieSlime.Slimefun.Listeners.Items.iTomeListener;
@@ -167,9 +166,6 @@ public class Classes {
 		}
 		if (plugin.getConfig().getBoolean("items.Smeltery") == true) {
 			new SmelteryListener(plugin);
-		}
-		if (plugin.getConfig().getBoolean("items.SteelPlate") == true) {
-			new SteelPlateListener(plugin);
 		}
 		if (plugin.getConfig().getBoolean("items.fortune-cookie") == true) {
 			new FortuneCookieListener(plugin);
