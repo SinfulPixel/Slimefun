@@ -41,6 +41,12 @@ public class Slimefun {
 		}
 	}
 	
+	public static void addResearch(String research) {
+		if (!PlayerResearch.ll.contains(research)) {
+			PlayerResearch.ll.add(research);
+		}
+	}
+	
 	public static List<String> getResearchNames() {
 		return PlayerResearch.ll;
 	}
