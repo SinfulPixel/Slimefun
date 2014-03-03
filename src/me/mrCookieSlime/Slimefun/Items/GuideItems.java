@@ -329,7 +329,6 @@ public class GuideItems {
 	public static List<ItemStack> UHelmet(){
 		List<ItemStack> items = new ArrayList<ItemStack>();
 		items.add(new ItemStack(Material.IRON_BLOCK, 5));
-		items.add(new ItemStack(Material.NETHER_STAR, 4));
 		items.add(new ItemStack(Material.GHAST_TEAR, 8));
 		
 		ItemStack item = SlimefunItem.ADVANCED_CIRCUIT_BOARD.clone();
@@ -340,13 +339,16 @@ public class GuideItems {
 		item2.setAmount(1);
 		items.add(item2);
 		
+		ItemStack item3 = SlimefunItem.UBER_FOCUS.clone();
+		item3.setAmount(4);
+		items.add(item3);
+		
 		return items;
 	}
 	
 	public static List<ItemStack> UChest(){
 		List<ItemStack> items = new ArrayList<ItemStack>();
 		items.add(new ItemStack(Material.IRON_BLOCK, 8));
-		items.add(new ItemStack(Material.NETHER_STAR, 4));
 		items.add(new ItemStack(Material.GHAST_TEAR, 10));
 		
 		ItemStack item = SlimefunItem.ADVANCED_CIRCUIT_BOARD.clone();
@@ -357,13 +359,16 @@ public class GuideItems {
 		item2.setAmount(2);
 		items.add(item2);
 		
+		ItemStack item3 = SlimefunItem.UBER_FOCUS.clone();
+		item3.setAmount(4);
+		items.add(item3);
+		
 		return items;
 	}
 	
 	public static List<ItemStack> UBoots(){
 		List<ItemStack> items = new ArrayList<ItemStack>();
 		items.add(new ItemStack(Material.IRON_BLOCK, 4));
-		items.add(new ItemStack(Material.NETHER_STAR, 4));
 		items.add(new ItemStack(Material.GHAST_TEAR, 6));
 		
 		ItemStack item = SlimefunItem.ADVANCED_CIRCUIT_BOARD.clone();
@@ -374,13 +379,16 @@ public class GuideItems {
 		item2.setAmount(1);
 		items.add(item2);
 		
+		ItemStack item3 = SlimefunItem.UBER_FOCUS.clone();
+		item3.setAmount(4);
+		items.add(item3);
+		
 		return items;
 	}
 	
 	public static List<ItemStack> ULegs(){
 		List<ItemStack> items = new ArrayList<ItemStack>();
 		items.add(new ItemStack(Material.IRON_BLOCK, 7));
-		items.add(new ItemStack(Material.NETHER_STAR, 4));
 		items.add(new ItemStack(Material.GHAST_TEAR, 9));
 		
 		ItemStack item = SlimefunItem.ADVANCED_CIRCUIT_BOARD.clone();
@@ -391,12 +399,18 @@ public class GuideItems {
 		item2.setAmount(2);
 		items.add(item2);
 		
+		ItemStack item3 = SlimefunItem.UBER_FOCUS.clone();
+		item3.setAmount(4);
+		items.add(item3);
+		
 		return items;
 	}
 	
 	public static List<ItemStack> QHelmet(){
 		List<ItemStack> items = new ArrayList<ItemStack>();
-		items.add(new ItemStack(Material.NETHER_STAR, 2));
+		ItemStack item = SlimefunItem.QUANTUM_FOCUS.clone();
+		item.setAmount(2);
+		items.add(item);
 		items.add(new ItemStack(Material.IRON_BLOCK, 2));
 		items.add(SlimefunItem.SIMPLE_CIRCUIT_BOARD);
 		return items;
@@ -404,7 +418,9 @@ public class GuideItems {
 
 	public static List<ItemStack> QChest(){
 		List<ItemStack> items = new ArrayList<ItemStack>();
-		items.add(new ItemStack(Material.NETHER_STAR, 2));
+		ItemStack item = SlimefunItem.QUANTUM_FOCUS.clone();
+		item.setAmount(2);
+		items.add(item);
 		items.add(new ItemStack(Material.IRON_BLOCK, 5));
 		items.add(SlimefunItem.SIMPLE_CIRCUIT_BOARD);
 		return items;
@@ -412,7 +428,9 @@ public class GuideItems {
 	
 	public static List<ItemStack> QLegs(){
 		List<ItemStack> items = new ArrayList<ItemStack>();
-		items.add(new ItemStack(Material.NETHER_STAR, 2));
+		ItemStack item = SlimefunItem.QUANTUM_FOCUS.clone();
+		item.setAmount(2);
+		items.add(item);
 		items.add(new ItemStack(Material.IRON_BLOCK, 4));
 		items.add(SlimefunItem.SIMPLE_CIRCUIT_BOARD);
 		return items;
@@ -420,7 +438,9 @@ public class GuideItems {
 	
 	public static List<ItemStack> QBoots(){
 		List<ItemStack> items = new ArrayList<ItemStack>();
-		items.add(new ItemStack(Material.NETHER_STAR, 2));
+		ItemStack item = SlimefunItem.QUANTUM_FOCUS.clone();
+		item.setAmount(2);
+		items.add(item);
 		items.add(new ItemStack(Material.IRON_BLOCK, 2));
 		items.add(SlimefunItem.SIMPLE_CIRCUIT_BOARD);
 		return items;
@@ -456,15 +476,43 @@ public class GuideItems {
 	
 	public static List<ItemStack> NanoFocus(){
 		List<ItemStack> items = new ArrayList<ItemStack>();
-		items.add(new ItemStack(Material.EYE_OF_ENDER));
+		items.add(null);
 		items.add(new ItemStack(Material.DIAMOND));
-		items.add(new ItemStack(Material.EYE_OF_ENDER));
-		items.add(SlimefunItem.MAGICAL_LUMP_3);
+		items.add(null);
+		items.add(new ItemStack(Material.DIAMOND));
 		items.add(new ItemStack(Material.NETHER_STAR));
-		items.add(SlimefunItem.MAGICAL_LUMP_3);
-		items.add(new ItemStack(Material.EYE_OF_ENDER));
 		items.add(new ItemStack(Material.DIAMOND));
-		items.add(new ItemStack(Material.EYE_OF_ENDER));
+		items.add(null);
+		items.add(new ItemStack(Material.DIAMOND));
+		items.add(null);
+		return items;
+	}
+	
+	public static List<ItemStack> QuantumFocus(){
+		List<ItemStack> items = new ArrayList<ItemStack>();
+		items.add(null);
+		items.add(SlimefunItem.STEEL_PLATE);
+		items.add(null);
+		items.add(SlimefunItem.STEEL_PLATE);
+		items.add(SlimefunItem.NANO_FOCUS);
+		items.add(SlimefunItem.STEEL_PLATE);
+		items.add(null);
+		items.add(SlimefunItem.STEEL_PLATE);
+		items.add(null);
+		return items;
+	}
+	
+	public static List<ItemStack> UberFocus(){
+		List<ItemStack> items = new ArrayList<ItemStack>();
+		items.add(SlimefunItem.STEEL_PLATE);
+		items.add(new ItemStack(Material.DIAMOND));
+		items.add(SlimefunItem.STEEL_PLATE);
+		items.add(new ItemStack(Material.DIAMOND));
+		items.add(SlimefunItem.QUANTUM_FOCUS);
+		items.add(new ItemStack(Material.DIAMOND));
+		items.add(SlimefunItem.STEEL_PLATE);
+		items.add(new ItemStack(Material.DIAMOND));
+		items.add(SlimefunItem.STEEL_PLATE);
 		return items;
 	}
 	
@@ -1113,15 +1161,15 @@ public class GuideItems {
 	
 	public static List<ItemStack> GFRecipe(){
 		List<ItemStack> items = new ArrayList<ItemStack>();
-		items.add(new ItemStack(Material.GOLD_BLOCK));
+		items.add(SlimefunItem.GOLD_CHUNK);
 		items.add(null);
-		items.add(new ItemStack(Material.GOLD_BLOCK));
+		items.add(SlimefunItem.GOLD_CHUNK);
 		items.add(SlimefunItem.MAGICAL_LUMP_3);
 		items.add(new ItemStack(Material.FEATHER));
 		items.add(SlimefunItem.MAGICAL_LUMP_3);
-		items.add(new ItemStack(Material.GOLD_BLOCK));
+		items.add(SlimefunItem.GOLD_CHUNK);
 		items.add(null);
-		items.add(new ItemStack(Material.GOLD_BLOCK));
+		items.add(SlimefunItem.GOLD_CHUNK);
 		return items;
 	}
 	

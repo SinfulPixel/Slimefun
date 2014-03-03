@@ -92,6 +92,8 @@ items:
   GoldChunk: true
   GoldenFeather: true
   PortableHole: true
+  QuantumFocus: true
+  UberFocus: true
 researches:
   Walking sticks: true
   Portable Crafter: true

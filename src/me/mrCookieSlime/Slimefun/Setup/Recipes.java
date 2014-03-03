@@ -175,15 +175,36 @@ public class Recipes {
 			if (plugin.getConfig().getBoolean("items.PortableHole")) {
 				PortableHoleRecipe();
 			}
+			if (plugin.getConfig().getBoolean("items.QuantumFocus")) {
+				QuantumFocusRecipe();
+			}
+			if (plugin.getConfig().getBoolean("items.UberFocus")) {
+				UberFocusRecipe();
+			}
 		}
 	  
 	  public static void NanoFocusRecipe() {
 		  ShapedRecipe r = new ShapedRecipe(SlimefunItem.NANO_FOCUS);
-		  r.shape(new String [] { "ydy", "lnl", "ydy" });
-		  r.setIngredient('y', Material.EYE_OF_ENDER);
+		  r.shape(new String [] { " d ", "dnd", " d " });
 		  r.setIngredient('n', Material.NETHER_STAR);
 		  r.setIngredient('d', Material.DIAMOND);
-		  r.setIngredient('l', Material.GOLD_NUGGET, 3);
+		  plugin.getServer().addRecipe(r);
+	  }
+	  
+	  public static void QuantumFocusRecipe() {
+		  ShapedRecipe r = new ShapedRecipe(SlimefunItem.QUANTUM_FOCUS);
+		  r.shape(new String [] { " s ", "sns", " s " });
+		  r.setIngredient('n', Material.WATCH, 1);
+		  r.setIngredient('s', Material.PAPER, 1);
+		  plugin.getServer().addRecipe(r);
+	  }
+	  
+	  public static void UberFocusRecipe() {
+		  ShapedRecipe r = new ShapedRecipe(SlimefunItem.UBER_FOCUS);
+		  r.shape(new String [] { "sds", "dnd", "sds" });
+		  r.setIngredient('n', Material.WATCH, 2);
+		  r.setIngredient('d', Material.DIAMOND);
+		  r.setIngredient('s', Material.PAPER, 1);
 		  plugin.getServer().addRecipe(r);
 	  }
 	  
@@ -743,7 +764,7 @@ public class Recipes {
 			r.shape(new String[] { "g g", "lfl", "g g" });
 			r.setIngredient('f', Material.FEATHER);
 			r.setIngredient('l', Material.GOLD_NUGGET, 3);
-			r.setIngredient('g', Material.GOLD_BLOCK);
+			r.setIngredient('g', Material.FLINT, 2);
 			plugin.getServer().addRecipe(r);
 		}
 		public static void PortableHoleRecipe() {

@@ -460,7 +460,7 @@ public class ToolBenchListener implements Listener {
 				         String l05 = "";
 				         String l25 = ChatColor.BLUE + "Materials needed:";
 				         String l35 = ChatColor.BLUE + "1 simple circuitboard";
-				         String l45 = ChatColor.BLUE + "2 nether stars";
+				         String l45 = ChatColor.BLUE + "2 Quantum Foci";
 				         String l55 = ChatColor.BLUE + "2 iron blocks";
 				         ll5.add(l15);
 				         ll5.add(l05);
@@ -485,7 +485,7 @@ public class ToolBenchListener implements Listener {
 				         String l05 = "";
 				         String l25 = ChatColor.BLUE + "Materials needed:";
 				         String l35 = ChatColor.BLUE + "1 simple circuitboard";
-				         String l45 = ChatColor.BLUE + "2 nether stars";
+				         String l45 = ChatColor.BLUE + "2 Quantum Foci";
 				         String l55 = ChatColor.BLUE + "5 iron blocks";
 				         ll5.add(l15);
 				         ll5.add(l05);
@@ -510,7 +510,7 @@ public class ToolBenchListener implements Listener {
 				         String l05 = "";
 				         String l25 = ChatColor.BLUE + "Materials needed:";
 				         String l35 = ChatColor.BLUE + "1 simple circuitboard";
-				         String l45 = ChatColor.BLUE + "2 nether stars";
+				         String l45 = ChatColor.BLUE + "2 Quantum Foci";
 				         String l55 = ChatColor.BLUE + "4 iron blocks";
 				         ll5.add(l15);
 				         ll5.add(l05);
@@ -535,7 +535,7 @@ public class ToolBenchListener implements Listener {
 				         String l05 = "";
 				         String l25 = ChatColor.BLUE + "Materials needed:";
 				         String l35 = ChatColor.BLUE + "1 simple circuitboard";
-				         String l45 = ChatColor.BLUE + "2 nether stars";
+				         String l45 = ChatColor.BLUE + "2 Quantum Foci";
 				         String l55 = ChatColor.BLUE + "2 iron blocks";
 				         ll5.add(l15);
 				         ll5.add(l05);
@@ -563,7 +563,7 @@ public class ToolBenchListener implements Listener {
 						ll.add("");
 						ll.add(ChatColor.BLUE + "Materials needed:");
 						ll.add(ChatColor.BLUE + "5 Iron Blocks");
-						ll.add(ChatColor.BLUE + "4 Nether Stars");
+						ll.add(ChatColor.BLUE + "4 Uber Foci");
 						ll.add(ChatColor.BLUE + "8 Ghast Tears");
 						ll.add(ChatColor.BLUE + "4 Advanced Circuit Boards");
 						ll.add(ChatColor.BLUE + "1 Steel Plate");
@@ -582,7 +582,7 @@ public class ToolBenchListener implements Listener {
 							ll.add("");
 							ll.add(ChatColor.BLUE + "Materials needed:");
 							ll.add(ChatColor.BLUE + "8 Iron Blocks");
-							ll.add(ChatColor.BLUE + "4 Nether Stars");
+							ll.add(ChatColor.BLUE + "4 Uber Foci");
 							ll.add(ChatColor.BLUE + "10 Ghast Tears");
 							ll.add(ChatColor.BLUE + "4 Advanced Circuit Boards");
 							ll.add(ChatColor.BLUE + "2 Steel Plates");
@@ -601,7 +601,7 @@ public class ToolBenchListener implements Listener {
 						ll.add("");
 						ll.add(ChatColor.BLUE + "Materials needed:");
 						ll.add(ChatColor.BLUE + "7 Iron Blocks");
-						ll.add(ChatColor.BLUE + "4 Nether Stars");
+						ll.add(ChatColor.BLUE + "4 Uber Foci");
 						ll.add(ChatColor.BLUE + "9 Ghast Tears");
 						ll.add(ChatColor.BLUE + "4 Advanced Circuit Boards");
 						ll.add(ChatColor.BLUE + "2 Steel Plates");
@@ -620,7 +620,7 @@ public class ToolBenchListener implements Listener {
 						ll.add("");
 						ll.add(ChatColor.BLUE + "Materials needed:");
 						ll.add(ChatColor.BLUE + "4 Iron Blocks");
-						ll.add(ChatColor.BLUE + "4 Nether Stars");
+						ll.add(ChatColor.BLUE + "4 Uber Foci");
 						ll.add(ChatColor.BLUE + "6 Ghast Tears");
 						ll.add(ChatColor.BLUE + "4 Advanced Circuit Boards");
 						ll.add(ChatColor.BLUE + "1 Steel Plates");

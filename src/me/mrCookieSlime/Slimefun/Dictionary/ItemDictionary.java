@@ -371,19 +371,6 @@ public class ItemDictionary {
 			im.setLore(ll);
 			item.setItemMeta(im);
 		}
-		if (ConfigName.equalsIgnoreCase("DonationGuide")) {
-			item.setType(Material.BOOK);
-			List<String> ll = new ArrayList<String>();
-			String l0 = "";
-			String l1 = ChatColor.BLUE + "right click " + ChatColor.GREEN + "to open";
-			ll.add(l0);
-			ll.add(l1);
-			ItemMeta im = item.getItemMeta();
-			im.setLore(ll);
-			item.setItemMeta(im);
-			item = ItemModifier.Setname(item, ChatColor.GOLD + "The Donation guide");
-			item = ItemModifier.setDurability(item, 11);
-		}
 		if (ConfigName.equalsIgnoreCase("guide")) {
 			item.setType(Material.ENCHANTED_BOOK);
 			List<String> ll = new ArrayList<String>();
@@ -564,19 +551,10 @@ public class ItemDictionary {
 			item.setItemMeta(im);
 			item = ItemModifier.Setname(item, ChatColor.DARK_GRAY + "Multi Tool");
 		}
-		if (ConfigName.equalsIgnoreCase("Ash")) {
-			item.setType(Material.MELON_SEEDS);
-			item = ItemModifier.Setname(item, ChatColor.DARK_GRAY + "" + ChatColor.BOLD + "Ash");
-			item = ItemModifier.setDurability(item, 1);
-		}
-		if (ConfigName.equalsIgnoreCase("Firewood")) {
-			item.setType(Material.WOOD);
-			item = ItemModifier.setDurability(item, 1);
-			item = ItemModifier.Setname(item, ChatColor.DARK_GRAY + "Firewood");
-		}
 		if (ConfigName.equalsIgnoreCase("SteelPlate")) {
-			item.setType(Material.IRON_FENCE);
+			item.setType(Material.PAPER);
 			item = ItemModifier.Setname(item, ChatColor.DARK_GRAY + "Steel Plate");
+			item = ItemModifier.setDurability(item, 1);
 		}
 		if (ConfigName.equalsIgnoreCase("smeltery")) {
 			item.setType(Material.FURNACE);
@@ -667,6 +645,16 @@ public class ItemDictionary {
 			item.setType(Material.WATCH);
 			item = ItemModifier.Setname(item, ChatColor.GOLD + "Nano Focus");
 			item = ItemModifier.setDurability(item, 1);
+		}
+		if (ConfigName.equalsIgnoreCase("QuantumFocus")) {
+			item.setType(Material.WATCH);
+			item = ItemModifier.Setname(item, ChatColor.WHITE + "Quantum Focus");
+			item = ItemModifier.setDurability(item, 2);
+		}
+		if (ConfigName.equalsIgnoreCase("UberFocus")) {
+			item.setType(Material.WATCH);
+			item = ItemModifier.Setname(item, ChatColor.BLUE + "" + ChatColor.BOLD + "Uber Focus");
+			item = ItemModifier.setDurability(item, 3);
 		}
 		if (ConfigName.equalsIgnoreCase("OreWasher")) {
 			item.setType(Material.FURNACE);

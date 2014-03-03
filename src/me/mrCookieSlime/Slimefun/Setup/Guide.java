@@ -314,5 +314,11 @@ public class Guide {
 		if (plugin.getConfig().getBoolean("items.PortableHole")) {
 			Slimefun.registerItem(SlimefunItem.PORTABLE_HOLE, Category.MagicUtils(), GuideItems.HoleRecipe(), RecipeType.SHAPED_RECIPE, GuideItems.HoleOutput());
 		}
+		if (plugin.getConfig().getBoolean("items.QuantumFocus")) {
+			Slimefun.registerItem(SlimefunItem.QUANTUM_FOCUS, Category.Materials(), GuideItems.QuantumFocus(), RecipeType.SHAPED_RECIPE, SlimefunItem.QUANTUM_FOCUS);
+		}
+		if (plugin.getConfig().getBoolean("items.UberFocus")) {
+			Slimefun.registerItem(SlimefunItem.UBER_FOCUS, Category.Materials(), GuideItems.UberFocus(), RecipeType.SHAPED_RECIPE, SlimefunItem.UBER_FOCUS);
+		}
 	}
 }

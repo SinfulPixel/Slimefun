@@ -293,10 +293,10 @@ public class ArmorCraftListener implements Listener {
 						 }
 					  }
 					if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "Quatumarmor helmet")) {
-						 if (p.getInventory().contains(Material.IRON_BLOCK, 2) && p.getInventory().contains(Material.NETHER_STAR, 2) && p.getInventory().containsAtLeast(SlimefunItem.SIMPLE_CIRCUIT_BOARD, 1)) {
+						 if (p.getInventory().contains(Material.IRON_BLOCK, 2) && p.getInventory().containsAtLeast(SlimefunItem.QUANTUM_FOCUS, 2) && p.getInventory().containsAtLeast(SlimefunItem.SIMPLE_CIRCUIT_BOARD, 1)) {
 							 
 							 PlayerInventory.removeItemIgnoringMeta(p, Material.IRON_BLOCK, 2);
-							 PlayerInventory.removeItemIgnoringMeta(p, Material.NETHER_STAR, 2);
+							 PlayerInventory.removeItem(p, SlimefunItem.QUANTUM_FOCUS, 2);
 							 PlayerInventory.removeItem(p, SlimefunItem.SIMPLE_CIRCUIT_BOARD, 1);
 							 
 							 p.getInventory().addItem(SlimefunItem.QUANTUM_HELMET);
@@ -310,10 +310,10 @@ public class ArmorCraftListener implements Listener {
 						 }
 					  }
 					if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "Quatumarmor chestplate")) {
-						 if (p.getInventory().contains(Material.IRON_BLOCK, 5) && p.getInventory().contains(Material.NETHER_STAR, 2) && p.getInventory().containsAtLeast(SlimefunItem.SIMPLE_CIRCUIT_BOARD, 1)) {
+						 if (p.getInventory().contains(Material.IRON_BLOCK, 5) && p.getInventory().containsAtLeast(SlimefunItem.QUANTUM_FOCUS, 2) && p.getInventory().containsAtLeast(SlimefunItem.SIMPLE_CIRCUIT_BOARD, 1)) {
 							 
 							 PlayerInventory.removeItemIgnoringMeta(p, Material.IRON_BLOCK, 5);
-							 PlayerInventory.removeItemIgnoringMeta(p, Material.NETHER_STAR, 2);
+							 PlayerInventory.removeItem(p, SlimefunItem.QUANTUM_FOCUS, 2);
 							 PlayerInventory.removeItem(p, SlimefunItem.SIMPLE_CIRCUIT_BOARD, 1);
 							 
 							 p.getInventory().addItem(SlimefunItem.QUANTUM_CHESTPLATE);
@@ -327,10 +327,10 @@ public class ArmorCraftListener implements Listener {
 						 }
 					  }
 					if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "Quatumarmor leggings")) {
-						 if (p.getInventory().contains(Material.IRON_BLOCK, 4) && p.getInventory().contains(Material.NETHER_STAR, 2) && p.getInventory().containsAtLeast(SlimefunItem.SIMPLE_CIRCUIT_BOARD, 1)) {
+						 if (p.getInventory().contains(Material.IRON_BLOCK, 4) && p.getInventory().containsAtLeast(SlimefunItem.QUANTUM_FOCUS, 2) && p.getInventory().containsAtLeast(SlimefunItem.SIMPLE_CIRCUIT_BOARD, 1)) {
 
 							 PlayerInventory.removeItemIgnoringMeta(p, Material.IRON_BLOCK, 4);
-							 PlayerInventory.removeItemIgnoringMeta(p, Material.NETHER_STAR, 2);
+							 PlayerInventory.removeItem(p, SlimefunItem.QUANTUM_FOCUS, 2);
 							 PlayerInventory.removeItem(p, SlimefunItem.SIMPLE_CIRCUIT_BOARD, 1);
 							 
 							 p.getInventory().addItem(SlimefunItem.QUANTUM_LEGGINGS);
@@ -344,10 +344,10 @@ public class ArmorCraftListener implements Listener {
 						 }
 					  }
 					if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.WHITE + "Quatumarmor boots")) {
-						 if (p.getInventory().contains(Material.IRON_BLOCK, 2) && p.getInventory().contains(Material.NETHER_STAR, 2) && p.getInventory().containsAtLeast(SlimefunItem.SIMPLE_CIRCUIT_BOARD, 1)) {
+						 if (p.getInventory().contains(Material.IRON_BLOCK, 2) && p.getInventory().containsAtLeast(SlimefunItem.QUANTUM_FOCUS, 2) && p.getInventory().containsAtLeast(SlimefunItem.SIMPLE_CIRCUIT_BOARD, 1)) {
 
 							 PlayerInventory.removeItemIgnoringMeta(p, Material.IRON_BLOCK, 2);
-							 PlayerInventory.removeItemIgnoringMeta(p, Material.NETHER_STAR, 2);
+							 PlayerInventory.removeItem(p, SlimefunItem.QUANTUM_FOCUS, 2);
 							 PlayerInventory.removeItem(p, SlimefunItem.SIMPLE_CIRCUIT_BOARD, 1);
 							 
 							 p.getInventory().addItem(SlimefunItem.QUANTUM_BOOTS);
@@ -361,13 +361,13 @@ public class ArmorCraftListener implements Listener {
 						 }
 					  }
 					if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.BLUE + "" + ChatColor.BOLD + "Uber" + ChatColor.GOLD + "" + ChatColor.BOLD + "Helmet")) {
-						if (p.getInventory().contains(Material.IRON_BLOCK, 5) && p.getInventory().contains(Material.NETHER_STAR, 4) && p.getInventory().contains(Material.GHAST_TEAR, 8) && p.getInventory().containsAtLeast(SlimefunItem.ADVANCED_CIRCUIT_BOARD, 4) && p.getInventory().containsAtLeast(SlimefunItem.STEEL_PLATE, 1) ) {
+						if (p.getInventory().contains(Material.IRON_BLOCK, 5) && p.getInventory().containsAtLeast(SlimefunItem.UBER_FOCUS, 4) && p.getInventory().contains(Material.GHAST_TEAR, 8) && p.getInventory().containsAtLeast(SlimefunItem.ADVANCED_CIRCUIT_BOARD, 4) && p.getInventory().containsAtLeast(SlimefunItem.STEEL_PLATE, 1) ) {
 
 							 PlayerInventory.removeItemIgnoringMeta(p, Material.IRON_BLOCK, 5);
-							 PlayerInventory.removeItemIgnoringMeta(p, Material.NETHER_STAR, 4);
 							 PlayerInventory.removeItemIgnoringMeta(p, Material.GHAST_TEAR, 8);
 							 PlayerInventory.removeItem(p, SlimefunItem.ADVANCED_CIRCUIT_BOARD, 4);
 							 PlayerInventory.removeItem(p, SlimefunItem.STEEL_PLATE, 1);
+							 PlayerInventory.removeItem(p, SlimefunItem.UBER_FOCUS, 4);
 							 
 							 	p.getInventory().addItem(SlimefunItem.UBER_HELMET);
 								e.setCancelled(true);
@@ -380,13 +380,13 @@ public class ArmorCraftListener implements Listener {
 						 }
 					  }
 					if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.BLUE + "" + ChatColor.BOLD + "Uber" + ChatColor.GOLD + "" + ChatColor.BOLD + "Chestplate")) {
-						 if (p.getInventory().contains(Material.IRON_BLOCK, 8) && p.getInventory().contains(Material.NETHER_STAR, 4) && p.getInventory().contains(Material.GHAST_TEAR, 10) && p.getInventory().containsAtLeast(SlimefunItem.ADVANCED_CIRCUIT_BOARD, 4) && p.getInventory().containsAtLeast(SlimefunItem.STEEL_PLATE, 2)) {
+						 if (p.getInventory().contains(Material.IRON_BLOCK, 8) && p.getInventory().containsAtLeast(SlimefunItem.UBER_FOCUS, 4) && p.getInventory().contains(Material.GHAST_TEAR, 10) && p.getInventory().containsAtLeast(SlimefunItem.ADVANCED_CIRCUIT_BOARD, 4) && p.getInventory().containsAtLeast(SlimefunItem.STEEL_PLATE, 2)) {
 
 							 PlayerInventory.removeItemIgnoringMeta(p, Material.IRON_BLOCK, 8);
-							 PlayerInventory.removeItemIgnoringMeta(p, Material.NETHER_STAR, 4);
 							 PlayerInventory.removeItemIgnoringMeta(p, Material.GHAST_TEAR, 10);
 							 PlayerInventory.removeItem(p, SlimefunItem.ADVANCED_CIRCUIT_BOARD, 4);
 							 PlayerInventory.removeItem(p, SlimefunItem.STEEL_PLATE, 2);
+							 PlayerInventory.removeItem(p, SlimefunItem.UBER_FOCUS, 4);
 							 
 							 p.getInventory().addItem(SlimefunItem.UBER_CHESTPLATE);
 							 e.setCancelled(true);
@@ -399,13 +399,13 @@ public class ArmorCraftListener implements Listener {
 						 }
 					  }
 					if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.BLUE + "" + ChatColor.BOLD + "Uber" + ChatColor.GOLD + "" + ChatColor.BOLD + "Leggings")) {
-						 if (p.getInventory().contains(Material.IRON_BLOCK, 7) && p.getInventory().contains(Material.NETHER_STAR, 4) && p.getInventory().contains(Material.GHAST_TEAR, 9) && p.getInventory().containsAtLeast(SlimefunItem.ADVANCED_CIRCUIT_BOARD, 4) && p.getInventory().containsAtLeast(SlimefunItem.STEEL_PLATE, 2)) {
+						 if (p.getInventory().contains(Material.IRON_BLOCK, 7) && p.getInventory().containsAtLeast(SlimefunItem.UBER_FOCUS, 4) && p.getInventory().contains(Material.GHAST_TEAR, 9) && p.getInventory().containsAtLeast(SlimefunItem.ADVANCED_CIRCUIT_BOARD, 4) && p.getInventory().containsAtLeast(SlimefunItem.STEEL_PLATE, 2)) {
 
 							 PlayerInventory.removeItemIgnoringMeta(p, Material.IRON_BLOCK, 7);
-							 PlayerInventory.removeItemIgnoringMeta(p, Material.NETHER_STAR, 4);
 							 PlayerInventory.removeItemIgnoringMeta(p, Material.GHAST_TEAR, 9);
 							 PlayerInventory.removeItem(p, SlimefunItem.ADVANCED_CIRCUIT_BOARD, 4);
 							 PlayerInventory.removeItem(p, SlimefunItem.STEEL_PLATE, 2);
+							 PlayerInventory.removeItem(p, SlimefunItem.UBER_FOCUS, 4);
 							 
 							 p.getInventory().addItem(SlimefunItem.UBER_LEGGINGS);
 							 e.setCancelled(true);
@@ -418,13 +418,13 @@ public class ArmorCraftListener implements Listener {
 						 }
 					  }
 					if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.BLUE + "" + ChatColor.BOLD + "Uber" + ChatColor.GOLD + "" + ChatColor.BOLD + "Boots")) {
-						 if (p.getInventory().contains(Material.IRON_BLOCK, 4) && p.getInventory().contains(Material.NETHER_STAR, 4) && p.getInventory().contains(Material.GHAST_TEAR, 6) && p.getInventory().containsAtLeast(SlimefunItem.ADVANCED_CIRCUIT_BOARD, 4) && p.getInventory().containsAtLeast(SlimefunItem.STEEL_PLATE, 2)) {
+						 if (p.getInventory().contains(Material.IRON_BLOCK, 4) && p.getInventory().containsAtLeast(SlimefunItem.UBER_FOCUS, 4) && p.getInventory().contains(Material.GHAST_TEAR, 6) && p.getInventory().containsAtLeast(SlimefunItem.ADVANCED_CIRCUIT_BOARD, 4) && p.getInventory().containsAtLeast(SlimefunItem.STEEL_PLATE, 2)) {
 
 							 PlayerInventory.removeItemIgnoringMeta(p, Material.IRON_BLOCK, 4);
-							 PlayerInventory.removeItemIgnoringMeta(p, Material.NETHER_STAR, 4);
 							 PlayerInventory.removeItemIgnoringMeta(p, Material.GHAST_TEAR, 6);
 							 PlayerInventory.removeItem(p, SlimefunItem.ADVANCED_CIRCUIT_BOARD, 4);
 							 PlayerInventory.removeItem(p, SlimefunItem.STEEL_PLATE, 2);
+							 PlayerInventory.removeItem(p, SlimefunItem.UBER_FOCUS, 4);
 							 
 							 p.getInventory().addItem(SlimefunItem.UBER_BOOTS);
 							 e.setCancelled(true);
