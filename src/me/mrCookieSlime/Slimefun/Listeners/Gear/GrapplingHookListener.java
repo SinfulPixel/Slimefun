@@ -34,7 +34,6 @@ public class GrapplingHookListener implements Listener {
 	    this.plugin.getServer().getPluginManager().registerEvents(this, this.plugin);
 	  }
 	
-	@SuppressWarnings("deprecation")
 	@EventHandler
 	public void onShoot(PlayerInteractEvent e) {
 		Player p = e.getPlayer();
@@ -76,7 +75,6 @@ public class GrapplingHookListener implements Listener {
 	    }
 	}
 	
-	@SuppressWarnings("deprecation")
 	@EventHandler
 	public void onLand(ProjectileHitEvent e) {
 		if (e.getEntity() instanceof Arrow) {
@@ -125,7 +123,6 @@ public class GrapplingHookListener implements Listener {
 		}
 	}
 	
-	@SuppressWarnings("deprecation")
 	@EventHandler
 	public void onDamage(EntityDamageByEntityEvent e) {
 		if (e.getDamager() instanceof Arrow) {

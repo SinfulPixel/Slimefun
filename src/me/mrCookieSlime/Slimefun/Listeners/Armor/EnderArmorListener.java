@@ -21,7 +21,6 @@ public class EnderArmorListener implements Listener {
 	    this.plugin.getServer().getPluginManager().registerEvents(this, this.plugin);
 	  }
 	
-	@SuppressWarnings("deprecation")
 	@EventHandler
     public void onProjectileLaunch(ProjectileLaunchEvent e){
 		if (e.getEntity().getShooter() instanceof Player) {
@@ -44,7 +43,6 @@ public class EnderArmorListener implements Listener {
 		}
     }
  
-    @SuppressWarnings("deprecation")
 	@EventHandler
     public void onProjectileHitEvent (ProjectileHitEvent e) {
         if (!(e.getEntity().getShooter() instanceof Player)) {

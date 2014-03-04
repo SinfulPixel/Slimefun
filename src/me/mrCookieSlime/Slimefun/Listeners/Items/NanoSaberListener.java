@@ -22,7 +22,6 @@ private startup plugin;
 	    this.plugin.getServer().getPluginManager().registerEvents(this, this.plugin);
 	  }
 	
-	@SuppressWarnings("deprecation")
 	@EventHandler
 	  public void onPlayerInteract(PlayerInteractEvent e) {
 	    Player p = e.getPlayer();

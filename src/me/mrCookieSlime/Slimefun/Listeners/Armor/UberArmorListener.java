@@ -87,7 +87,6 @@ public class UberArmorListener implements Listener{
 	  }
 	  
 	
-	@SuppressWarnings("deprecation")
 	@EventHandler
     public void onProjectileLaunch(ProjectileLaunchEvent e){
 		if (e.getEntity().getShooter() instanceof Player) {
@@ -107,7 +106,6 @@ public class UberArmorListener implements Listener{
 		}
     }
 	
-	@SuppressWarnings("deprecation")
 	@EventHandler
     public void onProjectileHitEvent (ProjectileHitEvent e) {
         if (!(e.getEntity().getShooter() instanceof Player)) {
@@ -176,7 +174,6 @@ public class UberArmorListener implements Listener{
 		}
 	  }
 	
-	@SuppressWarnings("deprecation")
 	@EventHandler
 	public void onShoot(EntityDamageByEntityEvent e) {
 		if (e.getDamager() instanceof Arrow) {

@@ -243,7 +243,6 @@ public class MultiToolListener implements Listener {
 		  }
 	  }
 	  
-	  @SuppressWarnings("deprecation")
 	@EventHandler
 		public void onLand(ProjectileHitEvent e) {
 			if (e.getEntity() instanceof Arrow) {
@@ -292,7 +291,6 @@ public class MultiToolListener implements Listener {
 			}
 		}
 	  
-	  @SuppressWarnings("deprecation")
 	@EventHandler
 		public void onDamage(EntityDamageByEntityEvent e) {
 			if (e.getDamager() instanceof Arrow) {
