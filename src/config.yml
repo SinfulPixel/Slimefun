@@ -95,6 +95,7 @@ items:
   QuantumFocus: true
   UberFocus: true
   UberAxe: true
+  AmuletOfRevival: true
 researches:
   Walking sticks: true
   Portable Crafter: true
@@ -145,6 +146,7 @@ researches:
   Nano Saber: true
   Nano armor: true
   Quantum armor: true
+  Amulet of Revival: true
   Uber armor: true
   Uber Upgrade Cores: true
   Uber Axe: true
@@ -335,8 +337,3 @@ world-blacklist:
   - PvPworld
   - FarmingWorld
   - Heaven
-Portable Hole:
-  block-blacklist:
-  - BEDROCK
-  seconds-until-close: 6
-  max-hole-length: 5

@@ -56,6 +56,7 @@ public class Researches {
 		Slimefun.addResearch("Nano Saber");
 		Slimefun.addResearch("Nano armor");
 		Slimefun.addResearch("Quantum armor");
+		Slimefun.addResearch("Amulet of Revival");
 		Slimefun.addResearch("Uber armor");
 		Slimefun.addResearch("Uber Upgrade Cores");
 		Slimefun.addResearch("Uber Axe");
@@ -140,6 +141,7 @@ public class Researches {
 		Slimefun.registerResearch(SlimefunItem.QUANTUM_FOCUS, "Quantum armor");
 		Slimefun.registerResearch(SlimefunItem.UBER_FOCUS, "Uber armor");
 		Slimefun.registerResearch(SlimefunItem.UBER_AXE, "Uber Axe");
+		Slimefun.registerResearch(SlimefunItem.AMULET_OF_REVIVAL, "Amulet of Revival");
 	}
 
 }

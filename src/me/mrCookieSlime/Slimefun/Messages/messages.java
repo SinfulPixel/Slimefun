@@ -163,4 +163,10 @@ public class messages {
    public static void NotEnoughXP(Player player) {
 	   player.sendMessage(prefix + ChatColor.translateAlternateColorCodes('&', Messages.msgcfg.getString("messages.not-enough-xp")));
    }
+   public static void AmuletSaved(Player player) {
+	   player.sendMessage(prefix + ChatColor.translateAlternateColorCodes('&', Messages.msgcfg.getString("messages.amulet-saved")));
+   }
+   public static void AmuletTricked(Player player) {
+	   player.sendMessage(prefix + ChatColor.translateAlternateColorCodes('&', Messages.msgcfg.getString("messages.amulet-tricked")));
+   }
 }

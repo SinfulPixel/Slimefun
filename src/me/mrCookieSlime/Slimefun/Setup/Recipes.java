@@ -181,7 +181,19 @@ public class Recipes {
 			if (plugin.getConfig().getBoolean("items.UberFocus")) {
 				UberFocusRecipe();
 			}
+			if (plugin.getConfig().getBoolean("items.AmuletOfRevival")) {
+				AmuletRecipe();
+			}
 		}
+	  
+	  public static void AmuletRecipe() {
+		  ShapedRecipe r = new ShapedRecipe(SlimefunItem.AMULET_OF_REVIVAL);
+		  r.shape(new String [] { "lhl", "hfh", "lhl" });
+		  r.setIngredient('f', Material.NETHER_STAR, 2);
+		  r.setIngredient('h', Material.ENDER_PEARL, 1);
+		  r.setIngredient('l', Material.GOLD_NUGGET, 3);
+		  plugin.getServer().addRecipe(r);
+	  }
 	  
 	  public static void NanoFocusRecipe() {
 		  ShapedRecipe r = new ShapedRecipe(SlimefunItem.NANO_FOCUS);

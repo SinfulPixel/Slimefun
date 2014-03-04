@@ -24,6 +24,7 @@ import me.mrCookieSlime.Slimefun.Listeners.Gear.GrapplingHookListener;
 import me.mrCookieSlime.Slimefun.Listeners.Gear.JetpackListener;
 import me.mrCookieSlime.Slimefun.Listeners.Gear.MultiToolListener;
 import me.mrCookieSlime.Slimefun.Listeners.Gear.ParachuteListener;
+import me.mrCookieSlime.Slimefun.Listeners.Items.AmuletOfRevivalListener;
 import me.mrCookieSlime.Slimefun.Listeners.Items.BookoTeleportingListener;
 import me.mrCookieSlime.Slimefun.Listeners.Items.CircuitBoardListener;
 import me.mrCookieSlime.Slimefun.Listeners.Items.CrystalOfRepairingListener;
@@ -266,6 +267,9 @@ public class Classes {
 		}
 		if (plugin.getConfig().getBoolean("items.UberAxe")) {
 			new UberAxeListener(plugin);
+		}
+		if (plugin.getConfig().getBoolean("items.AmuletOfRevival")) {
+			new AmuletOfRevivalListener(plugin);
 		}
 	}
 

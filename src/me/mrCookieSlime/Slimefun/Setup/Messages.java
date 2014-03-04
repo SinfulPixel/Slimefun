@@ -152,6 +152,12 @@ public class Messages {
 			if (!msgcfg.contains("descriptions.give")) {
 				msgcfg.set("descriptions.give", "&bGives Items");
 			}
+			if (!msgcfg.contains("messages.amulet-saved")) {
+				msgcfg.set("messages.amulet-saved", "&bYour Amulet saved you from Dying but vanished");
+			}
+			if (!msgcfg.contains("messages.amulet-tricked")) {
+				msgcfg.set("messages.amulet-tricked", "&4&lYou tried to trick this mighty old Amulet by wearing multiple Ones? All Damage you get will now be way more painful!");
+			}
 			try {
 				msgcfg.save(messages);
 			} catch (Exception e1) {

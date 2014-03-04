@@ -1211,4 +1211,18 @@ public class GuideItems {
 		items.add(null);
 		return items;
 	}
+	
+	public static List<ItemStack> AmuletRecipe(){
+		List<ItemStack> items = new ArrayList<ItemStack>();
+		items.add(SlimefunItem.MAGICAL_LUMP_3);
+		items.add(SlimefunItem.PORTABLE_HOLE);
+		items.add(SlimefunItem.MAGICAL_LUMP_3);
+		items.add(SlimefunItem.PORTABLE_HOLE);
+		items.add(SlimefunItem.QUANTUM_FOCUS);
+		items.add(SlimefunItem.PORTABLE_HOLE);
+		items.add(SlimefunItem.MAGICAL_LUMP_3);
+		items.add(SlimefunItem.PORTABLE_HOLE);
+		items.add(SlimefunItem.MAGICAL_LUMP_3);
+		return items;
+	}
 }

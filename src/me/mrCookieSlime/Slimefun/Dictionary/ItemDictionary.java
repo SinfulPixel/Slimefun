@@ -714,6 +714,25 @@ public class ItemDictionary {
 			item.addUnsafeEnchantment(Enchantment.DIG_SPEED, 2);
 			item.addUnsafeEnchantment(Enchantment.DAMAGE_ALL, 4);
 		}
+		if (ConfigName.equalsIgnoreCase("AmuletOfRevival")) {
+			item.setType(Material.EMERALD);
+			item = ItemModifier.Setname(item, ChatColor.GOLD + "" + ChatColor.BOLD + "Amulet of Revival");
+			item = ItemModifier.setDurability(item, 3);
+			List<String> ll = new ArrayList<String>();
+			ll.add("");
+			ll.add(ChatColor.GOLD + "This mighty Amulet has");
+			ll.add(ChatColor.GOLD + "made a deal with the devil");
+			ll.add(ChatColor.GOLD + "thousands of years ago that");
+			ll.add(ChatColor.GOLD + "it can save the Everyone who");
+			ll.add(ChatColor.GOLD + "has it in his Inventory from");
+			ll.add(ChatColor.GOLD + "Death one time. But if someone");
+			ll.add(ChatColor.GOLD + "tries to trick it and have");
+			ll.add(ChatColor.GOLD + "multiple Amulets he will feel");
+			ll.add(ChatColor.GOLD + "way more damage when given.");
+			ItemMeta im = item.getItemMeta();
+			im.setLore(ll);
+			item.setItemMeta(im);
+		}
 		return item;
 	}
 }

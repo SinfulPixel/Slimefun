@@ -323,5 +323,8 @@ public class Guide {
 		if (plugin.getConfig().getBoolean("items.UberAxe")) {
 			Slimefun.registerItem(SlimefunItem.UBER_AXE, Category.Tools(), GuideItems.UberAxeRecipe(), RecipeType.SHAPED_RECIPE, SlimefunItem.UBER_AXE);
 		}
+		if (plugin.getConfig().getBoolean("items.AmuletOfRevival")) {
+			Slimefun.registerItem(SlimefunItem.AMULET_OF_REVIVAL, Category.CrystalsAndGems(), GuideItems.AmuletRecipe(), RecipeType.SHAPED_RECIPE, SlimefunItem.AMULET_OF_REVIVAL);
+		}
 	}
 }

@@ -119,4 +119,5 @@ public class SlimefunItem {
 		public static ItemStack QUANTUM_FOCUS = ItemDictionary.getItem("QuantumFocus");
 		public static ItemStack UBER_FOCUS = ItemDictionary.getItem("UberFocus");
 		public static ItemStack UBER_AXE = ItemDictionary.getItem("UberAxe");
+		public static ItemStack AMULET_OF_REVIVAL = ItemDictionary.getItem("AmuletOfRevival");
 }
