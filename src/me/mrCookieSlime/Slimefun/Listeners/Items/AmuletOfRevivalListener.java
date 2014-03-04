@@ -26,7 +26,7 @@ public class AmuletOfRevivalListener implements Listener {
 			Player p = (Player) e.getEntity();
 			if (p.getInventory().containsAtLeast(SlimefunItem.AMULET_OF_REVIVAL, 1)) {
 				if (p.getInventory().containsAtLeast(SlimefunItem.AMULET_OF_REVIVAL, 2)) {
-					e.setDamage(e.getDamage() * 10);
+					e.setDamage(e.getDamage() * 20);
 					messages.AmuletTricked(p);
 				}
 				else {
