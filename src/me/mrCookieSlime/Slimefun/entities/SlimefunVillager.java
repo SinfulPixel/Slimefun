@@ -4,9 +4,9 @@ import me.mrCookieSlime.Slimefun.Dictionary.VillagerDictionary;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
-import org.bukkit.craftbukkit.v1_7_R1.entity.CraftVillager;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Villager;
+import org.bukkit.entity.Villager.Profession;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
@@ -20,7 +20,7 @@ public class SlimefunVillager {
 		v.setCustomName(ChatColor.GRAY + "Lost " + ChatColor.BLUE + " Merchant");
 		v.setCustomNameVisible(true);
 		v.setRemoveWhenFarAway(false);
-		((CraftVillager) v).getHandle().setProfession(5);
+		v.setProfession(Profession.PRIEST);
 		v.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 999999999, 100));
 		v.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, 999999999, -10));
 	}
@@ -32,7 +32,7 @@ public class SlimefunVillager {
 		v.setCustomName(ChatColor.GREEN + "Quest " + ChatColor.BLUE + " Villager");
 		v.setCustomNameVisible(true);
 		v.setRemoveWhenFarAway(false);
-		((CraftVillager) v).getHandle().setProfession(5);
+		v.setProfession(Profession.LIBRARIAN);
 		v.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 999999999, 100));
 		v.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, 999999999, -10));
 	}
@@ -44,7 +44,7 @@ public class SlimefunVillager {
 		v.setCustomName(ChatColor.GRAY + "Lost " + ChatColor.DARK_GRAY + " Blacksmith");
 		v.setCustomNameVisible(true);
 		v.setRemoveWhenFarAway(false);
-		((CraftVillager) v).getHandle().setProfession(5);
+		v.setProfession(Profession.BLACKSMITH);
 		v.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 999999999, 100));
 		v.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, 999999999, -10));
 	}
