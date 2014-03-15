@@ -1,4 +1,4 @@
-package me.mrCookieSlime.Slimefun.api;
+package me.mrCookieSlime.Slimefun.Utilities;
 
 import org.bukkit.Bukkit;
 import org.bukkit.GameMode;
@@ -104,6 +104,18 @@ public class PlayerInventory {
 	public static void update(Player p) {
 		 p.openInventory(Bukkit.createInventory(null, 0, "Updating Inventory..."));
          p.closeInventory();
+	}
+	
+	public static void damage(Player p) {
+		ItemStack item = p.getItemInHand().clone();
+		
+		item.setDurability((short) (item.getDurability() + 1));
+		
+		if (item.getDurability() >= item.getType().getMaxDurability()) {
+			item = null;
+		}
+		
+		p.setItemInHand(item);
 	}
 
 }

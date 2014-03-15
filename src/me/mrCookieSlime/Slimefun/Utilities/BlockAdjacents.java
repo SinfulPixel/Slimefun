@@ -1,4 +1,4 @@
-package me.mrCookieSlime.Slimefun.api;
+package me.mrCookieSlime.Slimefun.Utilities;
 
 import org.bukkit.Location;
 import org.bukkit.Material;
