@@ -2,7 +2,6 @@ package me.mrCookieSlime.Slimefun.Commands;
 
 import me.mrCookieSlime.Slimefun.startup;
 import me.mrCookieSlime.Slimefun.AddonHandler.Slimefun;
-import me.mrCookieSlime.Slimefun.Dictionary.ItemDictionary;
 import me.mrCookieSlime.Slimefun.Inventories.SlimefunInventory;
 import me.mrCookieSlime.Slimefun.Items.SlimefunGuide;
 import me.mrCookieSlime.Slimefun.Items.SlimefunItem;
@@ -226,7 +225,8 @@ public class SlimefunCommand implements Listener, CommandExecutor {
 										if (Slimefun.getNames().contains(args[2])) {
 											Player target = plugin.getServer().getPlayer(args[1]);
 											
-											target.getWorld().dropItem(target.getLocation(), ItemDictionary.getItem(args[2]));
+											target.getInventory().addItem(Slimefun.getByName(args[2]));
+											messages.ItemGiven(target, Slimefun.getByName(args[2]).getAmount(), Slimefun.getByName(args[2]).getItemMeta().getDisplayName());
 										}
 										else {
 											messages.NotAValidArgument(sender, args[2]);
