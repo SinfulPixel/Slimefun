@@ -11,7 +11,7 @@ import me.mrCookieSlime.Slimefun.Dictionary.ItemDictionary;
 import me.mrCookieSlime.Slimefun.Items.SlimefunItem;
 import me.mrCookieSlime.Slimefun.Messages.messages;
 import me.mrCookieSlime.Slimefun.Utilities.Calculator;
-import me.mrCookieSlime.Slimefun.api.PlayerInventory;
+import me.mrCookieSlime.Slimefun.Utilities.PlayerInventory;
 import me.mrCookieSlime.Slimefun.research.PlayerResearch;
 
 import org.bukkit.Bukkit;

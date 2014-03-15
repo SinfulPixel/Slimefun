@@ -1,7 +1,7 @@
 package me.mrCookieSlime.Slimefun.Listeners.Food;
 
 import me.mrCookieSlime.Slimefun.startup;
-import me.mrCookieSlime.Slimefun.api.PlayerInventory;
+import me.mrCookieSlime.Slimefun.Utilities.PlayerInventory;
 
 import org.bukkit.Material;
 import org.bukkit.Sound;

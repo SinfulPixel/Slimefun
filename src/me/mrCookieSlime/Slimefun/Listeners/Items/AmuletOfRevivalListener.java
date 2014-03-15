@@ -3,7 +3,7 @@ package me.mrCookieSlime.Slimefun.Listeners.Items;
 import me.mrCookieSlime.Slimefun.startup;
 import me.mrCookieSlime.Slimefun.Items.SlimefunItem;
 import me.mrCookieSlime.Slimefun.Messages.messages;
-import me.mrCookieSlime.Slimefun.api.PlayerInventory;
+import me.mrCookieSlime.Slimefun.Utilities.PlayerInventory;
 
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
