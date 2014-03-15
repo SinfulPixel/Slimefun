@@ -1,11 +1,14 @@
 package me.mrCookieSlime.Slimefun.Listeners.Items;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import me.mrCookieSlime.Slimefun.startup;
+import me.mrCookieSlime.Slimefun.Utilities.BlockBreaker;
+import me.mrCookieSlime.Slimefun.Utilities.PlayerInventory;
 import me.mrCookieSlime.Slimefun.Utilities.TreeCalculator;
 
-import org.bukkit.Effect;
+import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.enchantments.Enchantment;
@@ -13,20 +16,21 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockBreakEvent;
-import org.bukkit.inventory.ItemStack;
 
 public class UberAxeListener implements Listener{
 	
 	private startup plugin;
 	
-	public UberAxeListener(startup instance){
+	public UberAxeListener(startup instance) {
 	    this.plugin = instance;
 	    this.plugin.getServer().getPluginManager().registerEvents(this, this.plugin);
 	  }
 	
+	List<Location> broken = new ArrayList<Location>();
+	
 	@EventHandler
 	public void onChop(BlockBreakEvent e) {
-		if (!e.isCancelled()) {
+		if (!broken.contains(e.getBlock().getLocation())) {
 			Player p = e.getPlayer();
 			if (p.getItemInHand() != null) {
 				if (p.getItemInHand().getType() == Material.DIAMOND_AXE) {
@@ -37,14 +41,17 @@ public class UberAxeListener implements Listener{
 								ArrayList<Block> logs = new ArrayList<Block>();
 								logs.add(e.getBlock());
 								TreeCalculator.getTree(e.getBlock(), logs, new ArrayList<Block>());
-								
+
 								for (Block b: logs) {
-									for (ItemStack drop: b.getDrops()) {
-										b.getWorld().dropItem(b.getLocation(), drop);
-									}
-									b.getWorld().playEffect(b.getLocation(), Effect.STEP_SOUND, b.getType());
-									b.setType(Material.AIR);
+									broken.add(b.getLocation());
+									
+									BlockBreaker.breakBlock(p, b);
+									
+									broken.remove(b.getLocation());
 								}
+								
+								PlayerInventory.damage(p);
+								
 							}
 						}
 					}
