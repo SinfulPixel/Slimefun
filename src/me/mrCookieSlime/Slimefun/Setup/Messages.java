@@ -158,6 +158,12 @@ public class Messages {
 			if (!msgcfg.contains("messages.amulet-tricked")) {
 				msgcfg.set("messages.amulet-tricked", "&4&lYou tried to trick this mighty old Amulet by wearing multiple Ones? All Damage you get will now be way more painful!");
 			}
+			if (!msgcfg.contains("messages.item-given")) {
+				msgcfg.set("messages.item-given", "&a&lYou have been given &7%amount%x %item%");
+			}
+			if (!msgcfg.contains("messages.uberPickaxe-changed")) {
+				msgcfg.set("messages.uberPickaxe-changed", "&9Uber Pickaxe Mode changed to: &b&l%mode%");
+			}
 			try {
 				msgcfg.save(messages);
 			} catch (Exception e1) {

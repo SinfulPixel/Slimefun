@@ -1225,4 +1225,18 @@ public class GuideItems {
 		items.add(SlimefunItem.MAGICAL_LUMP_3);
 		return items;
 	}
+	
+	public static List<ItemStack> UberPickaxeRecipe(){
+		List<ItemStack> items = new ArrayList<ItemStack>();
+		items.add(SlimefunItem.UBER_FOCUS);
+		items.add(SlimefunItem.UBER_FOCUS);
+		items.add(SlimefunItem.UBER_FOCUS);
+		items.add(null);
+		items.add(SlimefunItem.STEEL_INGOT);
+		items.add(null);
+		items.add(null);
+		items.add(SlimefunItem.STEEL_INGOT);
+		items.add(null);
+		return items;
+	}
 }

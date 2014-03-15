@@ -47,6 +47,7 @@ import me.mrCookieSlime.Slimefun.Listeners.Items.SpawnVillagers;
 import me.mrCookieSlime.Slimefun.Listeners.Items.SwordOfBeheadingListener;
 import me.mrCookieSlime.Slimefun.Listeners.Items.TomeofHomelandListener;
 import me.mrCookieSlime.Slimefun.Listeners.Items.UberAxeListener;
+import me.mrCookieSlime.Slimefun.Listeners.Items.UberPickaxeListener;
 import me.mrCookieSlime.Slimefun.Listeners.Items.iTomeListener;
 import me.mrCookieSlime.Slimefun.Listeners.Player.WelcomeListener;
 import me.mrCookieSlime.Slimefun.Listeners.UberUpgrades.AbsorptionUpgrade;
@@ -270,6 +271,9 @@ public class Classes {
 		}
 		if (plugin.getConfig().getBoolean("items.AmuletOfRevival")) {
 			new AmuletOfRevivalListener(plugin);
+		}
+		if (plugin.getConfig().getBoolean("items.UberPickaxe")) {
+			new UberPickaxeListener(plugin);
 		}
 	}
 

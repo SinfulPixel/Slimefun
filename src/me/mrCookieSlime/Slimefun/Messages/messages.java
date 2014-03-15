@@ -169,4 +169,15 @@ public class messages {
    public static void AmuletTricked(Player player) {
 	   player.sendMessage(prefix + ChatColor.translateAlternateColorCodes('&', Messages.msgcfg.getString("messages.amulet-tricked")));
    }
+   public static void ItemGiven(Player player, int amount, String name) {
+	   String msg = ChatColor.translateAlternateColorCodes('&', Messages.msgcfg.getString("messages.item-given"));
+	   msg = msg.replace("%amount%", String.valueOf(amount));
+	   msg = msg.replace("%item%", ChatColor.translateAlternateColorCodes('&', "&7\"" + name + "&7\""));
+	   player.sendMessage(prefix + msg);
+   }
+   public static void UberPickaxeModeChanged(Player player, String mode) {
+	   String msg = ChatColor.translateAlternateColorCodes('&', Messages.msgcfg.getString("messages.uberPickaxe-changed"));
+	   msg = msg.replace("%mode%", mode);
+	   player.sendMessage(prefix + msg);
+   }
 }

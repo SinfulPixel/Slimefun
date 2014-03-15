@@ -120,4 +120,8 @@ public class SlimefunItem {
 		public static ItemStack UBER_FOCUS = ItemDictionary.getItem("UberFocus");
 		public static ItemStack UBER_AXE = ItemDictionary.getItem("UberAxe");
 		public static ItemStack AMULET_OF_REVIVAL = ItemDictionary.getItem("AmuletOfRevival");
+		public static ItemStack UBER_PICKAXE = ItemDictionary.getItem("UberPickaxe");
+		public static ItemStack UBER_PICKAXE_3x3 = ItemDictionary.getItem("UberPickaxe2");
+		public static ItemStack UBER_PICKAXE_5x5 = ItemDictionary.getItem("UberPickaxe3");
+		public static ItemStack UBER_PICKAXE_1x3 = ItemDictionary.getItem("UberPickaxe4");
 }

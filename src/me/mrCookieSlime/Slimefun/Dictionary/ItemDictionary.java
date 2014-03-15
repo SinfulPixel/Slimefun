@@ -733,6 +733,62 @@ public class ItemDictionary {
 			im.setLore(ll);
 			item.setItemMeta(im);
 		}
+		if (ConfigName.equalsIgnoreCase("UberPickaxe")) {
+			item.setType(Material.DIAMOND_PICKAXE);
+			item = ItemModifier.Setname(item, ChatColor.BLUE + "" + ChatColor.BOLD + "Uber Pickaxe");
+			List<String> ll = new ArrayList<String>();
+			ll.add("");
+			ll.add(ChatColor.BLUE + "Right Click " + ChatColor.GREEN + "to change the Mining Mode");
+			ll.add("");
+			ll.add(ChatColor.GRAY + "Current Mode: " +  ChatColor.DARK_GRAY + "" + ChatColor.ITALIC + "1x1");
+			ll.add("");
+			ll.add(ChatColor.RED + "Fortune has no Effect on this mighty Tool");
+			ItemMeta im = item.getItemMeta();
+			im.setLore(ll);
+			item.setItemMeta(im);
+		}
+		if (ConfigName.equalsIgnoreCase("UberPickaxe2")) {
+			item.setType(Material.DIAMOND_PICKAXE);
+			item = ItemModifier.Setname(item, ChatColor.BLUE + "" + ChatColor.BOLD + "Uber Pickaxe");
+			List<String> ll = new ArrayList<String>();
+			ll.add("");
+			ll.add(ChatColor.BLUE + "Right Click " + ChatColor.GREEN + "to change the Mining Mode");
+			ll.add("");
+			ll.add(ChatColor.GRAY + "Current Mode: " +  ChatColor.DARK_GRAY + "" + ChatColor.ITALIC + "3x3");
+			ll.add("");
+			ll.add(ChatColor.RED + "Fortune has no Effect on this mighty Tool");
+			ItemMeta im = item.getItemMeta();
+			im.setLore(ll);
+			item.setItemMeta(im);
+		}
+		if (ConfigName.equalsIgnoreCase("UberPickaxe3")) {
+			item.setType(Material.DIAMOND_PICKAXE);
+			item = ItemModifier.Setname(item, ChatColor.BLUE + "" + ChatColor.BOLD + "Uber Pickaxe");
+			List<String> ll = new ArrayList<String>();
+			ll.add("");
+			ll.add(ChatColor.BLUE + "Right Click " + ChatColor.GREEN + "to change the Mining Mode");
+			ll.add("");
+			ll.add(ChatColor.GRAY + "Current Mode: " +  ChatColor.DARK_GRAY + "" + ChatColor.ITALIC + "5x5");
+			ll.add("");
+			ll.add(ChatColor.RED + "Fortune has no Effect on this mighty Tool");
+			ItemMeta im = item.getItemMeta();
+			im.setLore(ll);
+			item.setItemMeta(im);
+		}
+		if (ConfigName.equalsIgnoreCase("UberPickaxe4")) {
+			item.setType(Material.DIAMOND_PICKAXE);
+			item = ItemModifier.Setname(item, ChatColor.BLUE + "" + ChatColor.BOLD + "Uber Pickaxe");
+			List<String> ll = new ArrayList<String>();
+			ll.add("");
+			ll.add(ChatColor.BLUE + "Right Click " + ChatColor.GREEN + "to change the Mining Mode");
+			ll.add("");
+			ll.add(ChatColor.GRAY + "Current Mode: " +  ChatColor.DARK_GRAY + "" + ChatColor.ITALIC + "1x3");
+			ll.add("");
+			ll.add(ChatColor.RED + "Fortune has no Effect on this mighty Tool");
+			ItemMeta im = item.getItemMeta();
+			im.setLore(ll);
+			item.setItemMeta(im);
+		}
 		return item;
 	}
 }

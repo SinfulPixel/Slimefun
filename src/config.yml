@@ -96,6 +96,7 @@ items:
   UberFocus: true
   UberAxe: true
   AmuletOfRevival: true
+  UberPickaxe: true
 researches:
   Walking sticks: true
   Portable Crafter: true
@@ -150,6 +151,7 @@ researches:
   Uber armor: true
   Uber Upgrade Cores: true
   Uber Axe: true
+  Uber Pickaxe: true
 structures:
   huts: true
 generation-chance:

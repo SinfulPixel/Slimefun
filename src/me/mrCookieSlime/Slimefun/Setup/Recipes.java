@@ -184,6 +184,9 @@ public class Recipes {
 			if (plugin.getConfig().getBoolean("items.AmuletOfRevival")) {
 				AmuletRecipe();
 			}
+			if (plugin.getConfig().getBoolean("items.UberPickaxe")) {
+				UberPickaxeRecipe();
+			}
 		}
 	  
 	  public static void AmuletRecipe() {
@@ -793,7 +796,7 @@ public class Recipes {
 			if (true) {
 				ShapedRecipe r = new ShapedRecipe(SlimefunItem.UBER_AXE);
 				r.shape(new String[] { "fd ", "db ", " b " });
-				r.setIngredient('d', Material.WATCH, 3);
+				r.setIngredient('f', Material.WATCH, 3);
 				r.setIngredient('d', Material.DIAMOND);
 				r.setIngredient('b', Material.BLAZE_ROD);
 				plugin.getServer().addRecipe(r);
@@ -801,10 +804,17 @@ public class Recipes {
 			if (true) {
 				ShapedRecipe r = new ShapedRecipe(SlimefunItem.UBER_AXE);
 				r.shape(new String[] { " df", " bd", " b " });
-				r.setIngredient('d', Material.WATCH, 3);
+				r.setIngredient('f', Material.WATCH, 3);
 				r.setIngredient('d', Material.DIAMOND);
 				r.setIngredient('b', Material.BLAZE_ROD);
 				plugin.getServer().addRecipe(r);
 			}
+		}
+		public static void UberPickaxeRecipe() {
+			ShapedRecipe r = new ShapedRecipe(SlimefunItem.UBER_PICKAXE);
+			r.shape(new String[] { "fff", " s ", " s " });
+			r.setIngredient('f', Material.WATCH, 3);
+			r.setIngredient('s', Material.IRON_INGOT, 1);
+			plugin.getServer().addRecipe(r);
 		}
 }
