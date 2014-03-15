@@ -28,7 +28,7 @@ public class PlayerResearch {
 	public static boolean hasResearched(Player p, String research) {
 		boolean b = false;
 		
-		File Researches = new File("data-storage/Slimefun/Researches", p.getName() + ".yml");
+		File Researches = new File("data-storage/Slimefun/Researches", p.getUniqueId() + ".yml");
 		FileConfiguration rcfg = YamlConfiguration.loadConfiguration(Researches);
 		
 		if (plugin.getConfig().contains("researches." + research)) {
@@ -45,8 +45,8 @@ public class PlayerResearch {
 
 		    }
 		else {
-			if (rcfg.contains(p.getName() + "." + research)) {
-				if (rcfg.getBoolean(p.getName() + "." + research)) {
+			if (rcfg.contains("Researches." + research)) {
+				if (rcfg.getBoolean("Researches." + research)) {
 					b = true;
 				}
 			}
@@ -57,7 +57,7 @@ public class PlayerResearch {
 	
 	public static void research(Player p, String research) {
 		
-		File Researches = new File("data-storage/Slimefun/Researches", p.getName() + ".yml");
+		File Researches = new File("data-storage/Slimefun/Researches", p.getUniqueId() + ".yml");
 		FileConfiguration rcfg = YamlConfiguration.loadConfiguration(Researches);
 		
 		rcfg.set(p.getName() + "." + research, true);

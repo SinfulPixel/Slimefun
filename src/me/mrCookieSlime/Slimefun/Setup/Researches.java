@@ -60,6 +60,7 @@ public class Researches {
 		Slimefun.addResearch("Uber armor");
 		Slimefun.addResearch("Uber Upgrade Cores");
 		Slimefun.addResearch("Uber Axe");
+		Slimefun.addResearch("Uber Pickaxe");
 		
 		Slimefun.registerResearch(SlimefunItem.GRANDMAS_WALKING_STICK, "Walking sticks");
 		Slimefun.registerResearch(SlimefunItem.GRANDPAS_WALKING_STICK, "Walking sticks");
@@ -142,6 +143,67 @@ public class Researches {
 		Slimefun.registerResearch(SlimefunItem.UBER_FOCUS, "Uber armor");
 		Slimefun.registerResearch(SlimefunItem.UBER_AXE, "Uber Axe");
 		Slimefun.registerResearch(SlimefunItem.AMULET_OF_REVIVAL, "Amulet of Revival");
+		Slimefun.registerResearch(SlimefunItem.UBER_PICKAXE, "Uber Pickaxe");
+		
+		Slimefun.registerDigitalName(SlimefunItem.NANO_PICKAXE,"nanopickaxe");
+		Slimefun.registerDigitalName(SlimefunItem.PORTABLE_DUSTBIN, "dustbin");
+		Slimefun.registerDigitalName(SlimefunItem.ENDER_BACKPACK, "enderbackpack");
+		Slimefun.registerDigitalName(SlimefunItem.GRANDPAS_WALKING_STICK, "grandpaswalkingstick");
+		Slimefun.registerDigitalName(SlimefunItem.GRANDMAS_WALKING_STICK, "grandmaswalkingstick");
+		Slimefun.registerDigitalName(SlimefunItem.SUPER_MEAT, "supermeat");
+		Slimefun.registerDigitalName(SlimefunItem.NANO_HOE, "nanohoe");
+		Slimefun.registerDigitalName(SlimefunItem.NANO_SABER, "nanosaber");
+		Slimefun.registerDigitalName(SlimefunItem.TOOL_BENCH, "toolbench");
+		Slimefun.registerDigitalName(SlimefunItem.SIMPLE_CIRCUIT_BOARD, "simplecircuitboard");
+		Slimefun.registerDigitalName(SlimefunItem.INVISIBLE_TOME, "itome");
+		Slimefun.registerDigitalName(SlimefunItem.BOOK_O_TELEPORTING, "bookoteleporting");
+		Slimefun.registerDigitalName(SlimefunItem.PORTABLE_ENCHANTER, "penchanter");
+		Slimefun.registerDigitalName(SlimefunItem.PORTABLE_CRAFTER, "pcrafter");
+		Slimefun.registerDigitalName(SlimefunItem.TOME_OF_HOMELAND, "tomeofhomeland");
+		Slimefun.registerDigitalName(SlimefunItem.PORTABLE_TOOL_BENCH, "ptoolbench");
+		Slimefun.registerDigitalName(SlimefunItem.PORTABLE_BOOK_BINDER, "pbookbinder");
+		Slimefun.registerDigitalName(SlimefunItem.STEEL_INGOT, "steelingot");
+		Slimefun.registerDigitalName(SlimefunItem.ADVANCED_CIRCUIT_BOARD, "advancedcircuitboard");
+		Slimefun.registerDigitalName(SlimefunItem.STEEL_THRUSTER, "steelthruster");
+		Slimefun.registerDigitalName(SlimefunItem.JETPACK, "jetpack");
+		Slimefun.registerDigitalName(SlimefunItem.PORTABLE_JUKEBOX, "pjukebox");
+		Slimefun.registerDigitalName(SlimefunItem.NANO_AXEL, "nanoaxel");
+		Slimefun.registerDigitalName(SlimefunItem.MAGIC_EYE_OF_ENDER, "magiceyeofender");
+		Slimefun.registerDigitalName(SlimefunItem.PARACHUTE, "parachute");
+		Slimefun.registerDigitalName(SlimefunItem.UBER_MEAT, "ubermeat");
+		Slimefun.registerDigitalName(SlimefunItem.PARTIALLY_GOLDEN_APPLE, "partiallygoldenapple");
+		Slimefun.registerDigitalName(SlimefunItem.MAGIC_SUGAR, "magicsugar");
+		Slimefun.registerDigitalName(SlimefunItem.MAGICAL_LUMP_1, "magicallump1");
+		Slimefun.registerDigitalName(SlimefunItem.MAGICAL_LUMP_2, "magicallump2");
+		Slimefun.registerDigitalName(SlimefunItem.MAGICAL_LUMP_3, "magicallump3");
+		Slimefun.registerDigitalName(SlimefunItem.ENDER_LUMP_1, "enderlump1");
+		Slimefun.registerDigitalName(SlimefunItem.ENDER_LUMP_2, "enderlump2");
+		Slimefun.registerDigitalName(SlimefunItem.ENDER_LUMP_3, "enderlump3");
+		Slimefun.registerDigitalName(SlimefunItem.CRYSTAL_OF_REPAIRING, "crystalofrepairing");
+		Slimefun.registerDigitalName(SlimefunItem.ENDER_CRYSTAL_OF_REPAIRING, "endercrystalofrepairing");
+		Slimefun.registerDigitalName(SlimefunItem.SLIMEFUN_GUIDE, "guide");
+		Slimefun.registerDigitalName(SlimefunItem.SWORD_OF_BEHEADING, "swordofbeheading");
+		Slimefun.registerDigitalName(SlimefunItem.EMERALD_OF_REPAIRING, "emeraldofrepairing");
+		Slimefun.registerDigitalName(SlimefunItem.MULTI_TOOL_MODE_NONE, "multitool");
+		Slimefun.registerDigitalName(SlimefunItem.STEEL_PLATE, "steelplate");
+		Slimefun.registerDigitalName(SlimefunItem.CHAIN, "chain");
+		Slimefun.registerDigitalName(SlimefunItem.FORTUNE_COOKIE, "fortunecookie");
+		Slimefun.registerDigitalName(SlimefunItem.GRAPPLING_HOOK, "grapplinghook");
+		Slimefun.registerDigitalName(SlimefunItem.HOOK, "hook");
+		Slimefun.registerDigitalName(SlimefunItem.DIAMOND_OF_DUPLICATING, "diamondofduplicating");
+		Slimefun.registerDigitalName(SlimefunItem.SLIME_GEM, "slimegem");
+		Slimefun.registerDigitalName(SlimefunItem.INK_OF_KNOWLEDGE, "inkofknowledge");
+		Slimefun.registerDigitalName(SlimefunItem.MINERS_COMPASS, "minerscompass");
+		Slimefun.registerDigitalName(SlimefunItem.NANO_FOCUS, "nanofocus");
+		Slimefun.registerDigitalName(SlimefunItem.QUANTUM_FOCUS, "quantumfocus");
+		Slimefun.registerDigitalName(SlimefunItem.UBER_FOCUS, "uberfocus");
+		Slimefun.registerDigitalName(SlimefunItem.IRON_CHUNK, "ironchunk");
+		Slimefun.registerDigitalName(SlimefunItem.GOLD_CHUNK, "goldchunk");
+		Slimefun.registerDigitalName(SlimefunItem.GOLDEN_FEATHER, "goldenfeather");
+		Slimefun.registerDigitalName(SlimefunItem.PORTABLE_HOLE, "portablehole");
+		Slimefun.registerDigitalName(SlimefunItem.UBER_AXE, "uberaxe");
+		Slimefun.registerDigitalName(SlimefunItem.AMULET_OF_REVIVAL, "amuletofrevival");
+		Slimefun.registerDigitalName(SlimefunItem.UBER_PICKAXE, "uberpickaxe");
 	}
 
 }

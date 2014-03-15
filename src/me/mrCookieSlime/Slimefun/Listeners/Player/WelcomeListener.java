@@ -25,19 +25,31 @@ public class WelcomeListener implements Listener {
 	}
 	
 	@EventHandler
-	public void onPlayerJoin(PlayerJoinEvent e) {
+	public void onPlayerJoin(PlayerJoinEvent e) throws IOException {
 		Player p = e.getPlayer();
 		
-		File players = new File("data-storage/Slimefun/Players", p.getName() + ".yml");
+		File oldP = new File("data-storage/Slimefun/Players", p.getName() + ".yml");
+		File oldR = new File("data-storage/Slimefun/Researches", p.getName() + ".yml");
+		
+		File players = new File("data-storage/Slimefun/Players", p.getUniqueId() + ".yml");
 		FileConfiguration pcfg = YamlConfiguration.loadConfiguration(players);
 		
-		File Researches = new File("data-storage/Slimefun/Researches", p.getName() + ".yml");
+		File Researches = new File("data-storage/Slimefun/Researches", p.getUniqueId() + ".yml");
 		FileConfiguration rcfg = YamlConfiguration.loadConfiguration(Researches);
+		
+		if (oldP.exists() || oldR.exists()) {
+			oldP.renameTo(players);
+			
+			oldR.delete();
+			Researches.createNewFile();
+			
+			System.out.println("The Database of Player \"" + p.getName() + "\" has been migrated to \"" + p.getUniqueId() + "\"");
+		}
 		
 		if (plugin.getConfig().getBoolean("options.enable-researching")) {
 			for (int i = 0; i < PlayerResearch.getResearchNames().size(); i++) {
-				if (!rcfg.contains(p.getName() + "." + PlayerResearch.getResearchNames().get(i))) {
-					rcfg.set(p.getName() + "." + PlayerResearch.getResearchNames().get(i), false);
+				if (!rcfg.contains("researches." + PlayerResearch.getResearchNames().get(i))) {
+					rcfg.set("researches." + PlayerResearch.getResearchNames().get(i), false);
 					try {
 						rcfg.save(Researches);
 					} catch (IOException e1) {
@@ -47,8 +59,8 @@ public class WelcomeListener implements Listener {
 		}
 		else {
 			for (int i = 0; i < PlayerResearch.getResearchNames().size(); i++) {
-				if (!rcfg.contains(p.getName() + "." + PlayerResearch.getResearchNames().get(i))) {
-					rcfg.set(p.getName() + "." + PlayerResearch.getResearchNames().get(i), true);
+				if (!rcfg.contains("researches." + PlayerResearch.getResearchNames().get(i))) {
+					rcfg.set("researches." + PlayerResearch.getResearchNames().get(i), true);
 					try {
 						rcfg.save(Researches);
 					} catch (IOException e1) {
