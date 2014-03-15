@@ -34,6 +34,9 @@ public class Slimefun {
 	
 	public static Map<ItemStack, String> UberPrices = new HashMap<ItemStack, String>();
 	
+	public static Map<String, ItemStack> NameIndex = new HashMap<String, ItemStack>();
+	public static List<String> NameList = new ArrayList<String>();
+	
 	public static void registerResearch(ItemStack item, String research) {
 		PlayerResearch.map.put(item, research);
 		if (!PlayerResearch.ll.contains(research)) {
@@ -136,7 +139,25 @@ public class Slimefun {
 		}
 	}
 	
+	public static void registerDigitalName(ItemStack item, String digitalName) {
+		if (!NameList.contains(digitalName)) {
+			NameList.add(digitalName);
+		}
+		if (!NameIndex.containsKey(digitalName)) {
+			NameIndex.put(digitalName, item);
+		}
+	}
+	
+	public static ItemStack getByName(String digitalName) {
+		if (NameIndex.containsKey(digitalName)) {
+			return NameIndex.get(digitalName);
+		}
+		else {
+			return null;
+		}
+	}
+	
 	public static List<String> getNames() {
-		return NameIndex.get();
+		return NameList;
 	}
 }
