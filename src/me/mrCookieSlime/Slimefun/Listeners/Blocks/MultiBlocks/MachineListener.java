@@ -45,6 +45,7 @@ public class MachineListener implements Listener {
 													if (p.getItemInHand().getItemMeta().getLore().get(1).equalsIgnoreCase(ChatColor.GREEN + "Charge:")) {
 														double charge = Double.valueOf(ChatColor.stripColor(p.getItemInHand().getItemMeta().getLore().get(2)).split(" / ")[0]);
 														double added = 0.1;
+														double max = Double.valueOf(ChatColor.stripColor(p.getItemInHand().getItemMeta().getLore().get(2)).split(" / ")[1].replace(" KJ", ""));
 														
 														int y = (int) e.getClickedBlock().getRelative(BlockFace.UP).getRelative(BlockFace.UP).getRelative(BlockFace.UP).getLocation().getY();
 														
@@ -68,8 +69,8 @@ public class MachineListener implements Listener {
 															}
 														}
 														
-														if (charge + added > 50) {
-															added = 50 - charge;
+														if (charge + added > max) {
+															added = max - charge;
 														}
 														
 														charge = charge + added;
@@ -82,7 +83,7 @@ public class MachineListener implements Listener {
 														
 														ItemMeta im = item.getItemMeta();
 														List<String> lore = item.getItemMeta().getLore();
-														lore.set(2, ChatColor.GRAY + String.valueOf(charge) + " / 50 KJ");
+														lore.set(2, ChatColor.GRAY + String.valueOf(charge) + " / " + ChatColor.stripColor(p.getItemInHand().getItemMeta().getLore().get(2)).split(" / ")[1]);
 														im.setLore(lore);
 														
 														item.setItemMeta(im);
@@ -113,9 +114,10 @@ public class MachineListener implements Listener {
 													if (p.getItemInHand().getItemMeta().getLore().get(1).equalsIgnoreCase(ChatColor.GREEN + "Charge:")) {
 														double charge = Double.valueOf(ChatColor.stripColor(p.getItemInHand().getItemMeta().getLore().get(2)).split(" / ")[0]);
 														double added = 0.05;
+														double max = Double.valueOf(ChatColor.stripColor(p.getItemInHand().getItemMeta().getLore().get(2)).split(" / ")[1].replace(" KJ", ""));
 														
-														if (charge + added > 50) {
-															added = 50 - charge;
+														if (charge + added > max) {
+															added = max - charge;
 														}
 														
 														charge = charge + added;
@@ -128,7 +130,7 @@ public class MachineListener implements Listener {
 														
 														ItemMeta im = item.getItemMeta();
 														List<String> lore = item.getItemMeta().getLore();
-														lore.set(2, ChatColor.GRAY + String.valueOf(charge) + " / 50 KJ");
+														lore.set(2, ChatColor.GRAY + String.valueOf(charge) + " / " + ChatColor.stripColor(p.getItemInHand().getItemMeta().getLore().get(2)).split(" / ")[1]);
 														im.setLore(lore);
 														
 														item.setItemMeta(im);
@@ -157,9 +159,10 @@ public class MachineListener implements Listener {
 													if (p.getItemInHand().getItemMeta().getLore().get(1).equalsIgnoreCase(ChatColor.GREEN + "Charge:")) {
 														double charge = Double.valueOf(ChatColor.stripColor(p.getItemInHand().getItemMeta().getLore().get(2)).split(" / ")[0]);
 														double added = 0.2;
+														double max = Double.valueOf(ChatColor.stripColor(p.getItemInHand().getItemMeta().getLore().get(2)).split(" / ")[1].replace(" KJ", ""));
 														
-														if (charge + added > 50) {
-															added = 50 - charge;
+														if (charge + added > max) {
+															added = max - charge;
 														}
 														
 														charge = charge + added;
@@ -172,7 +175,7 @@ public class MachineListener implements Listener {
 														
 														ItemMeta im = item.getItemMeta();
 														List<String> lore = item.getItemMeta().getLore();
-														lore.set(2, ChatColor.GRAY + String.valueOf(charge) + " / 50 KJ");
+														lore.set(2, ChatColor.GRAY + String.valueOf(charge) + " / " + ChatColor.stripColor(p.getItemInHand().getItemMeta().getLore().get(2)).split(" / ")[1]);
 														im.setLore(lore);
 														
 														item.setItemMeta(im);
