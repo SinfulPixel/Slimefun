@@ -187,6 +187,9 @@ public class Recipes {
 			if (plugin.getConfig().getBoolean("items.UberPickaxe")) {
 				UberPickaxeRecipe();
 			}
+			if (plugin.getConfig().getBoolean("items.Battery")) {
+				BatteryRecipe();
+			}
 		}
 	  
 	  public static void AmuletRecipe() {
@@ -810,11 +813,21 @@ public class Recipes {
 				plugin.getServer().addRecipe(r);
 			}
 		}
+		
 		public static void UberPickaxeRecipe() {
 			ShapedRecipe r = new ShapedRecipe(SlimefunItem.UBER_PICKAXE);
 			r.shape(new String[] { "fff", " s ", " s " });
 			r.setIngredient('f', Material.WATCH, 3);
 			r.setIngredient('s', Material.IRON_INGOT, 1);
+			plugin.getServer().addRecipe(r);
+		}
+		
+		public static void BatteryRecipe() {
+			ShapedRecipe r = new ShapedRecipe(SlimefunItem.BATTERY);
+			r.shape(new String[] { " s ", "grg", "grg" });
+			r.setIngredient('r', Material.REDSTONE);
+			r.setIngredient('s', Material.IRON_INGOT, 1);
+			r.setIngredient('g', Material.GOLD_INGOT);
 			plugin.getServer().addRecipe(r);
 		}
 }

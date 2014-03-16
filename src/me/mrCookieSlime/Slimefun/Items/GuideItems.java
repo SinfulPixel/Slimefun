@@ -1239,4 +1239,60 @@ public class GuideItems {
 		items.add(null);
 		return items;
 	}
+	
+	public static List<ItemStack> BatteryRecipe(){
+		List<ItemStack> items = new ArrayList<ItemStack>();
+		items.add(null);
+		items.add(SlimefunItem.STEEL_INGOT);
+		items.add(null);
+		items.add(new ItemStack(Material.GOLD_INGOT));
+		items.add(new ItemStack(Material.REDSTONE));
+		items.add(new ItemStack(Material.GOLD_INGOT));
+		items.add(new ItemStack(Material.GOLD_INGOT));
+		items.add(new ItemStack(Material.REDSTONE));
+		items.add(new ItemStack(Material.GOLD_INGOT));
+		return items;
+	}
+	
+	public static List<ItemStack> SolarPanelRecipe(){
+		List<ItemStack> items = new ArrayList<ItemStack>();
+		items.add(new ItemStack(Material.DAYLIGHT_DETECTOR));
+		items.add(new ItemStack(Material.DAYLIGHT_DETECTOR));
+		items.add(new ItemStack(Material.DAYLIGHT_DETECTOR));
+		items.add(null);
+		items.add(new ItemStack(Material.NETHER_FENCE));
+		items.add(null);
+		items.add(null);
+		items.add(new ItemStack(Material.PISTON_BASE));
+		items.add(null);
+		return items;
+	}
+	
+	public static List<ItemStack> WaterMillRecipe(){
+		List<ItemStack> items = new ArrayList<ItemStack>();
+		items.add(null);
+		items.add(null);
+		items.add(null);
+		items.add(new ItemStack(Material.IRON_FENCE));
+		items.add(new ItemStack(Material.PISTON_BASE));
+		items.add(new ItemStack(Material.IRON_FENCE));
+		items.add(new ItemStack(Material.STATIONARY_WATER));
+		items.add(new ItemStack(Material.STATIONARY_WATER));
+		items.add(new ItemStack(Material.STATIONARY_WATER));
+		return items;
+	}
+	
+	public static List<ItemStack> ThermalGeneratorRecipe(){
+		List<ItemStack> items = new ArrayList<ItemStack>();
+		items.add(null);
+		items.add(null);
+		items.add(null);
+		items.add(new ItemStack(Material.IRON_FENCE));
+		items.add(new ItemStack(Material.PISTON_BASE));
+		items.add(new ItemStack(Material.IRON_FENCE));
+		items.add(new ItemStack(Material.STATIONARY_LAVA));
+		items.add(new ItemStack(Material.STATIONARY_LAVA));
+		items.add(new ItemStack(Material.STATIONARY_LAVA));
+		return items;
+	}
 }

@@ -97,6 +97,11 @@ items:
   UberAxe: true
   AmuletOfRevival: true
   UberPickaxe: true
+  ElectricFurnace: true
+  WaterMill: true
+  ThermalGenerator: true
+  SolarPanel: true
+  Battery: true
 researches:
   Walking sticks: true
   Portable Crafter: true
@@ -126,6 +131,10 @@ researches:
   Ore Washing: true
   Hot Melting: true
   Steel Ingot: true
+  Battery: true
+  Electric Furnace: true
+  Water Mill: true
+  Thermal Generator: true
   Miners Compass: true
   Steel Thruster: true
   Steel Plate: true
@@ -135,6 +144,7 @@ researches:
   Grappling Hook: true
   Jetpack: true
   Multi Tool: true
+  Solar Panel: true
   Emerald of Repairing: true
   Crystal of Repairing: true
   Ender Crystal of Repairing: true

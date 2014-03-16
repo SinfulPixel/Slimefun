@@ -12,6 +12,7 @@ import me.mrCookieSlime.Slimefun.Listeners.Armor.UberArmorListener;
 import me.mrCookieSlime.Slimefun.Listeners.Blocks.ArmorCraftListener;
 import me.mrCookieSlime.Slimefun.Listeners.Blocks.ToolBenchListener;
 import me.mrCookieSlime.Slimefun.Listeners.Blocks.MultiBlocks.BookBinderListener;
+import me.mrCookieSlime.Slimefun.Listeners.Blocks.MultiBlocks.MachineListener;
 import me.mrCookieSlime.Slimefun.Listeners.Blocks.MultiBlocks.OreWasherListener;
 import me.mrCookieSlime.Slimefun.Listeners.Blocks.MultiBlocks.SmelteryListener;
 import me.mrCookieSlime.Slimefun.Listeners.Drops.SimpleCircuitBoardDropListener;
@@ -90,6 +91,7 @@ public class Classes {
 		new CircuitBoardListener(plugin);
 		new CommandAliases(plugin);
 		new SpawnVillagers(plugin);
+		new MachineListener(plugin);
 		
 		if (plugin.getConfig().getBoolean("items.NanoPickaxe") == true) {
 			new NanoPickaxeListener(plugin);

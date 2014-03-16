@@ -95,5 +95,11 @@ public class Category {
 		item = ItemModifier.Setname(item, ChatColor.GOLD + "Uber Upgrade Cores");
 		return item;
 	}
+	
+	public static ItemStack Machines() {
+		ItemStack item = new ItemStack(Material.IRON_BLOCK);
+		item = ItemModifier.Setname(item, ChatColor.GRAY + "Electric Machines");
+		return item;
+	}
 
 }

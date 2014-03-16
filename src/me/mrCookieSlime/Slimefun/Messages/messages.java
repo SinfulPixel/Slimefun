@@ -180,4 +180,14 @@ public class messages {
 	   msg = msg.replace("%mode%", mode);
 	   player.sendMessage(prefix + msg);
    }
+   public static void ChargeAdd(Player player, String charge) {
+	   String msg = ChatColor.translateAlternateColorCodes('&', Messages.msgcfg.getString("messages.charge-add"));
+	   msg = msg.replace("%charge%", ChatColor.GRAY + charge);
+	   player.sendMessage(msg);
+   }
+   public static void ChargeRemove(Player player, String charge) {
+	   String msg = ChatColor.translateAlternateColorCodes('&', Messages.msgcfg.getString("messages.charge-remove"));
+	   msg = msg.replace("%charge%", ChatColor.GRAY + charge);
+	   player.sendMessage(msg);
+   }
 }

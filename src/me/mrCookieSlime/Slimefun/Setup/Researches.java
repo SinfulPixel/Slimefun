@@ -35,6 +35,10 @@ public class Researches {
 		Slimefun.addResearch("Ore Washing");
 		Slimefun.addResearch("Hot Melting");
 		Slimefun.addResearch("Steel Ingot");
+		Slimefun.addResearch("Battery");
+		Slimefun.addResearch("Electric Furnace");
+		Slimefun.addResearch("Water Mill");
+		Slimefun.addResearch("Thermal Generator");
 		Slimefun.addResearch("Miners Compass");
 		Slimefun.addResearch("Steel Thruster");
 		Slimefun.addResearch("Steel Plate");
@@ -44,6 +48,7 @@ public class Researches {
 		Slimefun.addResearch("Grappling Hook");
 		Slimefun.addResearch("Jetpack");
 		Slimefun.addResearch("Multi Tool");
+		Slimefun.addResearch("Solar Panel");
 		Slimefun.addResearch("Emerald of Repairing");
 		Slimefun.addResearch("Crystal of Repairing");
 		Slimefun.addResearch("Ender Crystal of Repairing");
@@ -144,6 +149,7 @@ public class Researches {
 		Slimefun.registerResearch(SlimefunItem.UBER_AXE, "Uber Axe");
 		Slimefun.registerResearch(SlimefunItem.AMULET_OF_REVIVAL, "Amulet of Revival");
 		Slimefun.registerResearch(SlimefunItem.UBER_PICKAXE, "Uber Pickaxe");
+		Slimefun.registerResearch(SlimefunItem.BATTERY, "Battery");
 		
 		Slimefun.registerDigitalName(SlimefunItem.NANO_PICKAXE,"nanopickaxe");
 		Slimefun.registerDigitalName(SlimefunItem.PORTABLE_DUSTBIN, "dustbin");
@@ -204,6 +210,7 @@ public class Researches {
 		Slimefun.registerDigitalName(SlimefunItem.UBER_AXE, "uberaxe");
 		Slimefun.registerDigitalName(SlimefunItem.AMULET_OF_REVIVAL, "amuletofrevival");
 		Slimefun.registerDigitalName(SlimefunItem.UBER_PICKAXE, "uberpickaxe");
+		Slimefun.registerDigitalName(SlimefunItem.BATTERY, "battery");
 	}
 
 }

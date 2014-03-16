@@ -329,5 +329,17 @@ public class Guide {
 		if (plugin.getConfig().getBoolean("items.UberPickaxe")) {
 			Slimefun.registerItem(SlimefunItem.UBER_PICKAXE, Category.Tools(), GuideItems.UberPickaxeRecipe(), RecipeType.SHAPED_RECIPE, SlimefunItem.UBER_PICKAXE);
 		}
+		if (plugin.getConfig().getBoolean("items.Battery")) {
+			Slimefun.registerItem(SlimefunItem.BATTERY, Category.Electric(), GuideItems.BatteryRecipe(), RecipeType.SHAPED_RECIPE, SlimefunItem.BATTERY);
+		}
+		if (plugin.getConfig().getBoolean("items.SolarPanel")) {
+			Slimefun.registerItem(SlimefunItem.SOLAR_PANEL, Category.Machines(), GuideItems.SolarPanelRecipe(), RecipeType.MULTIBLOCK, SlimefunItem.SOLAR_PANEL);
+		}
+		if (plugin.getConfig().getBoolean("items.WaterMill")) {
+			Slimefun.registerItem(SlimefunItem.WATER_MILL, Category.Machines(), GuideItems.WaterMillRecipe(), RecipeType.MULTIBLOCK, SlimefunItem.WATER_MILL);
+		}
+		if (plugin.getConfig().getBoolean("items.ThermalGenerator")) {
+			Slimefun.registerItem(SlimefunItem.THERMAL_GENERATOR, Category.Machines(), GuideItems.ThermalGeneratorRecipe(), RecipeType.MULTIBLOCK, SlimefunItem.THERMAL_GENERATOR);
+		}
 	}
 }

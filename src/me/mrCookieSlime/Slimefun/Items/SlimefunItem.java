@@ -124,4 +124,8 @@ public class SlimefunItem {
 		public static ItemStack UBER_PICKAXE_3x3 = ItemDictionary.getItem("UberPickaxe2");
 		public static ItemStack UBER_PICKAXE_5x5 = ItemDictionary.getItem("UberPickaxe3");
 		public static ItemStack UBER_PICKAXE_1x3 = ItemDictionary.getItem("UberPickaxe4");
+		public static ItemStack BATTERY = ItemDictionary.getItem("Battery");
+		public static ItemStack WATER_MILL = ItemDictionary.getItem("WaterMill");
+		public static ItemStack THERMAL_GENERATOR = ItemDictionary.getItem("ThermalGenerator");
+		public static ItemStack SOLAR_PANEL = ItemDictionary.getItem("SolarPanel");
 }

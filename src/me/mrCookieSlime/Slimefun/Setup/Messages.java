@@ -164,6 +164,12 @@ public class Messages {
 			if (!msgcfg.contains("messages.uberPickaxe-changed")) {
 				msgcfg.set("messages.uberPickaxe-changed", "&9Uber Pickaxe Mode changed to: &b&l%mode%");
 			}
+			if (!msgcfg.contains("messages.charge-add")) {
+				msgcfg.set("messages.charge-add", "&a&l+ %charge%");
+			}
+			if (!msgcfg.contains("messages.charge-remove")) {
+				msgcfg.set("messages.charge-remove", "&c&l- %charge%");
+			}
 			try {
 				msgcfg.save(messages);
 			} catch (Exception e1) {

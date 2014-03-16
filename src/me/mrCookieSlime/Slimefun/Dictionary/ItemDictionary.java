@@ -789,6 +789,75 @@ public class ItemDictionary {
 			im.setLore(ll);
 			item.setItemMeta(im);
 		}
+		if (ConfigName.equalsIgnoreCase("Battery")) {
+			item.setType(Material.NETHER_BRICK_ITEM);
+			item = ItemModifier.Setname(item, ChatColor.GRAY + "Battery");
+			item = ItemModifier.setDurability(item, 1);
+			List<String> ll = new ArrayList<String>();
+			ll.add("");
+			ll.add(ChatColor.GREEN + "Charge:");
+			ll.add(ChatColor.GRAY + "0 / 50 KJ");
+			ItemMeta im = item.getItemMeta();
+			im.setLore(ll);
+			item.setItemMeta(im);
+		}
+		if (ConfigName.equalsIgnoreCase("SolarPanel")) {
+			item.setType(Material.DAYLIGHT_DETECTOR);
+			item = ItemModifier.Setname(item, ChatColor.GRAY + "Solar Panel");
+			List<String> ll = new ArrayList<String>();
+			ll.add("");
+			ll.add(ChatColor.GREEN + "Produces:");
+			ll.add(ChatColor.GRAY + "~100 J/t");
+			ll.add("");
+			ll.add(ChatColor.GREEN + "Stores:");
+			ll.add(ChatColor.GRAY + "100 J");
+			ItemMeta im = item.getItemMeta();
+			im.setLore(ll);
+			item.setItemMeta(im);
+		}
+		if (ConfigName.equalsIgnoreCase("WaterMill")) {
+			item.setType(Material.WATER_BUCKET);
+			item = ItemModifier.Setname(item, ChatColor.GRAY + "Water Mill");
+			List<String> ll = new ArrayList<String>();
+			ll.add("");
+			ll.add(ChatColor.GREEN + "Produces:");
+			ll.add(ChatColor.GRAY + "~50 J/t");
+			ll.add("");
+			ll.add(ChatColor.GREEN + "Stores:");
+			ll.add(ChatColor.GRAY + "50 J");
+			ItemMeta im = item.getItemMeta();
+			im.setLore(ll);
+			item.setItemMeta(im);
+		}
+		if (ConfigName.equalsIgnoreCase("ThermalGenerator")) {
+			item.setType(Material.LAVA_BUCKET);
+			item = ItemModifier.Setname(item, ChatColor.GRAY + "Thermal Generator");
+			List<String> ll = new ArrayList<String>();
+			ll.add("");
+			ll.add(ChatColor.GREEN + "Produces:");
+			ll.add(ChatColor.GRAY + "~200 J/t");
+			ll.add("");
+			ll.add(ChatColor.GREEN + "Stores:");
+			ll.add(ChatColor.GRAY + "200 J");
+			ItemMeta im = item.getItemMeta();
+			im.setLore(ll);
+			item.setItemMeta(im);
+		}
+		if (ConfigName.equalsIgnoreCase("ElectricFurnace")) {
+			item.setType(Material.FURNACE);
+			item = ItemModifier.Setname(item, ChatColor.GRAY + "Electric Furnace");
+			List<String> ll = new ArrayList<String>();
+			ll.add("");
+			ll.add(ChatColor.GREEN + "Uses:");
+			ll.add(ChatColor.GRAY + "~100 J/Use");
+			ll.add("");
+			ll.add(ChatColor.GREEN + "Stores:");
+			ll.add(ChatColor.GRAY + "50 KJ");
+			ItemMeta im = item.getItemMeta();
+			im.setLore(ll);
+			item.setItemMeta(im);
+		}
+		
 		return item;
 	}
 }
