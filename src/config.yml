@@ -134,7 +134,6 @@ researches:
   Battery: true
   Electric Furnace: true
   Water Mill: true
-  Thermal Generator: true
   Miners Compass: true
   Steel Thruster: true
   Steel Plate: true
@@ -151,6 +150,7 @@ researches:
   Golden Feather: true
   Diamond of Duplicating: false
   Portable Hole: true
+  Thermal Generator: true
   Nano Tools: true
   Nano Pickaxe: true
   Nano Axel: true

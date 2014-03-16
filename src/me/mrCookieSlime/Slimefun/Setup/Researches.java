@@ -38,7 +38,6 @@ public class Researches {
 		Slimefun.addResearch("Battery");
 		Slimefun.addResearch("Electric Furnace");
 		Slimefun.addResearch("Water Mill");
-		Slimefun.addResearch("Thermal Generator");
 		Slimefun.addResearch("Miners Compass");
 		Slimefun.addResearch("Steel Thruster");
 		Slimefun.addResearch("Steel Plate");
@@ -55,6 +54,7 @@ public class Researches {
 		Slimefun.addResearch("Golden Feather");
 		Slimefun.addResearch("Diamond of Duplicating");
 		Slimefun.addResearch("Portable Hole");
+		Slimefun.addResearch("Thermal Generator");
 		Slimefun.addResearch("Nano Tools");
 		Slimefun.addResearch("Nano Pickaxe");
 		Slimefun.addResearch("Nano Axel");
