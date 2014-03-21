@@ -1295,4 +1295,18 @@ public class GuideItems {
 		items.add(new ItemStack(Material.STATIONARY_LAVA));
 		return items;
 	}
+	
+	public static List<ItemStack> ElectricFurnaceRecipe(){
+		List<ItemStack> items = new ArrayList<ItemStack>();
+		items.add(null);
+		items.add(null);
+		items.add(null);
+		items.add(null);
+		items.add(null);
+		items.add(null);
+		items.add(new ItemStack(Material.PISTON_BASE));
+		items.add(new ItemStack(Material.FURNACE));
+		items.add(new ItemStack(Material.PISTON_BASE));
+		return items;
+	}
 }

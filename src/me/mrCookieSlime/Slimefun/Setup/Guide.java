@@ -341,5 +341,8 @@ public class Guide {
 		if (plugin.getConfig().getBoolean("items.ThermalGenerator")) {
 			Slimefun.registerItem(SlimefunItem.THERMAL_GENERATOR, Category.Machines(), GuideItems.ThermalGeneratorRecipe(), RecipeType.MULTIBLOCK, SlimefunItem.THERMAL_GENERATOR);
 		}
+		if (plugin.getConfig().getBoolean("items.ElectricFurnace")) {
+			Slimefun.registerItem(SlimefunItem.ELECTRIC_FURNACE, Category.Machines(), GuideItems.ElectricFurnaceRecipe(), RecipeType.MULTIBLOCK, SlimefunItem.ELECTRIC_FURNACE);
+		}
 	}
 }

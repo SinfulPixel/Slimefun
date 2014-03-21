@@ -36,8 +36,8 @@ public class Researches {
 		Slimefun.addResearch("Hot Melting");
 		Slimefun.addResearch("Steel Ingot");
 		Slimefun.addResearch("Battery");
-		Slimefun.addResearch("Electric Furnace");
 		Slimefun.addResearch("Water Mill");
+		Slimefun.addResearch("Electric Furnace");
 		Slimefun.addResearch("Miners Compass");
 		Slimefun.addResearch("Steel Thruster");
 		Slimefun.addResearch("Steel Plate");
