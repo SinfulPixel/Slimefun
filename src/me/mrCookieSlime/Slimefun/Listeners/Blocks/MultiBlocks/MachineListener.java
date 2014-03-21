@@ -5,6 +5,7 @@ import java.util.List;
 import me.mrCookieSlime.Slimefun.startup;
 import me.mrCookieSlime.Slimefun.Messages.messages;
 import me.mrCookieSlime.Slimefun.Utilities.BlockAdjacents;
+import me.mrCookieSlime.Slimefun.Utilities.PlayerInventory;
 import me.mrCookieSlime.Slimefun.research.PlayerResearch;
 
 import org.bukkit.ChatColor;
@@ -77,18 +78,7 @@ public class MachineListener implements Listener {
 														
 														double bonus = charge - Double.valueOf(ChatColor.stripColor(p.getItemInHand().getItemMeta().getLore().get(2)).split(" / ")[0]);
 														
-														messages.ChargeAdd(p, String.valueOf(bonus) + " KJ");
-														
-														ItemStack item = p.getItemInHand().clone();
-														
-														ItemMeta im = item.getItemMeta();
-														List<String> lore = item.getItemMeta().getLore();
-														lore.set(2, ChatColor.GRAY + String.valueOf(charge) + " / " + ChatColor.stripColor(p.getItemInHand().getItemMeta().getLore().get(2)).split(" / ")[1]);
-														im.setLore(lore);
-														
-														item.setItemMeta(im);
-														
-														p.setItemInHand(item);
+														updateBattery(p, bonus, charge);
 													}
 												}
 											}
@@ -124,18 +114,7 @@ public class MachineListener implements Listener {
 														
 														double bonus = charge - Double.valueOf(ChatColor.stripColor(p.getItemInHand().getItemMeta().getLore().get(2)).split(" / ")[0]);
 														
-														messages.ChargeAdd(p, String.valueOf(bonus) + " KJ");
-														
-														ItemStack item = p.getItemInHand().clone();
-														
-														ItemMeta im = item.getItemMeta();
-														List<String> lore = item.getItemMeta().getLore();
-														lore.set(2, ChatColor.GRAY + String.valueOf(charge) + " / " + ChatColor.stripColor(p.getItemInHand().getItemMeta().getLore().get(2)).split(" / ")[1]);
-														im.setLore(lore);
-														
-														item.setItemMeta(im);
-														
-														p.setItemInHand(item);
+														updateBattery(p, bonus, charge);
 													}
 												}
 											}
@@ -169,18 +148,7 @@ public class MachineListener implements Listener {
 														
 														double bonus = charge - Double.valueOf(ChatColor.stripColor(p.getItemInHand().getItemMeta().getLore().get(2)).split(" / ")[0]);
 														
-														messages.ChargeAdd(p, String.valueOf(bonus) + " KJ");
-														
-														ItemStack item = p.getItemInHand().clone();
-														
-														ItemMeta im = item.getItemMeta();
-														List<String> lore = item.getItemMeta().getLore();
-														lore.set(2, ChatColor.GRAY + String.valueOf(charge) + " / " + ChatColor.stripColor(p.getItemInHand().getItemMeta().getLore().get(2)).split(" / ")[1]);
-														im.setLore(lore);
-														
-														item.setItemMeta(im);
-														
-														p.setItemInHand(item);
+														updateBattery(p, bonus, charge);
 													}
 												}
 											}
@@ -196,6 +164,22 @@ public class MachineListener implements Listener {
 				}
 			}
 		}
+	}
+	
+	public static void updateBattery(Player p, double added, double charge) {
+		messages.ChargeAdd(p, String.valueOf(added) + " KJ " + ChatColor.DARK_GRAY + "(Battery)");
+		
+		ItemStack item = p.getItemInHand().clone();
+		
+		ItemMeta im = item.getItemMeta();
+		List<String> lore = item.getItemMeta().getLore();
+		lore.set(2, ChatColor.GRAY + String.valueOf(charge) + " / " + ChatColor.stripColor(p.getItemInHand().getItemMeta().getLore().get(2)).split(" / ")[1]);
+		im.setLore(lore);
+		
+		item.setItemMeta(im);
+		
+		PlayerInventory.consumeItemInHand(p);
+		p.getInventory().addItem(item);
 	}
 
 }
