@@ -1,5 +1,6 @@
 package me.mrCookieSlime.Slimefun.Listeners.Gear;
 
+
 import java.util.Random;
 
 import me.mrCookieSlime.Slimefun.startup;
@@ -31,27 +32,26 @@ public class JetpackListener implements Listener {
 		if (p.getInventory().getChestplate().getEnchantmentLevel(Enchantment.PROTECTION_FIRE) == 20 || p.getInventory().getChestplate().getEnchantmentLevel(Enchantment.PROTECTION_EXPLOSIONS) == 20) {
 				if(p.isSneaking()) {
 					if (p.hasPermission("slimefun.jetpack")) {
-					p.getWorld().playSound(p.getLocation(), Sound.EXPLODE, (float) 0.25, 1);
-					p.getWorld().playEffect(p.getLocation(), Effect.SMOKE, 1, 1);
-					Location l = p.getLocation();
-					l.setPitch(1000);
-				       Vector d = l.getDirection();
-				       d.multiply(0.55);
-				       p.setVelocity(d);
-				       
-				       p.setFallDistance(0F);
-				       
-				       if (p.getInventory().getChestplate().getDurability() < 79) {
-				    	   int r = new Random().nextInt(50);
-				    	   if (r == 1) {
-				    		   p.getInventory().getChestplate().setDurability((short) (p.getInventory().getChestplate().getDurability() + 1));
-				    	   }
-				       }
-				       else {
-				    	   p.getInventory().setChestplate(null);
-				    	   p.playSound(p.getLocation(), Sound.ZOMBIE_METAL, 1, 1);
-				       }
-				       
+						
+						if (p.getInventory().getChestplate().getDurability() == p.getInventory().getChestplate().getType().getMaxDurability()) {
+							messages.OutOfFuel(p, "Jetpack");
+							p.playSound(p.getLocation(), Sound.ZOMBIE_METAL, 1, 1);
+						}
+						else {
+							p.getWorld().playSound(p.getLocation(), Sound.EXPLODE, (float) 0.25, 1);
+							p.getWorld().playEffect(p.getLocation(), Effect.SMOKE, 1, 1);
+							Location l = p.getLocation();
+							l.setPitch(1000);
+							Vector d = l.getDirection();
+							d.multiply(0.55);
+							p.setVelocity(d);
+					  	     
+							p.setFallDistance(0F);
+					       
+							if (new Random().nextInt(100) < 30) {
+								p.getInventory().getChestplate().setDurability((short) (p.getInventory().getChestplate().getDurability() + 1));
+							}
+						}
 					}
 					else {
 						messages.NoPermission(p, "slimefun.jetpack");

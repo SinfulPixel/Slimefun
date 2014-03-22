@@ -350,7 +350,9 @@ public class Recipes {
 		  plugin.getServer().addRecipe(r);
 	  }*/
 	  public static void MultiToolRecipe() {
-		  ShapedRecipe r = new ShapedRecipe(SlimefunItem.MULTI_TOOL_MODE_NONE);
+		  ItemStack item = SlimefunItem.MULTI_TOOL_MODE_NONE.clone();
+		  item.setDurability(item.getType().getMaxDurability());
+		  ShapedRecipe r = new ShapedRecipe(item);
 		  r.shape(new String [] { " s ", "sas", "dad" });
 		  r.setIngredient('s', Material.IRON_INGOT, 1);
 		  r.setIngredient('d', Material.DIAMOND);
@@ -622,7 +624,9 @@ public class Recipes {
 			plugin.getServer().addRecipe(r);
 		}
 		public static void JetpackRecipe() {
-			ShapedRecipe r = new ShapedRecipe(SlimefunItem.JETPACK);
+			ItemStack item = SlimefunItem.JETPACK.clone();
+			item.setDurability(item.getType().getMaxDurability());
+			ShapedRecipe r = new ShapedRecipe(item);
 			r.shape(new String[] { "sss", "sas", "trt" });
 			r.setIngredient('s', Material.IRON_INGOT, (short) 1);
 			r.setIngredient('a', Material.POWERED_RAIL, 1);

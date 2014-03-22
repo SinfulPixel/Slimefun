@@ -1,7 +1,6 @@
 package me.mrCookieSlime.Slimefun.Listeners.Gear;
 
 import java.util.HashMap;
-import java.util.Random;
 
 import me.mrCookieSlime.Slimefun.startup;
 import me.mrCookieSlime.Slimefun.Items.SlimefunItem;
@@ -51,187 +50,167 @@ public class MultiToolListener implements Listener {
 				  if (p.getItemInHand().getType() == Material.SHEARS) {
 					  if (p.isSneaking()) {
 						  if (p.getItemInHand().getItemMeta().getLore().toString().equalsIgnoreCase(SlimefunItem.MULTI_TOOL_MODE_NONE.getItemMeta().getLore().toString())) {
-							  ItemStack MultiTool = SlimefunItem.MULTI_TOOL_MODE_MAGIC_EYE_OF_ENDER;
+							  ItemStack MultiTool = SlimefunItem.MULTI_TOOL_MODE_MAGIC_EYE_OF_ENDER.clone();
 							  MultiTool.setDurability(p.getItemInHand().getDurability());
 							  p.setItemInHand(MultiTool);
 							  messages.MultiToolModeChanged(p, "Magic Eye of Ender");
 						  }
 						  else if (p.getItemInHand().getItemMeta().getLore().toString().equalsIgnoreCase(SlimefunItem.MULTI_TOOL_MODE_MAGIC_EYE_OF_ENDER.getItemMeta().getLore().toString())) {
-							  ItemStack MultiTool = SlimefunItem.MULTI_TOOL_MODE_PORTABLE_CRAFTER;
+							  ItemStack MultiTool = SlimefunItem.MULTI_TOOL_MODE_PORTABLE_CRAFTER.clone();
 							  MultiTool.setDurability(p.getItemInHand().getDurability());
 							  p.setItemInHand(MultiTool);
 							  messages.MultiToolModeChanged(p, "Portable Crafter");
 						  }
 						  else if (p.getItemInHand().getItemMeta().getLore().toString().equalsIgnoreCase(SlimefunItem.MULTI_TOOL_MODE_PORTABLE_CRAFTER.getItemMeta().getLore().toString())) {
-							  ItemStack MultiTool = SlimefunItem.MULTI_TOOL_MODE_ARROW_CANNON;
+							  ItemStack MultiTool = SlimefunItem.MULTI_TOOL_MODE_ARROW_CANNON.clone();
 							  MultiTool.setDurability(p.getItemInHand().getDurability());
 							  p.setItemInHand(MultiTool);
 							  messages.MultiToolModeChanged(p, "Arrow Cannon");
 						  }
 						  else if (p.getItemInHand().getItemMeta().getLore().toString().equalsIgnoreCase(SlimefunItem.MULTI_TOOL_MODE_ARROW_CANNON.getItemMeta().getLore().toString())) {
-							  ItemStack MultiTool = SlimefunItem.MULTI_TOOL_MODE_ENDER_BACKPACK;
+							  ItemStack MultiTool = SlimefunItem.MULTI_TOOL_MODE_ENDER_BACKPACK.clone();
 							  MultiTool.setDurability(p.getItemInHand().getDurability());
 							  p.setItemInHand(MultiTool);
 							  messages.MultiToolModeChanged(p, "Ender backpack");
 						  }
 						  else if (p.getItemInHand().getItemMeta().getLore().toString().equalsIgnoreCase(SlimefunItem.MULTI_TOOL_MODE_ENDER_BACKPACK.getItemMeta().getLore().toString())) {
-							  ItemStack MultiTool = SlimefunItem.MULTI_TOOL_MODE_WRENCH;
+							  ItemStack MultiTool = SlimefunItem.MULTI_TOOL_MODE_WRENCH.clone();
 							  MultiTool.setDurability(p.getItemInHand().getDurability());
 							  p.setItemInHand(MultiTool);
 							  messages.MultiToolModeChanged(p, "Wrench");
 						  }
 						  else if (p.getItemInHand().getItemMeta().getLore().toString().equalsIgnoreCase(SlimefunItem.MULTI_TOOL_MODE_WRENCH.getItemMeta().getLore().toString())) {
-							  ItemStack MultiTool = SlimefunItem.MULTI_TOOL_MODE_GRAPPLING_HOOK;
+							  ItemStack MultiTool = SlimefunItem.MULTI_TOOL_MODE_GRAPPLING_HOOK.clone();
 							  MultiTool.setDurability(p.getItemInHand().getDurability());
 							  p.setItemInHand(MultiTool);
 							  messages.MultiToolModeChanged(p, "Grappling hook");
 						  }
 						  else if (p.getItemInHand().getItemMeta().getLore().toString().equalsIgnoreCase(SlimefunItem.MULTI_TOOL_MODE_GRAPPLING_HOOK.getItemMeta().getLore().toString())) {
-							  ItemStack MultiTool = SlimefunItem.MULTI_TOOL_MODE_MAGIC_EYE_OF_ENDER;
+							  ItemStack MultiTool = SlimefunItem.MULTI_TOOL_MODE_MAGIC_EYE_OF_ENDER.clone();
 							  MultiTool.setDurability(p.getItemInHand().getDurability());
 							  p.setItemInHand(MultiTool);
 							  messages.MultiToolModeChanged(p, "Magic Eye of Ender");
 						  }
 					  }
 					  else {
-						  if (p.getItemInHand().getItemMeta().getLore().toString().equalsIgnoreCase(SlimefunItem.MULTI_TOOL_MODE_MAGIC_EYE_OF_ENDER.getItemMeta().getLore().toString())) {
+						  if (e.getAction() == Action.RIGHT_CLICK_BLOCK && e.getClickedBlock().getType() == Material.DISPENSER) {
+						  }
+						  else if (p.getItemInHand().getItemMeta().getLore().toString().equalsIgnoreCase(SlimefunItem.MULTI_TOOL_MODE_MAGIC_EYE_OF_ENDER.getItemMeta().getLore().toString())) {
 							  
-							  if (p.getItemInHand().getDurability() < 237) {
-									int r = new Random().nextInt(15);
-							    	   if (r == 4) {
-							    		   p.getItemInHand().setDurability((short) (p.getItemInHand().getDurability() + 1));
-							    	   }
-							       }
-							       else {
-							    	   p.setItemInHand(null);
-							    	   p.playSound(p.getLocation(), Sound.ZOMBIE_METAL, 1, 1);
-							       }
-							  
-							  try {
-					    		  if (p.getInventory().getHelmet().getEnchantmentLevel(Enchantment.PROTECTION_EXPLOSIONS) == 7) {
-					    			  if (p.getInventory().getChestplate().getEnchantmentLevel(Enchantment.PROTECTION_EXPLOSIONS) == 7) {
-					    				  if (p.getInventory().getLeggings().getEnchantmentLevel(Enchantment.PROTECTION_EXPLOSIONS) == 7) {
-					    					  if (p.getInventory().getBoots().getEnchantmentLevel(Enchantment.PROTECTION_EXPLOSIONS) == 7) {
-					    			    		  p.launchProjectile(EnderPearl.class);
-					    			    	  }
-					    		    	  }
-					    	    	  }
+							  if (p.getItemInHand().getDurability() == p.getItemInHand().getType().getMaxDurability()) {
+								  messages.OutOfFuel(p, "Multi Tool");
+								  p.playSound(p.getLocation(), Sound.ZOMBIE_METAL, 1, 1);
+							  }
+							  else {
+								  try {
+						    		  if (p.getInventory().getHelmet().getEnchantmentLevel(Enchantment.PROTECTION_EXPLOSIONS) == 7) {
+						    			  if (p.getInventory().getChestplate().getEnchantmentLevel(Enchantment.PROTECTION_EXPLOSIONS) == 7) {
+						    				  if (p.getInventory().getLeggings().getEnchantmentLevel(Enchantment.PROTECTION_EXPLOSIONS) == 7) {
+						    					  if (p.getInventory().getBoots().getEnchantmentLevel(Enchantment.PROTECTION_EXPLOSIONS) == 7) {
+						    			    		  p.launchProjectile(EnderPearl.class);
+						    			    	  }
+						    		    	  }
+						    	    	  }
+							    	  }
 						    	  }
-					    	  }
-					    	  catch(Exception x) {
-					    		  
-					    	  }
+						    	  catch(Exception x) {
+						    	  }
+							  }
 						  }
 						  else if (p.getItemInHand().getItemMeta().getLore().toString().equalsIgnoreCase(SlimefunItem.MULTI_TOOL_MODE_PORTABLE_CRAFTER.getItemMeta().getLore().toString())) {
 							  
-							  if (p.getItemInHand().getDurability() < 237) {
-									int r = new Random().nextInt(15);
-							    	   if (r == 4) {
-							    		   p.getItemInHand().setDurability((short) (p.getItemInHand().getDurability() + 1));
-							    	   }
-							       }
-							       else {
-							    	   p.setItemInHand(null);
-							    	   p.playSound(p.getLocation(), Sound.ZOMBIE_METAL, 1, 1);
-							       }
-							  
-							  p.playSound(p.getLocation(), Sound.WOOD_CLICK, 1, 1);
-					    	  p.openWorkbench(null, true);
+							  if (p.getItemInHand().getDurability() == p.getItemInHand().getType().getMaxDurability()) {
+								  messages.OutOfFuel(p, "Multi Tool");
+								  p.playSound(p.getLocation(), Sound.ZOMBIE_METAL, 1, 1);
+							  }
+							  else {
+								  p.playSound(p.getLocation(), Sound.WOOD_CLICK, 1, 1);
+						    	  p.openWorkbench(null, true); 
+						    	  
+						    	  p.getItemInHand().setDurability((short) (p.getItemInHand().getDurability() + 1));
+							  }
 						  }
 						  else if (p.getItemInHand().getItemMeta().getLore().toString().equalsIgnoreCase(SlimefunItem.MULTI_TOOL_MODE_ARROW_CANNON.getItemMeta().getLore().toString())) {
 							  
-							  if (p.getItemInHand().getDurability() < 237) {
-									int r = new Random().nextInt(15);
-							    	   if (r == 4) {
-							    		   p.getItemInHand().setDurability((short) (p.getItemInHand().getDurability() + 1));
-							    	   }
-							       }
-							       else {
-							    	   p.setItemInHand(null);
-							    	   p.playSound(p.getLocation(), Sound.ZOMBIE_METAL, 1, 1);
-							       }
-							  
-							  Vector direction = e.getPlayer().getEyeLocation().getDirection().multiply(1);
-					    	  Projectile projectile = (Projectile)e.getPlayer().getWorld().spawn(e.getPlayer().getEyeLocation().add(direction.getX(), direction.getY(), direction.getZ()), Arrow.class);
-					    	  projectile.setShooter(e.getPlayer());
-					    	  projectile.setVelocity(direction);
+							  if (p.getItemInHand().getDurability() == p.getItemInHand().getType().getMaxDurability()) {
+								  messages.OutOfFuel(p, "Multi Tool");
+								  p.playSound(p.getLocation(), Sound.ZOMBIE_METAL, 1, 1);
+							  }
+							  else {
+								  Vector direction = e.getPlayer().getEyeLocation().getDirection().multiply(1);
+						    	  Projectile projectile = (Projectile)e.getPlayer().getWorld().spawn(e.getPlayer().getEyeLocation().add(direction.getX(), direction.getY(), direction.getZ()), Arrow.class);
+						    	  projectile.setShooter(e.getPlayer());
+						    	  projectile.setVelocity(direction);
+						    	  
+						    	  p.getItemInHand().setDurability((short) (p.getItemInHand().getDurability() + 1));
+							  }
 						  }
 						  else if (p.getItemInHand().getItemMeta().getLore().toString().equalsIgnoreCase(SlimefunItem.MULTI_TOOL_MODE_ENDER_BACKPACK.getItemMeta().getLore().toString())) {
 							  
-							  if (p.getItemInHand().getDurability() < 237) {
-									int r = new Random().nextInt(15);
-							    	   if (r == 4) {
-							    		   p.getItemInHand().setDurability((short) (p.getItemInHand().getDurability() + 1));
-							    	   }
-							       }
-							       else {
-							    	   p.setItemInHand(null);
-							    	   p.playSound(p.getLocation(), Sound.ZOMBIE_METAL, 1, 1);
-							       }
-							  
-							  
-					    		  p.openInventory(p.getEnderChest());
+							  if (p.getItemInHand().getDurability() == p.getItemInHand().getType().getMaxDurability()) {
+								  messages.OutOfFuel(p, "Multi Tool");
+								  p.playSound(p.getLocation(), Sound.ZOMBIE_METAL, 1, 1);
+							  }
+							  else {
+								  p.openInventory(p.getEnderChest());
 						    	  p.playEffect(p.getLocation(), Effect.ENDER_SIGNAL, 0);
 						    	  p.playSound(p.getLocation(), Sound.ENDERMAN_TELEPORT, 1, 1);
+						    	  
+						    	  p.getItemInHand().setDurability((short) (p.getItemInHand().getDurability() + 1));
+							  }
 						  }
 						  else if (p.getItemInHand().getItemMeta().getLore().toString().equalsIgnoreCase(SlimefunItem.MULTI_TOOL_MODE_WRENCH.getItemMeta().getLore().toString())) {
 							  
-							  if (p.getItemInHand().getDurability() < 237) {
-									int r = new Random().nextInt(15);
-							    	   if (r == 4) {
-							    		   p.getItemInHand().setDurability((short) (p.getItemInHand().getDurability() + 1));
-							    	   }
-							       }
-							       else {
-							    	   p.setItemInHand(null);
-							    	   p.playSound(p.getLocation(), Sound.ZOMBIE_METAL, 1, 1);
-							       }
-							  try {
-								  if (e.getClickedBlock().getType() == Material.ENDER_PORTAL_FRAME) {
-									  p.playSound(p.getLocation(), Sound.ZOMBIE_METAL, 1, 1);
-									  e.getClickedBlock().breakNaturally();
-									  p.getWorld().dropItemNaturally(e.getClickedBlock().getLocation(), SlimefunItem.TOOL_BENCH);
-									  e.setCancelled(true);
-								  }
+							  if (p.getItemInHand().getDurability() == p.getItemInHand().getType().getMaxDurability()) {
+								  messages.OutOfFuel(p, "Multi Tool");
+								  p.playSound(p.getLocation(), Sound.ZOMBIE_METAL, 1, 1);
 							  }
-							  catch(Exception x) {
+							  else {
+								  try {
+									  if (e.getClickedBlock().getType() == Material.ENDER_PORTAL_FRAME) {
+										  p.playSound(p.getLocation(), Sound.ZOMBIE_METAL, 1, 1);
+										  e.getClickedBlock().breakNaturally();
+										  p.getWorld().dropItemNaturally(e.getClickedBlock().getLocation(), SlimefunItem.TOOL_BENCH);
+										  e.setCancelled(true);
+									  }
+								  }
+								  catch(Exception x) {
+								  }
 								  
+								  p.getItemInHand().setDurability((short) (p.getItemInHand().getDurability() + 1));
 							  }
 						  }
 						  else if (p.getItemInHand().getItemMeta().getLore().toString().equalsIgnoreCase(SlimefunItem.MULTI_TOOL_MODE_GRAPPLING_HOOK.getItemMeta().getLore().toString())) {
 							  
-							  if (p.getItemInHand().getDurability() < 237) {
-									int r = new Random().nextInt(15);
-							    	   if (r == 4) {
-							    		   p.getItemInHand().setDurability((short) (p.getItemInHand().getDurability() + 1));
-							    	   }
-							       }
-							       else {
-							    	   p.setItemInHand(null);
-							    	   p.playSound(p.getLocation(), Sound.ZOMBIE_METAL, 1, 1);
-							       }
-							  try {
-								  Vector direction = e.getPlayer().getEyeLocation().getDirection().multiply(3);
-						    	  Projectile projectile = (Projectile)e.getPlayer().getWorld().spawn(e.getPlayer().getEyeLocation().add(direction.getX(), direction.getY(), direction.getZ()), Arrow.class);
-						    	  projectile.setShooter(e.getPlayer());
-						    	  projectile.setVelocity(direction);
-						    	  Arrow arrow = (Arrow) projectile;
-						    	  Bat bat = p.getWorld().spawn(
-						    	  p.getEyeLocation(), Bat.class);
-						    	  
-						    	  bat.addPotionEffect(new PotionEffect(PotionEffectType.INVISIBILITY, 100000, 100000));
-						    	  bat.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 100000, 100000));
-						    	   
-						    	  bat.setLeashHolder(arrow);
-						    	  
-						    	  jump.put(p.getName(), "true");
-						    	  
-						    	  bat.setHealth((double)0);
-						    	  
-						    	  damage.put(p.getName(), "true");
+							  if (p.getItemInHand().getDurability() == p.getItemInHand().getType().getMaxDurability()) {
+								  messages.OutOfFuel(p, "Multi Tool");
+								  p.playSound(p.getLocation(), Sound.ZOMBIE_METAL, 1, 1);
 							  }
-							  catch(Exception x) {
+							  else {
+								  try {
+									  Vector direction = e.getPlayer().getEyeLocation().getDirection().multiply(3);
+							    	  Projectile projectile = (Projectile)e.getPlayer().getWorld().spawn(e.getPlayer().getEyeLocation().add(direction.getX(), direction.getY(), direction.getZ()), Arrow.class);
+							    	  projectile.setShooter(e.getPlayer());
+							    	  projectile.setVelocity(direction);
+							    	  Arrow arrow = (Arrow) projectile;
+							    	  Bat bat = p.getWorld().spawn(
+							    	  p.getEyeLocation(), Bat.class);
+							    	  
+							    	  bat.addPotionEffect(new PotionEffect(PotionEffectType.INVISIBILITY, 100000, 100000));
+							    	  bat.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 100000, 100000));
+							    	   
+							    	  bat.setLeashHolder(arrow);
+							    	  
+							    	  jump.put(p.getName(), "true");
+							    	  
+							    	  bat.setHealth((double)0);
+							    	  
+							    	  damage.put(p.getName(), "true");
+								  }
+								  catch(Exception x) { 
+								  } 
 								  
+								  p.getItemInHand().setDurability((short) (p.getItemInHand().getDurability() + 1));
 							  }
 						  }
 					  }

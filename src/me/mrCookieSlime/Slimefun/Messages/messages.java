@@ -190,4 +190,9 @@ public class messages {
 	   msg = msg.replace("%charge%", ChatColor.GRAY + charge);
 	   player.sendMessage(msg);
    }
+   public static void OutOfFuel(Player player, String item) {
+	   String msg = ChatColor.translateAlternateColorCodes('&', Messages.msgcfg.getString("messages.out-of-fuel"));
+	   msg = msg.replace("%item%", ChatColor.GRAY + item);
+	   player.sendMessage(msg);
+   }
 }

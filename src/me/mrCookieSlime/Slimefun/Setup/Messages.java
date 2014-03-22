@@ -170,6 +170,9 @@ public class Messages {
 			if (!msgcfg.contains("messages.charge-remove")) {
 				msgcfg.set("messages.charge-remove", "&c&l- %charge%");
 			}
+			if (!msgcfg.contains("messages.out-of-fuel")) {
+				msgcfg.set("messages.out-of-fuel", "&4&lYour &c&l%item% &4&lhas ran out of Fuel!");
+			}
 			try {
 				msgcfg.save(messages);
 			} catch (Exception e1) {
