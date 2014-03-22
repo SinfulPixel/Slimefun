@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.util.List;
 
 import me.mrCookieSlime.Slimefun.startup;
+import me.mrCookieSlime.Slimefun.Items.SlimefunItem;
 import me.mrCookieSlime.Slimefun.Messages.messages;
 import me.mrCookieSlime.Slimefun.Utilities.BlockAdjacents;
 import me.mrCookieSlime.Slimefun.Utilities.PlayerInventory;
@@ -372,6 +373,421 @@ public class MachineListener implements Listener {
 										}
 									}
 								}
+						}
+					}
+					else {
+						messages.NotResearched(p);
+					}
+				}
+			}
+			else if (e.getClickedBlock().getType() == Material.DISPENSER) {
+				if (BlockAdjacents.hasMaterialOnBothSides(e.getClickedBlock(), Material.PISTON_BASE)) {
+					if (BlockAdjacents.hasMaterialOnBothSides(e.getClickedBlock().getRelative(BlockFace.UP), Material.BREWING_STAND)) {
+						e.setCancelled(true);
+						if (PlayerResearch.hasResearched(p, "Refueling Station")) {
+							if (p.getItemInHand() != null) {
+								boolean battery = false;
+								if (p.getItemInHand().hasItemMeta()) {
+									if (p.getItemInHand().getItemMeta().hasLore()) {
+										if (p.getItemInHand().getItemMeta().getLore().size() == 3) {
+											if (p.getItemInHand().getItemMeta().getLore().get(1).equalsIgnoreCase(ChatColor.GREEN + "Charge:")) {
+
+												battery = true;
+												
+												double Bcharge = Double.valueOf(ChatColor.stripColor(p.getItemInHand().getItemMeta().getLore().get(2)).split(" / ")[0]);
+												double Rcharge = 0;
+												
+												if (Bcharge <= 0) {
+													updateBattery(p, 0, Bcharge, false);
+												}
+												else {
+													List<String> rsX = Rcfg.getStringList("RefuelingStations.x");
+													List<String> rsY = Rcfg.getStringList("RefuelingStations.y");
+													List<String> rsZ = Rcfg.getStringList("RefuelingStations.z");
+													List<String> rsW = Rcfg.getStringList("RefuelingStations.world");
+													List<String> rsC = Rcfg.getStringList("RefuelingStations.charge");
+													
+													int pos = -1;
+													
+													if (rsX.contains(String.valueOf(e.getClickedBlock().getLocation().getX())) && rsY.contains(String.valueOf(e.getClickedBlock().getLocation().getY())) && rsZ.contains(String.valueOf(e.getClickedBlock().getLocation().getZ())) && rsW.contains(e.getClickedBlock().getLocation().getWorld().getName())) {
+														for(int i = 0; i < rsX.size(); i++) {
+															if (Double.parseDouble(rsX.get(i)) == e.getClickedBlock().getLocation().getX()) {
+																if (Double.parseDouble(rsY.get(i)) == e.getClickedBlock().getLocation().getY()) {
+																	if (Double.parseDouble(rsZ.get(i)) == e.getClickedBlock().getLocation().getZ()) {
+																		if (rsW.get(i).equalsIgnoreCase(e.getClickedBlock().getWorld().getName())) {
+																			Rcharge = Double.parseDouble(rsC.get(i));
+																			pos = i;
+																			break;
+																		}
+																	}
+																}
+															}
+														}
+													}
+													else {
+														rsX.add(String.valueOf(e.getClickedBlock().getLocation().getX()));
+														rsY.add(String.valueOf(e.getClickedBlock().getLocation().getY()));
+														rsZ.add(String.valueOf(e.getClickedBlock().getLocation().getZ()));
+														rsW.add(e.getClickedBlock().getLocation().getWorld().getName());
+														rsC.add(String.valueOf(0));
+														
+														Rcfg.set("RefuelingStations.x", rsX);
+														Rcfg.set("RefuelingStations.y", rsY);
+														Rcfg.set("RefuelingStations.z", rsZ);
+														Rcfg.set("RefuelingStations.world", rsW);
+														Rcfg.set("RefuelingStations.charge", rsC);
+														
+														try {
+															Rcfg.save(refuelers);
+														} catch (IOException x) {
+														}
+														
+														for(int i = 0; i < rsX.size(); i++) {
+															if (Double.parseDouble(rsX.get(i)) == e.getClickedBlock().getLocation().getX()) {
+																if (Double.parseDouble(rsY.get(i)) == e.getClickedBlock().getLocation().getY()) {
+																	if (Double.parseDouble(rsZ.get(i)) == e.getClickedBlock().getLocation().getZ()) {
+																		if (rsW.get(i).equalsIgnoreCase(e.getClickedBlock().getWorld().getName())) {
+																			pos = i;
+																			break;
+																		}
+																	}
+																}
+															}
+														}
+													}
+													
+													if (pos >= 0) {
+														double left = 50.0 - Rcharge;
+														
+														if (left == 0) {
+															updateBattery(p, 0.0, Bcharge, false);
+														}
+														else if (left > Bcharge) {
+															Rcharge = Rcharge + Bcharge;
+															
+															updateBattery(p, Bcharge, 0.0, false);
+														}
+														else {
+															Rcharge = Rcharge + left;
+															
+															Bcharge = Bcharge - left;
+															
+															updateBattery(p, left, Bcharge, false);
+														}
+														
+														rsC.set(pos, String.valueOf(Rcharge));
+														
+														Rcfg.set("RefuelingStations.charge", rsC);
+														
+														try {
+															Rcfg.save(refuelers);
+														} catch (IOException x) {
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+								
+								if (!battery) {
+									
+									double Rcharge = 0;
+									
+									List<String> rsX = Rcfg.getStringList("RefuelingStations.x");
+									List<String> rsY = Rcfg.getStringList("RefuelingStations.y");
+									List<String> rsZ = Rcfg.getStringList("RefuelingStations.z");
+									List<String> rsW = Rcfg.getStringList("RefuelingStations.world");
+									List<String> rsC = Rcfg.getStringList("RefuelingStations.charge");
+										
+										int pos = -1;
+										
+										if (rsX.contains(String.valueOf(e.getClickedBlock().getLocation().getX())) && rsY.contains(String.valueOf(e.getClickedBlock().getLocation().getY())) && rsZ.contains(String.valueOf(e.getClickedBlock().getLocation().getZ())) && rsW.contains(e.getClickedBlock().getLocation().getWorld().getName())) {
+											for(int i = 0; i < rsX.size(); i++) {
+												if (Double.parseDouble(rsX.get(i)) == e.getClickedBlock().getLocation().getX()) {
+													if (Double.parseDouble(rsY.get(i)) == e.getClickedBlock().getLocation().getY()) {
+														if (Double.parseDouble(rsZ.get(i)) == e.getClickedBlock().getLocation().getZ()) {
+															if (rsW.get(i).equalsIgnoreCase(e.getClickedBlock().getWorld().getName())) {
+																Rcharge = Double.parseDouble(rsC.get(i));
+																pos = i;
+																break;
+															}
+														}
+													}
+												}
+											}
+										}
+										else {
+											rsX.add(String.valueOf(e.getClickedBlock().getLocation().getX()));
+											rsY.add(String.valueOf(e.getClickedBlock().getLocation().getY()));
+											rsZ.add(String.valueOf(e.getClickedBlock().getLocation().getZ()));
+											rsW.add(e.getClickedBlock().getLocation().getWorld().getName());
+											rsC.add(String.valueOf(0));
+											
+											Rcfg.set("RefuelingStations.x", rsX);
+											Rcfg.set("RefuelingStations.y", rsY);
+											Rcfg.set("RefuelingStations.z", rsZ);
+											Rcfg.set("RefuelingStations.world", rsW);
+											Rcfg.set("RefuelingStations.charge", rsC);
+											
+											try {
+												Rcfg.save(refuelers);
+											} catch (IOException x) {
+											}
+											
+											for(int i = 0; i < rsX.size(); i++) {
+												if (Double.parseDouble(rsX.get(i)) == e.getClickedBlock().getLocation().getX()) {
+													if (Double.parseDouble(rsY.get(i)) == e.getClickedBlock().getLocation().getY()) {
+														if (Double.parseDouble(rsZ.get(i)) == e.getClickedBlock().getLocation().getZ()) {
+															if (rsW.get(i).equalsIgnoreCase(e.getClickedBlock().getWorld().getName())) {
+																pos = i;
+																break;
+															}
+														}
+													}
+												}
+											}
+										}
+										
+										if (pos >= 0) {
+											
+											if (Rcharge >= 0.2) {
+												ItemStack item = p.getItemInHand();
+												
+												if (item != null) {
+													if (item.hasItemMeta()) {
+														if (item.getItemMeta().hasDisplayName()) {
+															if (item.getItemMeta().hasLore()) {
+																if (item.getItemMeta().getDisplayName().equalsIgnoreCase(SlimefunItem.JETPACK.getItemMeta().getDisplayName()) && item.getItemMeta().getLore().toString().equalsIgnoreCase(SlimefunItem.JETPACK.getItemMeta().getLore().toString())) {
+																	
+																	if (item.getDurability() > 0) {
+																		messages.ChargeRemove(p, "200 J " + ChatColor.DARK_GRAY + "(Refueling Station)");
+																		
+																		Rcharge = Rcharge - 0.2;
+																		
+																		rsC.set(pos, String.valueOf(Rcharge));
+																		
+																		Rcfg.set("RefuelingStations.charge", rsC);
+																		
+																		try {
+																			Rcfg.save(refuelers);
+																		} catch (IOException x) {
+																		}
+																		
+																		item.setDurability((short) (item.getDurability() - 1));
+																		
+																		PlayerInventory.consumeItemInHand(p);
+																		p.getInventory().addItem(item);
+																		PlayerInventory.update(p);
+																		
+																	}
+																	else {
+																		messages.ChargeRemove(p, "0 J " + ChatColor.DARK_GRAY + "(Refueling Station)");
+																	}
+																}
+																else if (item.getItemMeta().getDisplayName().equalsIgnoreCase(SlimefunItem.MULTI_TOOL_MODE_NONE.getItemMeta().getDisplayName()) && item.getItemMeta().getLore().toString().equalsIgnoreCase(SlimefunItem.MULTI_TOOL_MODE_NONE.getItemMeta().getLore().toString())) {
+																	
+																	if (item.getDurability() > 0) {
+																		messages.ChargeRemove(p, "200 J " + ChatColor.DARK_GRAY + "(Refueling Station)");
+																		
+																		Rcharge = Rcharge - 0.2;
+																		
+																		rsC.set(pos, String.valueOf(Rcharge));
+																		
+																		Rcfg.set("RefuelingStations.charge", rsC);
+																		
+																		try {
+																			Rcfg.save(refuelers);
+																		} catch (IOException x) {
+																		}
+																		
+																		item.setDurability((short) (item.getDurability() - 1));
+																		
+																		PlayerInventory.consumeItemInHand(p);
+																		p.getInventory().addItem(item);
+																		PlayerInventory.update(p);
+																		
+																	}
+																	else {
+																		messages.ChargeRemove(p, "0 J " + ChatColor.DARK_GRAY + "(Refueling Station)");
+																	}
+																}
+																else if (item.getItemMeta().getDisplayName().equalsIgnoreCase(SlimefunItem.MULTI_TOOL_MODE_ARROW_CANNON.getItemMeta().getDisplayName()) && item.getItemMeta().getLore().toString().equalsIgnoreCase(SlimefunItem.MULTI_TOOL_MODE_ARROW_CANNON.getItemMeta().getLore().toString())) {
+																	
+																	if (item.getDurability() > 0) {
+																		messages.ChargeRemove(p, "200 J " + ChatColor.DARK_GRAY + "(Refueling Station)");
+																		
+																		Rcharge = Rcharge - 0.2;
+																		
+																		rsC.set(pos, String.valueOf(Rcharge));
+																		
+																		Rcfg.set("RefuelingStations.charge", rsC);
+																		
+																		try {
+																			Rcfg.save(refuelers);
+																		} catch (IOException x) {
+																		}
+																		
+																		item.setDurability((short) (item.getDurability() - 1));
+																		
+																		PlayerInventory.consumeItemInHand(p);
+																		p.getInventory().addItem(item);
+																		PlayerInventory.update(p);
+																		
+																	}
+																	else {
+																		messages.ChargeRemove(p, "0 J " + ChatColor.DARK_GRAY + "(Refueling Station)");
+																	}
+																}
+																else if (item.getItemMeta().getDisplayName().equalsIgnoreCase(SlimefunItem.MULTI_TOOL_MODE_ENDER_BACKPACK.getItemMeta().getDisplayName()) && item.getItemMeta().getLore().toString().equalsIgnoreCase(SlimefunItem.MULTI_TOOL_MODE_ENDER_BACKPACK.getItemMeta().getLore().toString())) {
+																	
+																	if (item.getDurability() > 0) {
+																		messages.ChargeRemove(p, "200 J " + ChatColor.DARK_GRAY + "(Refueling Station)");
+																		
+																		Rcharge = Rcharge - 0.2;
+																		
+																		rsC.set(pos, String.valueOf(Rcharge));
+																		
+																		Rcfg.set("RefuelingStations.charge", rsC);
+																		
+																		try {
+																			Rcfg.save(refuelers);
+																		} catch (IOException x) {
+																		}
+																		
+																		item.setDurability((short) (item.getDurability() - 1));
+																		
+																		PlayerInventory.consumeItemInHand(p);
+																		p.getInventory().addItem(item);
+																		PlayerInventory.update(p);
+																		
+																	}
+																	else {
+																		messages.ChargeRemove(p, "0 J " + ChatColor.DARK_GRAY + "(Refueling Station)");
+																	}
+																}
+																else if (item.getItemMeta().getDisplayName().equalsIgnoreCase(SlimefunItem.MULTI_TOOL_MODE_GRAPPLING_HOOK.getItemMeta().getDisplayName()) && item.getItemMeta().getLore().toString().equalsIgnoreCase(SlimefunItem.MULTI_TOOL_MODE_GRAPPLING_HOOK.getItemMeta().getLore().toString())) {
+																	
+																	if (item.getDurability() > 0) {
+																		messages.ChargeRemove(p, "200 J " + ChatColor.DARK_GRAY + "(Refueling Station)");
+																		
+																		Rcharge = Rcharge - 0.2;
+																		
+																		rsC.set(pos, String.valueOf(Rcharge));
+																		
+																		Rcfg.set("RefuelingStations.charge", rsC);
+																		
+																		try {
+																			Rcfg.save(refuelers);
+																		} catch (IOException x) {
+																		}
+																		
+																		item.setDurability((short) (item.getDurability() - 1));
+																		
+																		PlayerInventory.consumeItemInHand(p);
+																		p.getInventory().addItem(item);
+																		PlayerInventory.update(p);
+																		
+																	}
+																	else {
+																		messages.ChargeRemove(p, "0 J " + ChatColor.DARK_GRAY + "(Refueling Station)");
+																	}
+																}
+																else if (item.getItemMeta().getDisplayName().equalsIgnoreCase(SlimefunItem.MULTI_TOOL_MODE_MAGIC_EYE_OF_ENDER.getItemMeta().getDisplayName()) && item.getItemMeta().getLore().toString().equalsIgnoreCase(SlimefunItem.MULTI_TOOL_MODE_MAGIC_EYE_OF_ENDER.getItemMeta().getLore().toString())) {
+																	
+																	if (item.getDurability() > 0) {
+																		messages.ChargeRemove(p, "200 J " + ChatColor.DARK_GRAY + "(Refueling Station)");
+																		
+																		Rcharge = Rcharge - 0.2;
+																		
+																		rsC.set(pos, String.valueOf(Rcharge));
+																		
+																		Rcfg.set("RefuelingStations.charge", rsC);
+																		
+																		try {
+																			Rcfg.save(refuelers);
+																		} catch (IOException x) {
+																		}
+																		
+																		item.setDurability((short) (item.getDurability() - 1));
+																		
+																		PlayerInventory.consumeItemInHand(p);
+																		p.getInventory().addItem(item);
+																		PlayerInventory.update(p);
+																		
+																	}
+																	else {
+																		messages.ChargeRemove(p, "0 J " + ChatColor.DARK_GRAY + "(Refueling Station)");
+																	}
+																}
+																else if (item.getItemMeta().getDisplayName().equalsIgnoreCase(SlimefunItem.MULTI_TOOL_MODE_PORTABLE_CRAFTER.getItemMeta().getDisplayName()) && item.getItemMeta().getLore().toString().equalsIgnoreCase(SlimefunItem.MULTI_TOOL_MODE_PORTABLE_CRAFTER.getItemMeta().getLore().toString())) {
+																	
+																	if (item.getDurability() > 0) {
+																		messages.ChargeRemove(p, "200 J " + ChatColor.DARK_GRAY + "(Refueling Station)");
+																		
+																		Rcharge = Rcharge - 0.2;
+																		
+																		rsC.set(pos, String.valueOf(Rcharge));
+																		
+																		Rcfg.set("RefuelingStations.charge", rsC);
+																		
+																		try {
+																			Rcfg.save(refuelers);
+																		} catch (IOException x) {
+																		}
+																		
+																		item.setDurability((short) (item.getDurability() - 1));
+																		
+																		PlayerInventory.consumeItemInHand(p);
+																		p.getInventory().addItem(item);
+																		PlayerInventory.update(p);
+																		
+																	}
+																	else {
+																		messages.ChargeRemove(p, "0 J " + ChatColor.DARK_GRAY + "(Refueling Station)");
+																	}
+																}
+																else if (item.getItemMeta().getDisplayName().equalsIgnoreCase(SlimefunItem.MULTI_TOOL_MODE_WRENCH.getItemMeta().getDisplayName()) && item.getItemMeta().getLore().toString().equalsIgnoreCase(SlimefunItem.MULTI_TOOL_MODE_WRENCH.getItemMeta().getLore().toString())) {
+																	
+																	if (item.getDurability() > 0) {
+																		messages.ChargeRemove(p, "200 J " + ChatColor.DARK_GRAY + "(Refueling Station)");
+																		
+																		Rcharge = Rcharge - 0.2;
+																		
+																		rsC.set(pos, String.valueOf(Rcharge));
+																		
+																		Rcfg.set("RefuelingStations.charge", rsC);
+																		
+																		try {
+																			Rcfg.save(refuelers);
+																		} catch (IOException x) {
+																		}
+																		
+																		item.setDurability((short) (item.getDurability() - 1));
+																		
+																		PlayerInventory.consumeItemInHand(p);
+																		p.getInventory().addItem(item);
+																		PlayerInventory.update(p);
+																		
+																	}
+																	else {
+																		messages.ChargeRemove(p, "0 J " + ChatColor.DARK_GRAY + "(Refueling Station)");
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+											else {
+												messages.ChargeRemove(p, "0 J " + ChatColor.DARK_GRAY + "(Refueling Station)");
+											}
+										}
+									}
+							}
+						}
+						else {
+							messages.NotResearched(p);	
 						}
 					}
 				}

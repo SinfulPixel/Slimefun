@@ -223,15 +223,13 @@ public class ItemDictionary {
 			  ItemMeta im = item.getItemMeta();
 			  ((LeatherArmorMeta) im).setColor(Color.GRAY);
 			  List<String> ll = new ArrayList<String>();
-				String l0 = "";
-				String l1 = ChatColor.BLUE + "Sneak " + ChatColor.GREEN + "to use";
-				ll.add(l0);
-				ll.add(l1);
-				im.setLore(ll);
+			  ll.add("");
+			  ll.add(ChatColor.BLUE + "Sneak " + ChatColor.GREEN + "to use");
+			  im.setLore(ll);
 			  item.setItemMeta(im);
-				item = ItemModifier.Setname(item, ChatColor.GOLD + "Jetpack");
-				item.addUnsafeEnchantment(Enchantment.PROTECTION_EXPLOSIONS, 20);
-				item.addUnsafeEnchantment(Enchantment.DURABILITY, 20);
+			  item = ItemModifier.Setname(item, ChatColor.GOLD + "Jetpack");
+			  item.addUnsafeEnchantment(Enchantment.PROTECTION_EXPLOSIONS, 20);
+			  item.addUnsafeEnchantment(Enchantment.DURABILITY, 20);
 		}
 		if (ConfigName.equalsIgnoreCase("pJukebox")) {
 			item.setType(Material.BOOK);
@@ -850,6 +848,21 @@ public class ItemDictionary {
 			ll.add("");
 			ll.add(ChatColor.GREEN + "Uses:");
 			ll.add(ChatColor.GRAY + "~100 J/Use");
+			ll.add("");
+			ll.add(ChatColor.GREEN + "Stores:");
+			ll.add(ChatColor.GRAY + "50 KJ");
+			ItemMeta im = item.getItemMeta();
+			im.setLore(ll);
+			item.setItemMeta(im);
+		}
+		
+		if (ConfigName.equalsIgnoreCase("RefuelingStation")) {
+			item.setType(Material.BREWING_STAND_ITEM);
+			item = ItemModifier.Setname(item, ChatColor.GRAY + "Refueling Station");
+			List<String> ll = new ArrayList<String>();
+			ll.add("");
+			ll.add(ChatColor.GREEN + "Uses:");
+			ll.add(ChatColor.GRAY + "~200 J/Use");
 			ll.add("");
 			ll.add(ChatColor.GREEN + "Stores:");
 			ll.add(ChatColor.GRAY + "50 KJ");

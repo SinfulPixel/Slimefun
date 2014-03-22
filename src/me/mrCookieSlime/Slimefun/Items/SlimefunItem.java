@@ -129,4 +129,5 @@ public class SlimefunItem {
 		public static ItemStack THERMAL_GENERATOR = ItemDictionary.getItem("ThermalGenerator");
 		public static ItemStack SOLAR_PANEL = ItemDictionary.getItem("SolarPanel");
 		public static ItemStack ELECTRIC_FURNACE = ItemDictionary.getItem("ElectricFurnace");
+		public static ItemStack REFUELING_STATION = ItemDictionary.getItem("RefuelingStation");
 }

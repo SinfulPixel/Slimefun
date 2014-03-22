@@ -344,5 +344,8 @@ public class Guide {
 		if (plugin.getConfig().getBoolean("items.ElectricFurnace")) {
 			Slimefun.registerItem(SlimefunItem.ELECTRIC_FURNACE, Category.Machines(), GuideItems.ElectricFurnaceRecipe(), RecipeType.MULTIBLOCK, SlimefunItem.ELECTRIC_FURNACE);
 		}
+		if (plugin.getConfig().getBoolean("items.RefuelingStation")) {
+			Slimefun.registerItem(SlimefunItem.REFUELING_STATION, Category.Machines(), GuideItems.RefuelingStationRecipe(), RecipeType.MULTIBLOCK, SlimefunItem.REFUELING_STATION);
+		}
 	}
 }

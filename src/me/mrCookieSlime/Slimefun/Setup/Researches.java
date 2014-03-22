@@ -47,6 +47,7 @@ public class Researches {
 		Slimefun.addResearch("Grappling Hook");
 		Slimefun.addResearch("Jetpack");
 		Slimefun.addResearch("Multi Tool");
+		Slimefun.addResearch("Refueling Station");
 		Slimefun.addResearch("Solar Panel");
 		Slimefun.addResearch("Emerald of Repairing");
 		Slimefun.addResearch("Crystal of Repairing");
@@ -150,6 +151,11 @@ public class Researches {
 		Slimefun.registerResearch(SlimefunItem.AMULET_OF_REVIVAL, "Amulet of Revival");
 		Slimefun.registerResearch(SlimefunItem.UBER_PICKAXE, "Uber Pickaxe");
 		Slimefun.registerResearch(SlimefunItem.BATTERY, "Battery");
+		Slimefun.registerResearch(SlimefunItem.WATER_MILL, "Water Mill");
+		Slimefun.registerResearch(SlimefunItem.SOLAR_PANEL, "Solar Panel");
+		Slimefun.registerResearch(SlimefunItem.THERMAL_GENERATOR, "Thermal Generator");
+		Slimefun.registerResearch(SlimefunItem.ELECTRIC_FURNACE, "Electric Furnace");
+		Slimefun.registerResearch(SlimefunItem.REFUELING_STATION, "Refueling Station");
 		
 		Slimefun.registerDigitalName(SlimefunItem.NANO_PICKAXE,"nanopickaxe");
 		Slimefun.registerDigitalName(SlimefunItem.PORTABLE_DUSTBIN, "dustbin");

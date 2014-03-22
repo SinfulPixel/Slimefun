@@ -1309,4 +1309,18 @@ public class GuideItems {
 		items.add(new ItemStack(Material.PISTON_BASE));
 		return items;
 	}
+	
+	public static List<ItemStack> RefuelingStationRecipe(){
+		List<ItemStack> items = new ArrayList<ItemStack>();
+		items.add(null);
+		items.add(null);
+		items.add(null);
+		items.add(new ItemStack(Material.BREWING_STAND_ITEM));
+		items.add(null);
+		items.add(new ItemStack(Material.BREWING_STAND_ITEM));
+		items.add(new ItemStack(Material.PISTON_BASE));
+		items.add(new ItemStack(Material.DISPENSER));
+		items.add(new ItemStack(Material.PISTON_BASE));
+		return items;
+	}
 }

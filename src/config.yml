@@ -102,6 +102,7 @@ items:
   ThermalGenerator: true
   SolarPanel: true
   Battery: true
+  RefuelingStation: true
 researches:
   Walking sticks: true
   Portable Crafter: true
@@ -143,6 +144,7 @@ researches:
   Grappling Hook: true
   Jetpack: true
   Multi Tool: true
+  Refueling Station: true
   Solar Panel: true
   Emerald of Repairing: true
   Crystal of Repairing: true
