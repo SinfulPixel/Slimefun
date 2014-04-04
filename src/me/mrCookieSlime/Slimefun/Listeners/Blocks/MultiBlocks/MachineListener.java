@@ -5,9 +5,9 @@ import java.io.IOException;
 import java.util.List;
 
 import me.mrCookieSlime.Slimefun.startup;
-import me.mrCookieSlime.Slimefun.Items.SlimefunItem;
 import me.mrCookieSlime.Slimefun.Messages.messages;
 import me.mrCookieSlime.Slimefun.Utilities.BlockAdjacents;
+import me.mrCookieSlime.Slimefun.Utilities.FuelHandler;
 import me.mrCookieSlime.Slimefun.Utilities.PlayerInventory;
 import me.mrCookieSlime.Slimefun.Utilities.RecipeCalculator;
 import me.mrCookieSlime.Slimefun.research.PlayerResearch;
@@ -558,220 +558,36 @@ public class MachineListener implements Listener {
 													if (item.hasItemMeta()) {
 														if (item.getItemMeta().hasDisplayName()) {
 															if (item.getItemMeta().hasLore()) {
-																if (item.getItemMeta().getDisplayName().equalsIgnoreCase(SlimefunItem.JETPACK.getItemMeta().getDisplayName()) && item.getItemMeta().getLore().toString().equalsIgnoreCase(SlimefunItem.JETPACK.getItemMeta().getLore().toString())) {
-																	
-																	if (item.getDurability() > 0) {
-																		messages.ChargeRemove(p, "200 J " + ChatColor.DARK_GRAY + "(Refueling Station)");
+																for (ItemStack sfItem: FuelHandler.getContainers()) {
+																	if (item.getItemMeta().getDisplayName().equalsIgnoreCase(sfItem.getItemMeta().getDisplayName()) && item.getItemMeta().getLore().toString().equalsIgnoreCase(sfItem.getItemMeta().getLore().toString())) {
 																		
-																		Rcharge = Rcharge - 0.2;
-																		
-																		rsC.set(pos, String.valueOf(Rcharge));
-																		
-																		Rcfg.set("RefuelingStations.charge", rsC);
-																		
-																		try {
-																			Rcfg.save(refuelers);
-																		} catch (IOException x) {
+																		if (item.getDurability() > 0) {
+																			messages.ChargeRemove(p, "200 J " + ChatColor.DARK_GRAY + "(Refueling Station)");
+																			
+																			Rcharge = Rcharge - 0.2;
+																			
+																			rsC.set(pos, String.valueOf(Rcharge));
+																			
+																			Rcfg.set("RefuelingStations.charge", rsC);
+																			
+																			try {
+																				Rcfg.save(refuelers);
+																			} catch (IOException x) {
+																			}
+																			
+																			item.setDurability((short) (item.getDurability() - 1));
+																			
+																			PlayerInventory.consumeItemInHand(p);
+																			p.getInventory().addItem(item);
+																			PlayerInventory.update(p);
+																			
+																		}
+																		else {
+																			messages.ChargeRemove(p, "0 J " + ChatColor.DARK_GRAY + "(Refueling Station)");
 																		}
 																		
-																		item.setDurability((short) (item.getDurability() - 1));
+																		break;
 																		
-																		PlayerInventory.consumeItemInHand(p);
-																		p.getInventory().addItem(item);
-																		PlayerInventory.update(p);
-																		
-																	}
-																	else {
-																		messages.ChargeRemove(p, "0 J " + ChatColor.DARK_GRAY + "(Refueling Station)");
-																	}
-																}
-																else if (item.getItemMeta().getDisplayName().equalsIgnoreCase(SlimefunItem.MULTI_TOOL_MODE_NONE.getItemMeta().getDisplayName()) && item.getItemMeta().getLore().toString().equalsIgnoreCase(SlimefunItem.MULTI_TOOL_MODE_NONE.getItemMeta().getLore().toString())) {
-																	
-																	if (item.getDurability() > 0) {
-																		messages.ChargeRemove(p, "200 J " + ChatColor.DARK_GRAY + "(Refueling Station)");
-																		
-																		Rcharge = Rcharge - 0.2;
-																		
-																		rsC.set(pos, String.valueOf(Rcharge));
-																		
-																		Rcfg.set("RefuelingStations.charge", rsC);
-																		
-																		try {
-																			Rcfg.save(refuelers);
-																		} catch (IOException x) {
-																		}
-																		
-																		item.setDurability((short) (item.getDurability() - 1));
-																		
-																		PlayerInventory.consumeItemInHand(p);
-																		p.getInventory().addItem(item);
-																		PlayerInventory.update(p);
-																		
-																	}
-																	else {
-																		messages.ChargeRemove(p, "0 J " + ChatColor.DARK_GRAY + "(Refueling Station)");
-																	}
-																}
-																else if (item.getItemMeta().getDisplayName().equalsIgnoreCase(SlimefunItem.MULTI_TOOL_MODE_ARROW_CANNON.getItemMeta().getDisplayName()) && item.getItemMeta().getLore().toString().equalsIgnoreCase(SlimefunItem.MULTI_TOOL_MODE_ARROW_CANNON.getItemMeta().getLore().toString())) {
-																	
-																	if (item.getDurability() > 0) {
-																		messages.ChargeRemove(p, "200 J " + ChatColor.DARK_GRAY + "(Refueling Station)");
-																		
-																		Rcharge = Rcharge - 0.2;
-																		
-																		rsC.set(pos, String.valueOf(Rcharge));
-																		
-																		Rcfg.set("RefuelingStations.charge", rsC);
-																		
-																		try {
-																			Rcfg.save(refuelers);
-																		} catch (IOException x) {
-																		}
-																		
-																		item.setDurability((short) (item.getDurability() - 1));
-																		
-																		PlayerInventory.consumeItemInHand(p);
-																		p.getInventory().addItem(item);
-																		PlayerInventory.update(p);
-																		
-																	}
-																	else {
-																		messages.ChargeRemove(p, "0 J " + ChatColor.DARK_GRAY + "(Refueling Station)");
-																	}
-																}
-																else if (item.getItemMeta().getDisplayName().equalsIgnoreCase(SlimefunItem.MULTI_TOOL_MODE_ENDER_BACKPACK.getItemMeta().getDisplayName()) && item.getItemMeta().getLore().toString().equalsIgnoreCase(SlimefunItem.MULTI_TOOL_MODE_ENDER_BACKPACK.getItemMeta().getLore().toString())) {
-																	
-																	if (item.getDurability() > 0) {
-																		messages.ChargeRemove(p, "200 J " + ChatColor.DARK_GRAY + "(Refueling Station)");
-																		
-																		Rcharge = Rcharge - 0.2;
-																		
-																		rsC.set(pos, String.valueOf(Rcharge));
-																		
-																		Rcfg.set("RefuelingStations.charge", rsC);
-																		
-																		try {
-																			Rcfg.save(refuelers);
-																		} catch (IOException x) {
-																		}
-																		
-																		item.setDurability((short) (item.getDurability() - 1));
-																		
-																		PlayerInventory.consumeItemInHand(p);
-																		p.getInventory().addItem(item);
-																		PlayerInventory.update(p);
-																		
-																	}
-																	else {
-																		messages.ChargeRemove(p, "0 J " + ChatColor.DARK_GRAY + "(Refueling Station)");
-																	}
-																}
-																else if (item.getItemMeta().getDisplayName().equalsIgnoreCase(SlimefunItem.MULTI_TOOL_MODE_GRAPPLING_HOOK.getItemMeta().getDisplayName()) && item.getItemMeta().getLore().toString().equalsIgnoreCase(SlimefunItem.MULTI_TOOL_MODE_GRAPPLING_HOOK.getItemMeta().getLore().toString())) {
-																	
-																	if (item.getDurability() > 0) {
-																		messages.ChargeRemove(p, "200 J " + ChatColor.DARK_GRAY + "(Refueling Station)");
-																		
-																		Rcharge = Rcharge - 0.2;
-																		
-																		rsC.set(pos, String.valueOf(Rcharge));
-																		
-																		Rcfg.set("RefuelingStations.charge", rsC);
-																		
-																		try {
-																			Rcfg.save(refuelers);
-																		} catch (IOException x) {
-																		}
-																		
-																		item.setDurability((short) (item.getDurability() - 1));
-																		
-																		PlayerInventory.consumeItemInHand(p);
-																		p.getInventory().addItem(item);
-																		PlayerInventory.update(p);
-																		
-																	}
-																	else {
-																		messages.ChargeRemove(p, "0 J " + ChatColor.DARK_GRAY + "(Refueling Station)");
-																	}
-																}
-																else if (item.getItemMeta().getDisplayName().equalsIgnoreCase(SlimefunItem.MULTI_TOOL_MODE_MAGIC_EYE_OF_ENDER.getItemMeta().getDisplayName()) && item.getItemMeta().getLore().toString().equalsIgnoreCase(SlimefunItem.MULTI_TOOL_MODE_MAGIC_EYE_OF_ENDER.getItemMeta().getLore().toString())) {
-																	
-																	if (item.getDurability() > 0) {
-																		messages.ChargeRemove(p, "200 J " + ChatColor.DARK_GRAY + "(Refueling Station)");
-																		
-																		Rcharge = Rcharge - 0.2;
-																		
-																		rsC.set(pos, String.valueOf(Rcharge));
-																		
-																		Rcfg.set("RefuelingStations.charge", rsC);
-																		
-																		try {
-																			Rcfg.save(refuelers);
-																		} catch (IOException x) {
-																		}
-																		
-																		item.setDurability((short) (item.getDurability() - 1));
-																		
-																		PlayerInventory.consumeItemInHand(p);
-																		p.getInventory().addItem(item);
-																		PlayerInventory.update(p);
-																		
-																	}
-																	else {
-																		messages.ChargeRemove(p, "0 J " + ChatColor.DARK_GRAY + "(Refueling Station)");
-																	}
-																}
-																else if (item.getItemMeta().getDisplayName().equalsIgnoreCase(SlimefunItem.MULTI_TOOL_MODE_PORTABLE_CRAFTER.getItemMeta().getDisplayName()) && item.getItemMeta().getLore().toString().equalsIgnoreCase(SlimefunItem.MULTI_TOOL_MODE_PORTABLE_CRAFTER.getItemMeta().getLore().toString())) {
-																	
-																	if (item.getDurability() > 0) {
-																		messages.ChargeRemove(p, "200 J " + ChatColor.DARK_GRAY + "(Refueling Station)");
-																		
-																		Rcharge = Rcharge - 0.2;
-																		
-																		rsC.set(pos, String.valueOf(Rcharge));
-																		
-																		Rcfg.set("RefuelingStations.charge", rsC);
-																		
-																		try {
-																			Rcfg.save(refuelers);
-																		} catch (IOException x) {
-																		}
-																		
-																		item.setDurability((short) (item.getDurability() - 1));
-																		
-																		PlayerInventory.consumeItemInHand(p);
-																		p.getInventory().addItem(item);
-																		PlayerInventory.update(p);
-																		
-																	}
-																	else {
-																		messages.ChargeRemove(p, "0 J " + ChatColor.DARK_GRAY + "(Refueling Station)");
-																	}
-																}
-																else if (item.getItemMeta().getDisplayName().equalsIgnoreCase(SlimefunItem.MULTI_TOOL_MODE_WRENCH.getItemMeta().getDisplayName()) && item.getItemMeta().getLore().toString().equalsIgnoreCase(SlimefunItem.MULTI_TOOL_MODE_WRENCH.getItemMeta().getLore().toString())) {
-																	
-																	if (item.getDurability() > 0) {
-																		messages.ChargeRemove(p, "200 J " + ChatColor.DARK_GRAY + "(Refueling Station)");
-																		
-																		Rcharge = Rcharge - 0.2;
-																		
-																		rsC.set(pos, String.valueOf(Rcharge));
-																		
-																		Rcfg.set("RefuelingStations.charge", rsC);
-																		
-																		try {
-																			Rcfg.save(refuelers);
-																		} catch (IOException x) {
-																		}
-																		
-																		item.setDurability((short) (item.getDurability() - 1));
-																		
-																		PlayerInventory.consumeItemInHand(p);
-																		p.getInventory().addItem(item);
-																		PlayerInventory.update(p);
-																		
-																	}
-																	else {
-																		messages.ChargeRemove(p, "0 J " + ChatColor.DARK_GRAY + "(Refueling Station)");
 																	}
 																}
 															}

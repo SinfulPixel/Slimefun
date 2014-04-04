@@ -6,6 +6,7 @@ import me.mrCookieSlime.Slimefun.Items.Category;
 import me.mrCookieSlime.Slimefun.Items.GuideItems;
 import me.mrCookieSlime.Slimefun.Items.RecipeType;
 import me.mrCookieSlime.Slimefun.Items.SlimefunItem;
+import me.mrCookieSlime.Slimefun.Utilities.FuelHandler;
 
 
 public class Guide {
@@ -169,9 +170,17 @@ public class Guide {
 		}
 		if (plugin.getConfig().getBoolean("items.jetpack")) {
 			Slimefun.registerItem(SlimefunItem.JETPACK, Category.Gear(), GuideItems.Jetpack(), RecipeType.SHAPED_RECIPE, SlimefunItem.JETPACK);
+			FuelHandler.registerFuelContainer(SlimefunItem.JETPACK);
 		}
 		if (plugin.getConfig().getBoolean("items.MultiTool")) {
 			Slimefun.registerItem(SlimefunItem.MULTI_TOOL_MODE_NONE, Category.Gear(), GuideItems.MultiTool(), RecipeType.SHAPED_RECIPE, SlimefunItem.MULTI_TOOL_MODE_NONE);
+			FuelHandler.registerFuelContainer(SlimefunItem.MULTI_TOOL_MODE_ARROW_CANNON);
+			FuelHandler.registerFuelContainer(SlimefunItem.MULTI_TOOL_MODE_ENDER_BACKPACK);
+			FuelHandler.registerFuelContainer(SlimefunItem.MULTI_TOOL_MODE_GRAPPLING_HOOK);
+			FuelHandler.registerFuelContainer(SlimefunItem.MULTI_TOOL_MODE_MAGIC_EYE_OF_ENDER);
+			FuelHandler.registerFuelContainer(SlimefunItem.MULTI_TOOL_MODE_NONE);
+			FuelHandler.registerFuelContainer(SlimefunItem.MULTI_TOOL_MODE_PORTABLE_CRAFTER);
+			FuelHandler.registerFuelContainer(SlimefunItem.MULTI_TOOL_MODE_WRENCH);
 		}
 		if (plugin.getConfig().getBoolean("items.Emerald-of-Repairing")) {
 			Slimefun.registerItem(SlimefunItem.EMERALD_OF_REPAIRING, Category.CrystalsAndGems(), GuideItems.Erepairing(), RecipeType.SHAPED_RECIPE, SlimefunItem.EMERALD_OF_REPAIRING);

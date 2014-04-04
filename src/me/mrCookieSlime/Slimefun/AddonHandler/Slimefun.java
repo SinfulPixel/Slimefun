@@ -37,6 +37,8 @@ public class Slimefun {
 	public static Map<String, ItemStack> NameIndex = new HashMap<String, ItemStack>();
 	public static List<String> NameList = new ArrayList<String>();
 	
+	public static List<ItemStack> fuelContainers = new ArrayList<ItemStack>();
+	
 	public static void registerResearch(ItemStack item, String research) {
 		PlayerResearch.map.put(item, research);
 		if (!PlayerResearch.ll.contains(research)) {
