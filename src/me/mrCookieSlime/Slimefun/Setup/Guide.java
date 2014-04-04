@@ -169,11 +169,11 @@ public class Guide {
 			Slimefun.registerItem(SlimefunItem.GRAPPLING_HOOK, Category.Gear(), GuideItems.GrapplingHook(), RecipeType.SHAPED_RECIPE, GuideItems.GrapplingHookOutput());
 		}
 		if (plugin.getConfig().getBoolean("items.jetpack")) {
-			Slimefun.registerItem(SlimefunItem.JETPACK, Category.Gear(), GuideItems.Jetpack(), RecipeType.SHAPED_RECIPE, SlimefunItem.JETPACK);
+			Slimefun.registerItem(SlimefunItem.JETPACK, Category.Gear(), GuideItems.Jetpack(), RecipeType.SHAPED_RECIPE, GuideItems.JetpackOutput());
 			FuelHandler.registerFuelContainer(SlimefunItem.JETPACK);
 		}
 		if (plugin.getConfig().getBoolean("items.MultiTool")) {
-			Slimefun.registerItem(SlimefunItem.MULTI_TOOL_MODE_NONE, Category.Gear(), GuideItems.MultiTool(), RecipeType.SHAPED_RECIPE, SlimefunItem.MULTI_TOOL_MODE_NONE);
+			Slimefun.registerItem(SlimefunItem.MULTI_TOOL_MODE_NONE, Category.Gear(), GuideItems.MultiTool(), RecipeType.SHAPED_RECIPE, GuideItems.MTOutput());
 			FuelHandler.registerFuelContainer(SlimefunItem.MULTI_TOOL_MODE_ARROW_CANNON);
 			FuelHandler.registerFuelContainer(SlimefunItem.MULTI_TOOL_MODE_ENDER_BACKPACK);
 			FuelHandler.registerFuelContainer(SlimefunItem.MULTI_TOOL_MODE_GRAPPLING_HOOK);

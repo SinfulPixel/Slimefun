@@ -1,6 +1,7 @@
 package me.mrCookieSlime.Slimefun.Setup;
 
 import me.mrCookieSlime.Slimefun.startup;
+import me.mrCookieSlime.Slimefun.Items.GuideItems;
 import me.mrCookieSlime.Slimefun.Items.SlimefunItem;
 
 import org.bukkit.Material;
@@ -350,8 +351,7 @@ public class Recipes {
 		  plugin.getServer().addRecipe(r);
 	  }*/
 	  public static void MultiToolRecipe() {
-		  ItemStack item = SlimefunItem.MULTI_TOOL_MODE_NONE.clone();
-		  item.setDurability(item.getType().getMaxDurability());
+		  ItemStack item = GuideItems.MTOutput();
 		  ShapedRecipe r = new ShapedRecipe(item);
 		  r.shape(new String [] { " s ", "sas", "dad" });
 		  r.setIngredient('s', Material.IRON_INGOT, 1);
@@ -624,8 +624,7 @@ public class Recipes {
 			plugin.getServer().addRecipe(r);
 		}
 		public static void JetpackRecipe() {
-			ItemStack item = SlimefunItem.JETPACK.clone();
-			item.setDurability(item.getType().getMaxDurability());
+			ItemStack item = GuideItems.JetpackOutput();
 			ShapedRecipe r = new ShapedRecipe(item);
 			r.shape(new String[] { "sss", "sas", "trt" });
 			r.setIngredient('s', Material.IRON_INGOT, (short) 1);

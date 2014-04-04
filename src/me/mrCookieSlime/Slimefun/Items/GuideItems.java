@@ -16,6 +16,7 @@ public class GuideItems {
 		
 		return items;
 	}
+	
 	public static ItemStack GoldChunkOutput() {
 		ItemStack item = SlimefunItem.GOLD_CHUNK.clone();
 		
@@ -1322,5 +1323,17 @@ public class GuideItems {
 		items.add(new ItemStack(Material.DISPENSER));
 		items.add(new ItemStack(Material.PISTON_BASE));
 		return items;
+	}
+	
+	public static ItemStack JetpackOutput() {
+		ItemStack item = SlimefunItem.JETPACK.clone();
+		item.setDurability(item.getType().getMaxDurability());
+		return item;
+	}
+	
+	public static ItemStack MTOutput() {
+		ItemStack item = SlimefunItem.MULTI_TOOL_MODE_NONE.clone();
+		item.setDurability(item.getType().getMaxDurability());
+		return item;
 	}
 }
