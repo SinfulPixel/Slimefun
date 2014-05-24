@@ -3,10 +3,10 @@ package me.mrCookieSlime.Slimefun.Listeners.Items;
 import java.util.ArrayList;
 import java.util.List;
 
+import me.mrCookieSlime.CSCoreLib.general.Block.BlockBreaker;
+import me.mrCookieSlime.CSCoreLib.general.Player.PlayerInventory;
+import me.mrCookieSlime.CSCoreLib.general.World.TreeCalculator;
 import me.mrCookieSlime.Slimefun.startup;
-import me.mrCookieSlime.Slimefun.Utilities.BlockBreaker;
-import me.mrCookieSlime.Slimefun.Utilities.PlayerInventory;
-import me.mrCookieSlime.Slimefun.Utilities.TreeCalculator;
 
 import org.bukkit.Location;
 import org.bukkit.Material;
@@ -50,7 +50,7 @@ public class UberAxeListener implements Listener{
 									broken.remove(b.getLocation());
 								}
 								
-								PlayerInventory.damage(p);
+								PlayerInventory.damageItemInHand(p);
 								
 							}
 						}

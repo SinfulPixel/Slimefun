@@ -4,12 +4,12 @@ import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
+import me.mrCookieSlime.CSCoreLib.general.Block.BlockAdjacents;
+import me.mrCookieSlime.CSCoreLib.general.Player.PlayerInventory;
+import me.mrCookieSlime.CSCoreLib.general.Recipe.RecipeCalculator;
 import me.mrCookieSlime.Slimefun.startup;
 import me.mrCookieSlime.Slimefun.Messages.messages;
-import me.mrCookieSlime.Slimefun.Utilities.BlockAdjacents;
 import me.mrCookieSlime.Slimefun.Utilities.FuelHandler;
-import me.mrCookieSlime.Slimefun.Utilities.PlayerInventory;
-import me.mrCookieSlime.Slimefun.Utilities.RecipeCalculator;
 import me.mrCookieSlime.Slimefun.research.PlayerResearch;
 
 import org.bukkit.ChatColor;

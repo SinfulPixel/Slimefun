@@ -1,9 +1,9 @@
 package me.mrCookieSlime.Slimefun.Listeners.Blocks;
 
+import me.mrCookieSlime.CSCoreLib.general.Player.PlayerInventory;
 import me.mrCookieSlime.Slimefun.startup;
 import me.mrCookieSlime.Slimefun.Items.SlimefunItem;
 import me.mrCookieSlime.Slimefun.Messages.messages;
-import me.mrCookieSlime.Slimefun.Utilities.PlayerInventory;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Material;

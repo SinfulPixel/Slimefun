@@ -1,8 +1,8 @@
 package me.mrCookieSlime.Slimefun.Listeners.Food;
 
+import me.mrCookieSlime.CSCoreLib.general.Player.PlayerInventory;
 import me.mrCookieSlime.Slimefun.startup;
 
-import org.bukkit.GameMode;
 import org.bukkit.Material;
 import org.bukkit.Sound;
 import org.bukkit.enchantments.Enchantment;
@@ -38,16 +38,7 @@ public class SuperMeatListener implements Listener {
 	    	  p.setFoodLevel(20);
 	    	  p.setSaturation(18);
 	    	  p.setHealth((double) 20);
-	    	  if (p.getItemInHand().getAmount() != 1) {
-	    		  if (p.getGameMode() != GameMode.CREATIVE) {
-	    			  p.getItemInHand().setAmount(p.getItemInHand().getAmount() - 1);
-	    		  }
-	    	  }
-	    	  else {
-	    		  if (p.getGameMode() != GameMode.CREATIVE) {
-	    			  p.setItemInHand(null);
-	    		  }
-	    	  }
+	    	  PlayerInventory.consumeItemInHand(p);
 	    	  p.addPotionEffect(new PotionEffect(PotionEffectType.REGENERATION, 100, 4));
 	    	  p.playSound(p.getLocation(), Sound.EAT, 1, 1);
 	      }

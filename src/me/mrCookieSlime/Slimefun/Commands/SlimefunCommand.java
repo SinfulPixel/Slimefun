@@ -1,12 +1,12 @@
 package me.mrCookieSlime.Slimefun.Commands;
 
+import me.mrCookieSlime.CSCoreLib.general.Player.Players;
 import me.mrCookieSlime.Slimefun.startup;
 import me.mrCookieSlime.Slimefun.AddonHandler.Slimefun;
 import me.mrCookieSlime.Slimefun.Inventories.SlimefunInventory;
 import me.mrCookieSlime.Slimefun.Items.SlimefunGuide;
 import me.mrCookieSlime.Slimefun.Items.SlimefunItem;
 import me.mrCookieSlime.Slimefun.Messages.messages;
-import me.mrCookieSlime.Slimefun.Utilities.Players;
 import me.mrCookieSlime.Slimefun.research.PlayerResearch;
 
 import org.bukkit.ChatColor;

@@ -4,11 +4,11 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+import me.mrCookieSlime.CSCoreLib.general.Block.BlockAdjacents;
+import me.mrCookieSlime.CSCoreLib.general.Player.PlayerInventory;
 import me.mrCookieSlime.Slimefun.startup;
 import me.mrCookieSlime.Slimefun.Items.SlimefunItem;
 import me.mrCookieSlime.Slimefun.Messages.messages;
-import me.mrCookieSlime.Slimefun.Utilities.BlockAdjacents;
-import me.mrCookieSlime.Slimefun.Utilities.PlayerInventory;
 import me.mrCookieSlime.Slimefun.research.PlayerResearch;
 
 import org.bukkit.Bukkit;

@@ -1,8 +1,8 @@
 package me.mrCookieSlime.Slimefun.Listeners.Food;
 
+import me.mrCookieSlime.CSCoreLib.general.Player.PlayerInventory;
 import me.mrCookieSlime.Slimefun.startup;
 
-import org.bukkit.GameMode;
 import org.bukkit.Material;
 import org.bukkit.Sound;
 import org.bukkit.entity.Player;
@@ -34,16 +34,7 @@ public class UberMeatListener implements Listener {
 	    	  p.setSaturation(25);
 	    	  p.addPotionEffect(new PotionEffect(PotionEffectType.HEALTH_BOOST, 1200, 4));
 	    	  p.setHealth((double) 20);
-	    	  if (p.getItemInHand().getAmount() != 1) {
-	    		  if (p.getGameMode() != GameMode.CREATIVE) {
-	    			  p.getItemInHand().setAmount(p.getItemInHand().getAmount() - 1);
-	    		  }
-	    	  }
-	    	  else {
-	    		  if (p.getGameMode() != GameMode.CREATIVE) {
-	    			  p.setItemInHand(null);
-	    		  }
-	    	  }
+	    	  PlayerInventory.consumeItemInHand(p);
 	    	  p.addPotionEffect(new PotionEffect(PotionEffectType.REGENERATION, 600, 2));
 	    	  p.playSound(p.getLocation(), Sound.EAT, 1, 1);
 	      }

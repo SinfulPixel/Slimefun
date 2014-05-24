@@ -5,10 +5,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import me.mrCookieSlime.CSCoreLib.general.Math.Calculator;
 import me.mrCookieSlime.Slimefun.startup;
 import me.mrCookieSlime.Slimefun.AddonHandler.Slimefun;
 import me.mrCookieSlime.Slimefun.Items.ItemModifier;
-import me.mrCookieSlime.Slimefun.Utilities.Calculator;
 import me.mrCookieSlime.Slimefun.entities.SlimefunVillager;
 import me.mrCookieSlime.Slimefun.research.PlayerResearch;
 

@@ -3,12 +3,12 @@ package me.mrCookieSlime.Slimefun.Listeners.Items;
 import java.util.ArrayList;
 import java.util.List;
 
+import me.mrCookieSlime.CSCoreLib.general.Block.BlockBreaker;
+import me.mrCookieSlime.CSCoreLib.general.Player.PlayerInventory;
 import me.mrCookieSlime.Slimefun.startup;
 import me.mrCookieSlime.Slimefun.Items.SlimefunItem;
 import me.mrCookieSlime.Slimefun.Messages.messages;
-import me.mrCookieSlime.Slimefun.Utilities.BlockBreaker;
 import me.mrCookieSlime.Slimefun.Utilities.PlayerFace;
-import me.mrCookieSlime.Slimefun.Utilities.PlayerInventory;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
@@ -163,7 +163,7 @@ public class UberPickaxeListener implements Listener{
 											broken.add(b.getLocation());
 											
 											BlockBreaker.breakBlock(p, b);
-											PlayerInventory.damage(p);
+											PlayerInventory.damageItemInHand(p);
 											
 											broken.remove(b.getLocation());
 											
@@ -193,7 +193,7 @@ public class UberPickaxeListener implements Listener{
 														broken.remove(b.getLocation());
 													}
 													
-													PlayerInventory.damage(p);
+													PlayerInventory.damageItemInHand(p);
 													
 												}
 												else if (face == BlockFace.NORTH || face == BlockFace.SOUTH) {
@@ -217,7 +217,7 @@ public class UberPickaxeListener implements Listener{
 														broken.remove(b.getLocation());
 													}
 													
-													PlayerInventory.damage(p);
+													PlayerInventory.damageItemInHand(p);
 													
 												}
 												else if (face == BlockFace.EAST || face == BlockFace.WEST) {
@@ -241,7 +241,7 @@ public class UberPickaxeListener implements Listener{
 														broken.remove(b.getLocation());
 													}
 													
-													PlayerInventory.damage(p);
+													PlayerInventory.damageItemInHand(p);
 													
 												}
 											}
@@ -292,7 +292,7 @@ public class UberPickaxeListener implements Listener{
 														broken.remove(b.getLocation());
 													}
 													
-													PlayerInventory.damage(p);
+													PlayerInventory.damageItemInHand(p);
 													
 												}
 												else if (face == BlockFace.NORTH || face == BlockFace.SOUTH) {
@@ -337,7 +337,7 @@ public class UberPickaxeListener implements Listener{
 														broken.remove(b.getLocation());
 													}
 													
-													PlayerInventory.damage(p);
+													PlayerInventory.damageItemInHand(p);
 													
 												}
 												else if (face == BlockFace.EAST || face == BlockFace.WEST) {
@@ -382,7 +382,7 @@ public class UberPickaxeListener implements Listener{
 														broken.remove(b.getLocation());
 													}
 													
-													PlayerInventory.damage(p);
+													PlayerInventory.damageItemInHand(p);
 													
 												}
 											}
@@ -406,7 +406,7 @@ public class UberPickaxeListener implements Listener{
 														broken.remove(b.getLocation());
 													}
 													
-													PlayerInventory.damage(p);
+													PlayerInventory.damageItemInHand(p);
 													
 												}
 												else if (face == BlockFace.NORTH || face == BlockFace.SOUTH || face == BlockFace.EAST || face == BlockFace.WEST) {
@@ -424,7 +424,7 @@ public class UberPickaxeListener implements Listener{
 														broken.remove(b.getLocation());
 													}
 													
-													PlayerInventory.damage(p);
+													PlayerInventory.damageItemInHand(p);
 													
 												}
 											}

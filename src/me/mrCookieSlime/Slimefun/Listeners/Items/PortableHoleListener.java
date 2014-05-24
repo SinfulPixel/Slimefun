@@ -3,9 +3,9 @@ package me.mrCookieSlime.Slimefun.Listeners.Items;
 import java.io.File;
 import java.io.IOException;
 
+import me.mrCookieSlime.CSCoreLib.general.Player.PlayerInventory;
 import me.mrCookieSlime.Slimefun.startup;
 import me.mrCookieSlime.Slimefun.Messages.messages;
-import me.mrCookieSlime.Slimefun.Utilities.PlayerInventory;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Effect;
